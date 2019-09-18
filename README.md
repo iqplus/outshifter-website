@@ -19,7 +19,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```sh
     cd my-default-starter/
-    gatsby develop
+    gatsby develop  s
     ```
 
 1.  **Open the source code and start editing!**
