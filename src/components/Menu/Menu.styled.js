@@ -5,6 +5,7 @@ export const StyledMenu = styled.nav`
     .menu-desktop {
         margin: 0px;
         padding-left: 25px;
+        
     }
 
     .menu-desktop a {
@@ -12,6 +13,7 @@ export const StyledMenu = styled.nav`
         cursor: ${({ open }) => open ? 'pointer' : 'default'};
         padding-right: 25px;
         color: #4A4A4A;;
+        
     }
 
     .menu-desktop a:hover {
@@ -22,6 +24,7 @@ export const StyledMenu = styled.nav`
         transition: ${({ open }) => open ? 'opacity 0.2s linear 0.6s' : 'opacity 0.2s linear 0.1s'};
         opacity: ${({ open }) => open ? '1' : '0'};
         line-height: 48px;
+        
     }
     .menu-1 {
         transition: opacity 0.2s linear 0.5s;

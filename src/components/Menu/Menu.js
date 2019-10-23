@@ -10,10 +10,11 @@ class Menu extends React.Component {
         <StyledMenu open={this.props.open}>
           <div className="menu-desktop">
             <StaticQuery query={MENU} render={data =>{
-              const menu = data.items.edges;
-              return menu.map( (item, index) =>{
-                return <Link key={item.node.id} to={'/' + item.node.name} className={'menu-' + index}>{item.node.name}</Link>
-              });
+            const menu = data.allContentfulPage.edges;
+            return menu.map((item, index) => {
+              return <Link key={item.node.slug} to={'/' + item.node.slug} className={'menu-' + index}>{item.node.slug}</Link>
+            });
+              
             }} />
           </div>
         </StyledMenu>
@@ -24,13 +25,13 @@ class Menu extends React.Component {
 export default Menu;
 
 const MENU = graphql `
-  {
-    items:
-    allContentfulContentType {
+   {
+    allContentfulPage {
       edges {
         node {
           id
-          name
+          slug
         }
       }
-    }}`
+    }
+  }`
