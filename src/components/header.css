@@ -1,0 +1,40 @@
+/* header */ 
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+/* logo */
+.logo-wrapper img {
+    display: flex;
+    width: 200px;
+    margin-top: 5px;
+}
+
+/* Menu */
+.menu-wrapper {
+    display: flex;
+    align-items: stretch;
+    float:right;
+    margin-top: 15px;
+}
+
+.button-meny {
+    margin-top: 3px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .button-meny {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .logo-wrapper img {
+        margin-top: 10px;
+    }
+
+}
