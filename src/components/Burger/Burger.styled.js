@@ -18,7 +18,7 @@ export const StyledBurger = styled.button`
   transition: transform 1.2s;
 
   @media only screen and (min-width: 768px) {
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(1400%)'};
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(1000%)'};
   }
 
   &:focus {

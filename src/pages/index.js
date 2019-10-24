@@ -9,21 +9,29 @@ import Accordeon from '../components/Accordeon/Accordeon'
 
 import './pages.css';
 
-import Animation1 from '../images/01-animation-main-banner.png';
-import Animation2 from '../images/02-animation-mediator.png';
 import TestIcon from '../images/test-icon.png';
 
 import iconSet from '../icons/selection.json'
 import IcomoonReact, {iconList} from 'icomoon-react'
+
+import Lottie from 'lottie-react-web'
+import Animation1 from '../animations/animation1.json'
+import Animation2 from '../animations/animation2.json'
+import Animation1Phone from '../images/Animation-1-Phone.png'
+import Animation2Phone from '../images/Animation-2-Phone.png'
+
 
 class IndexPage extends React.Component {
   render () {
     return (
       <Layout>
         <SEO title="Home" />
-          
-        <div className="container">
-          <div className="row main-banner">
+
+        {/* Banner */}
+
+        <div className="masthead">   
+        <div className="container h-100">
+          <div className="row h-100 align-items-center main-banner">
             <div className="col-md-12 col-lg-5">
               <h1>Sell Anything<br/>
                 To Anyone<br/>
@@ -37,12 +45,16 @@ class IndexPage extends React.Component {
               <Button>Sign up</Button>
             </div>
             <div className="col-md-12 col-lg-7">
-              <div className="wrapper">
-                <img src={Animation1} />
+              <div className="wrapper-animation-1">
+                <div className="animation-background"><img src={Animation1Phone}></img></div>
+                <div className="class-animation"><Lottie options={{animationData: Animation1}}/></div>
               </div>
             </div>
           </div>
         </div>
+        </div>
+
+        {/* Banner */}
 
         <div className="container-fluid e-commerce">
           <div className="container">
@@ -60,12 +72,14 @@ class IndexPage extends React.Component {
           </div>
         </div>
 
+        {/* Mediator */}
+
         <div className="container">
-          <div className="row mediator">
-            
+          <div className="row mediator">        
             <div className="col-md-12 col-lg-6 align-self-center">
-              <div className="wrapper">
-                <img src={Animation2} />
+              <div className="wrapper-animation-2">
+                <div className="animation-background"><img src={Animation2Phone}></img></div>
+                <div className="class-animation-2"><Lottie options={{animationData: Animation2}}/></div>
               </div>
             </div>
             <div className="col-md-12 col-lg-6 align-self-center">
@@ -77,21 +91,43 @@ class IndexPage extends React.Component {
               </p>
               <Accordeon/>
             </div>
-
           </div>
         </div>
 
-        <div className="container pricing">
+        {/* Merchant */}
+        
+        <div className="container-fluid merchant">
+          <div className="container">
+            <div className="row">            
+              <div className="col-md-12 col-lg-6 align-self-center">
+                <h2>Merchant</h2>
+                <p>
+                Handpick products to sell directly through your online channels. For influencers, 
+                talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
+                on their online impact, outshifting enables a seamless income stream.
+                </p>
+                <Accordeon/>
+              </div>
+              <div className="col-md-12 col-lg-6 align-self-center">
+                <div className="wrapper-animation-2">
+                  <div className="animation-background"><img src={Animation2Phone}></img></div>
+                  <div className="class-animation-2"><Lottie options={{animationData: Animation2}}/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        {/* Pricing */}
+
+        <div className="container pricing">
           <div className="row text-center">
             <div className="col">
               <h2>Pricing</h2>
               <p>Design is the creation of a plan or convention for the construction of an object, systemDesign is th.</p>
             </div>
           </div>
-
           <div className="row">
-
             <div className="col-12 col-sm-12 col-md">
               <div className="box">
                 <div className="box-content">
@@ -112,7 +148,6 @@ class IndexPage extends React.Component {
                 </div>
               </div>
             </div>
-
             <div className="col-12 col-sm-12 col-md">
               <div className="box">
                 <div className="box-content">

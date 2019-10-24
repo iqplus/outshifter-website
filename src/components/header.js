@@ -4,6 +4,8 @@ import {StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 
 import Logo from '../images/logo.png';
+import LogoMobil from '../images/logo-mobil.png';
+import LogoText from '../images/outshifter-logo-text.png';
 import Menu from './Menu/Menu.js';
 import Burger from './Burger/Burger';
 import Button from './Button/Button';
@@ -26,16 +28,18 @@ export default class Header extends Component {
   render() {
     return (
 
-      <div className="container">
+      <div className="container menu-class">
         <div className="row">
-          <div className="col col-lg-4">         
+          <div className="col col-lg-4 align-self-center">         
             <div className="wrapper">
               <div className="logo-wrapper">
-                <img src={Logo} />
+                <img className="desktop" src={Logo} />
+                <img className="mobil logo-mobil" src={LogoMobil} />
+                <img className="mobil logo-text" src={LogoText} />
               </div>
             </div>
           </div>
-          <div className="col col-lg-8">
+          <div className="col col-lg-8 align-self-center">
             <div className="menu-wrapper">
               <StyledMenuName open={this.state.isOpen}>Menu</StyledMenuName>
               <Burger open={this.state.isOpen} onClick={this.toggleMenu}/>
