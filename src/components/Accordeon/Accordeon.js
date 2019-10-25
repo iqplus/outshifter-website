@@ -64,39 +64,61 @@ class Accordeon extends React.Component {
                         <div className="col-12 col-sm-12 col-md">
                             <ButtonDropdown buttonClicked={this.state.button1Clicked} onClick={this.toggleButton1}>Revenue <FaAngleRight /></ButtonDropdown>
                         </div>
+                        <div className="accordeon-mobil mobil"><AccordeonBox buttonClicked={this.state.button1Clicked} onClick={this.toggleButton1}>
+                            Search for and request access to an unlimited amount of proﬁles by a diverse 
+                            range of Merchants. Source the products you are passionate about instantly, 
+                            without being restricted to one brand, contract or timeframe.
+                        </AccordeonBox></div>
                         <div className="col-12 col-sm-12 col-md">
                             <ButtonDropdown buttonClicked={this.state.button2Clicked} onClick={this.toggleButton2}>Revenue <FaAngleRight /></ButtonDropdown>
                         </div>
+                        <div className="accordeon-mobil mobil"><AccordeonBox className="mobil" buttonClicked={this.state.button2Clicked} onClick={this.toggleButton2}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </AccordeonBox></div>
                         <div className="col-12 col-sm-12 col-md">
                             <ButtonDropdown buttonClicked={this.state.button3Clicked} onClick={this.toggleButton3}>Revenue <FaAngleRight /></ButtonDropdown>
                         </div>
+                        <div className="accordeon-mobil mobil"><AccordeonBox buttonClicked={this.state.button3Clicked} onClick={this.toggleButton3}>
+                            Search for and request access to an unlimited amount of proﬁles by a diverse 
+                            range of Merchants. Source the products you are passionate about instantly, 
+                            without being restricted to one brand, contract or timeframe.
+                        </AccordeonBox></div>
                         <div className="col-12 col-sm-12 col-md">  
                             <ButtonDropdown buttonClicked={this.state.button4Clicked} onClick={this.toggleButton4}>Revenue <FaAngleRight /></ButtonDropdown>
                         </div>
+                        <div className="accordeon-mobil mobil"><AccordeonBox className="mobil" buttonClicked={this.state.button4Clicked} onClick={this.toggleButton4}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </AccordeonBox></div>
                     </div>
 
-                    <AccordeonBox buttonClicked={this.state.button1Clicked} onClick={this.toggleButton1}>
+                    <div className="desktop"><AccordeonBox buttonClicked={this.state.button1Clicked} onClick={this.toggleButton1}>
                         Search for and request access to an unlimited amount of proﬁles by a diverse 
                         range of Merchants. Source the products you are passionate about instantly, 
                         without being restricted to one brand, contract or timeframe.
-                    </AccordeonBox>
-                    <AccordeonBox buttonClicked={this.state.button2Clicked} onClick={this.toggleButton2}>
+                    </AccordeonBox></div>
+                    <div className="desktop"><AccordeonBox buttonClicked={this.state.button2Clicked} onClick={this.toggleButton2}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
                         dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </AccordeonBox>
-                    <AccordeonBox buttonClicked={this.state.button3Clicked} onClick={this.toggleButton3}>
+                    </AccordeonBox></div>
+                    <div className="desktop"><AccordeonBox buttonClicked={this.state.button3Clicked} onClick={this.toggleButton3}>
                         Search for and request access to an unlimited amount of proﬁles by a diverse 
                         range of Merchants. Source the products you are passionate about instantly, 
                         without being restricted to one brand, contract or timeframe.
-                    </AccordeonBox>
-                    <AccordeonBox buttonClicked={this.state.button4Clicked} onClick={this.toggleButton4}>
+                    </AccordeonBox></div>
+                    <div className="desktop"><AccordeonBox buttonClicked={this.state.button4Clicked} onClick={this.toggleButton4}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
                         dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </AccordeonBox>
+                    </AccordeonBox></div>
                  
                 </div>
 
