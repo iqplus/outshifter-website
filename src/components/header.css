@@ -2,15 +2,21 @@
 .menu-class {
     margin-top: 15px;
 }
+
+/* logo */
 .wrapper {
     display: flex;
     align-items: stretch;
     width: 200px;
 }
 
-/* logo */
 .logo-wrapper {
     display: flex;
+    align-items: stretch;
+}
+.logo-wrapper img {
+    width: 200px;
+    height: 30px;
 }
 
 /* Menu */
