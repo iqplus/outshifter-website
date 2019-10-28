@@ -15,10 +15,7 @@ import iconSet from '../icons/selection.json'
 import IcomoonReact, {iconList} from 'icomoon-react'
 
 import Lottie from 'lottie-react-web'
-import Animation1 from '../animations/animation1.json'
-import Animation2 from '../animations/animation2.json'
-import Animation1Phone from '../images/Animation-1-Phone.png'
-import Animation2Phone from '../images/Animation-2-Phone.png'
+
 
 
 class IndexPage extends React.Component {
@@ -46,8 +43,8 @@ class IndexPage extends React.Component {
             </div>
             <div className="col-md-12 col-lg-7">
               <div className="wrapper-animation-1">
-                <div className="animation-background"><img src={Animation1Phone}></img></div>
-                <div className="class-animation"><Lottie options={{animationData: Animation1}}/></div>
+                <div className="animation-background"></div>
+                <div className="class-animation"></div>
               </div>
             </div>
           </div>
@@ -78,8 +75,8 @@ class IndexPage extends React.Component {
           <div className="row mediator">        
             <div className="col-md-12 col-lg-6 align-self-center">
               <div className="wrapper-animation-2">
-                <div className="animation-background"><img src={Animation2Phone}></img></div>
-                <div className="class-animation-2"><Lottie options={{animationData: Animation2}}/></div>
+                <div className="animation-background"></div>
+                <div className="class-animation-2"></div>
               </div>
             </div>
             <div className="col-md-12 col-lg-6 align-self-center">
@@ -110,8 +107,8 @@ class IndexPage extends React.Component {
               </div>
               <div className="col-md-12 col-lg-6 align-self-center">
                 <div className="wrapper-animation-2">
-                  <div className="animation-background"><img src={Animation2Phone}></img></div>
-                  <div className="class-animation-2"><Lottie options={{animationData: Animation2}}/></div>
+                  <div className="animation-background"></div>
+                  <div className="class-animation-2"></div>
                 </div>
               </div>
             </div>
