@@ -33,11 +33,21 @@
 .wrapper-animation-2 {
     display: flex;
     align-items: stretch;
-    max-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
 }
 .wrapper-animation-2 img {
-    max-width: 300px;
+    max-width: 500px;
+    height: auto;
+}
+.wrapper-animation-3 {
+    display: flex;
+    align-items: stretch;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.wrapper-animation-3 img {
+    max-width: 100%;
     height: auto;
 }
 
@@ -61,21 +71,27 @@
 /* Row Mediator */
 .mediator {
     padding-top: 10%;
-    padding-bottom: 20%;
+    padding-bottom: 10%;
+}
+.user-description {
+        text-align: justify;
+}
+.user-col {
+    padding-bottom: 100px;
 }
 
 /* Row Merchant */
 .merchant {
     background: #F5F7F8;
     padding-top: 10%;
-    padding-bottom: 20%;
+    padding-bottom: 10%;
 }
 
 
 /* Pricing */
 .pricing {
     padding-top: 10%;
-    max-width: 900px;
+    max-width: 900px!important;
     margin: 0 auto;
 }
 .pricing p {
@@ -133,6 +149,26 @@
     .pricing .box {
         margin-left: 25px;
         margin-right: 25px;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .mediator-width {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .merchant-width {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1201px) {
+    .wrapper-animation-2 {
+        max-width: 450px;
+    }
+    .wrapper-animation-2 img {
+        max-width: 450px;
     }
 }
 

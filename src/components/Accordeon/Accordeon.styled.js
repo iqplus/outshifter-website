@@ -2,9 +2,24 @@ import styled from 'styled-components';
 
 export const StyledAccordeon = styled.div`
 
+    max-width: 100%;
+
     .button-dropdown {
         padding-top: 25px;
         padding-bottom: 25px;
+    }
+
+    .drop-center {
+        text-align: center;
+    }
+    .drop-right {
+        text-align: right;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .row-box {
+            padding-right: 15px;
+        }
     }
 
     @media only screen and (max-width: 1199px) and (min-width: 991px) {

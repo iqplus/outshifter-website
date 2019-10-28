@@ -2,23 +2,16 @@
 .menu-class {
     margin-top: 15px;
 }
-
 /* logo */
 .wrapper {
     display: flex;
     align-items: stretch;
-    width: 200px;
+    width: 143px;
 }
-
 .logo-wrapper {
     display: flex;
     align-items: stretch;
 }
-.logo-wrapper img {
-    width: 200px;
-    height: 30px;
-}
-
 /* Menu */
 .menu-wrapper {
     display: flex;
@@ -32,6 +25,13 @@
 
 .button-meny button {
     padding: 5px 35px;
+}
+
+@media only screen and (min-width: 768px) {
+    .logo-wrapper img {
+        width: 143px;
+        height: 30px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -49,6 +49,7 @@
     .logo-mobil {
         width: 43px;
         margin-right: 5px;
+        height: 30px;
     }
     .logo-text {
         width: 75px;
@@ -56,4 +57,5 @@
         position: relative;
         top: 7px;
     }
+
 }
