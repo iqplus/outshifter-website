@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 
+import LogoFull from '../images/outshifter-logo-full.png';
 import Logo from '../images/logo.png';
 import LogoMobil from '../images/logo-mobil.png';
 import LogoText from '../images/outshifter-logo-text.png';
@@ -34,7 +35,7 @@ export default class Header extends Component {
           <MenuMobil open={this.state.isOpen} />
           <div className="col col-lg-4 align-self-center">
             <div className="logo-wrapper">
-              <img className="desktop" src={Logo} />
+              <img className="desktop" src={LogoFull} />
               <img className="mobil logo-mobil" src={LogoMobil} />
               <img className="mobil logo-text" src={LogoText} />
             </div>

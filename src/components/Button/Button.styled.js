@@ -15,7 +15,7 @@ export const StyledButton = styled.button`
     }
     
     &:hover {
-        transition: color 0.6s ease-in-out;
+        transition: color 0.4s ease-in-out;
         color: white;
     }
 
@@ -54,7 +54,7 @@ export const StyledButton = styled.button`
         background-color: white;
         z-index: -1;
         opacity: 1;
-        transition: all 0.6s ease-in-out;
+        transition: all 0.4s ease-in-out;
     }
 
     &:hover:after {

@@ -17,8 +17,10 @@ import IcomoonReact, {iconList} from 'icomoon-react'
 import Lottie from 'lottie-react-web'
 import Animation1 from '../animations/animation1.json'
 import Animation2 from '../animations/animation2.json'
+import Animation3 from '../animations/animation3.json'
 import Animation1Phone from '../images/Animation-1-Phone.png'
 import Animation2Phone from '../images/Animation-2-Phone.png'
+import Animation3Tablet from '../images/Animation-3-Tablet.png'
 
 
 class IndexPage extends React.Component {
@@ -31,7 +33,7 @@ class IndexPage extends React.Component {
 
         <div className="masthead">   
         <div className="container h-100">
-          <div className="row h-100 align-items-center main-banner">
+          <div className="row h-100 align-items-center main-banner no-gutters">
             <div className="col-md-12 col-lg-5">
               <h1>Sell Anything<br/>
                 To Anyone<br/>
@@ -54,7 +56,7 @@ class IndexPage extends React.Component {
         </div>
         </div>
 
-        {/* Banner */}
+        {/* E-commerce */}
 
         <div className="container-fluid e-commerce">
           <div className="container">
@@ -82,14 +84,16 @@ class IndexPage extends React.Component {
                 <div className="class-animation-2"><Lottie options={{animationData: Animation2}}/></div>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 align-self-center">
-              <h2>Mediator</h2>
-              <p>
-              Handpick products to sell directly through your online channels. For influencers, 
-              talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
-              on their online impact, outshifting enables a seamless income stream.
-              </p>
-              <Accordeon/>
+            <div className="user-col col-md-12 col-lg-6 align-self-center">
+              <div className="mediator-width">
+                <h2>Mediator</h2>
+                <p className="user-description">
+                Handpick products to sell directly through your online channels. For influencers, 
+                talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
+                on their online impact, outshifting enables a seamless income stream.
+                </p>
+                <Accordeon/>
+              </div>
             </div>
           </div>
         </div>
@@ -98,20 +102,22 @@ class IndexPage extends React.Component {
         
         <div className="container-fluid merchant">
           <div className="container">
-            <div className="row">            
-              <div className="col-md-12 col-lg-6 align-self-center">
-                <h2>Merchant</h2>
-                <p>
-                Handpick products to sell directly through your online channels. For influencers, 
-                talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
-                on their online impact, outshifting enables a seamless income stream.
-                </p>
-                <Accordeon/>
+            <div className="row no-gutters">            
+              <div className="user-col col-md-12 col-lg-6 align-self-center">
+                <div className="merchant-width">
+                  <h2>Merchant</h2>
+                  <p className="user-description">
+                  Handpick products to sell directly through your online channels. For influencers, 
+                  talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
+                  on their online impact, outshifting enables a seamless income stream.
+                  </p>
+                  <Accordeon/>
+                </div>
               </div>
-              <div className="col-md-12 col-lg-6 align-self-center">
-                <div className="wrapper-animation-2">
-                  <div className="animation-background"><img src={Animation2Phone}></img></div>
-                  <div className="class-animation-2"><Lottie options={{animationData: Animation2}}/></div>
+              <div className="col-md-12 col-lg-6 align-self-center merchant-width">
+                <div className="wrapper-animation-3">
+                  <div className="animation-background"><img src={Animation3Tablet}></img></div>
+                  <div className="class-animation-3"><Lottie options={{animationData: Animation3}}/></div>
                 </div>
               </div>
             </div>

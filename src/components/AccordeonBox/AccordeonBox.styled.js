@@ -7,9 +7,7 @@ export const StyledAccordeonBox = styled.div`
     border-radius: 7px;
 
     opacity: ${({ buttonClicked }) => buttonClicked ? '1' : '0'};
-    transition: ${({ buttonClicked }) => buttonClicked ? 'opacity 4s' : 'opacity 2s'};
-
-
+    transition: ${({ buttonClicked }) => buttonClicked ? 'opacity 2s' : 'opacity 2s'};
 
     @media only screen and (min-width: 768px) {
         position: absolute;
@@ -18,8 +16,6 @@ export const StyledAccordeonBox = styled.div`
     @media only screen and (max-width: 768px) {
         display: ${({ buttonClicked }) => buttonClicked ? 'block' : 'none'};
         margin-bottom: 15px;
-        margin-left: 15px;
-        margin-right: 15px;
     }
 
 `;
