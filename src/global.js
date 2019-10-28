@@ -12,6 +12,23 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
   }
 
+  @media only screen and (min-width: 1400px) {
+    .container {
+      max-width: 1280px!important;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .mobil {display: none;}
+  }
+  @media only screen and (max-width: 767px) {
+    .desktop {display: none;}
+    h1, h2 {
+      text-align: center;
+    }
+
+  }
+
 
   /* Fonts styling */
 
@@ -58,5 +75,6 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
   }
+
 
 `

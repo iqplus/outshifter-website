@@ -18,8 +18,13 @@ export const StyledBurger = styled.button`
   transition: transform 1.2s;
 
   @media only screen and (min-width: 768px) {
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(1400%)'};
+    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(1000%)'};
   }
+
+  @media only screen and (max-width: 768px) {
+    background: ${({ open }) => open ? 'none' : 'linear-gradient(45.36deg, #4D88EB 0%, #3DDFF4 100%)'};
+  }
+
 
   &:focus {
     outline: none;

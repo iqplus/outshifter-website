@@ -10,9 +10,9 @@ class Menu extends React.Component {
         <StyledMenu open={this.props.open}>
           <div className="menu-desktop">
             <StaticQuery query={MENU} render={data =>{
-            const menu = data.allContentfulPage.edges;
-            return menu.map((item, index) => {
-              return <Link key={item.node.slug} to={'/' + item.node.slug} className={'menu-' + index}>{item.node.slug}</Link>
+              const menu = data.allContentfulPage.edges;
+              return menu.map((item, index) => {
+                return <Link key={item.node.slug} to={'/' + item.node.slug} className={'menu-' + index}><span className="menu-item">{item.node.slug}</span></Link>
             });
               
             }} />

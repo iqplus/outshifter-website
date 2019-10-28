@@ -9,6 +9,7 @@ export const StyledButtonDropdown = styled.button`
     box-shadow: 0px 0 5px 0 #E1E8EC;
     font-size: 14px;
     padding: 5px 5px 5px 15px;
+    background: transparent;
 
     svg {
         font-size: 22px;

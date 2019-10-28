@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const SupportPage = () => (
   <Layout>
     <SEO title="FAQ & Support" />
-    <div>Suport</div>
+    <div>Support</div>
   </Layout>
 )
 

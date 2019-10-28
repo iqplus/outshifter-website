@@ -1,11 +1,12 @@
 
 /* Main Banner */
-.main-banner {
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+  }
+
 .main-banner h1 {
-    padding-top: 75px;
     padding-bottom: 15px;
 }
 .main-banner p {
@@ -14,6 +15,29 @@
 }
 .wrapper img {
     max-width: 100%;
+    height: auto;
+}
+.animation-background {
+    position: absolute;
+}
+.wrapper-animation-1 {
+    display: flex;
+    align-items: stretch;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.wrapper-animation-1 img {
+    max-width: 100%;
+    height: auto;
+}
+.wrapper-animation-2 {
+    display: flex;
+    align-items: stretch;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.wrapper-animation-2 img {
+    max-width: 300px;
     height: auto;
 }
 
@@ -37,11 +61,20 @@
 /* Row Mediator */
 .mediator {
     padding-top: 10%;
-    padding-bottom: 10%;
+    padding-bottom: 20%;
 }
+
+/* Row Merchant */
+.merchant {
+    background: #F5F7F8;
+    padding-top: 10%;
+    padding-bottom: 20%;
+}
+
 
 /* Pricing */
 .pricing {
+    padding-top: 10%;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -103,10 +136,19 @@
     }
 }
 
-
 @media only screen and (max-width: 991px) {
     .main-banner {
         text-align: center;
+    }
+    .main-banner h1 {
+        padding-top: 50px;
+    }
+    .wrapper-animation-2 {
+        margin-bottom: 50px;
+        max-width: 200px;
+    }
+    .wrapper-animation-2 img {
+        max-width: 200px;
     }
 }
 
@@ -116,5 +158,11 @@
     }
     .pricing .box {
         padding: 50px 15px;
+    }
+    .wrapper-animation-1 {
+        max-width: 350px;
+    }
+    .wrapper-animation-1 img {
+        max-width: 350px;
     }
 }

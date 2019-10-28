@@ -1,14 +1,22 @@
 /* header */ 
-.wrapper {
-    display: flex;
-    align-items: stretch;
+.menu-class {
+    margin-top: 15px;
 }
 
 /* logo */
-.logo-wrapper img {
+.wrapper {
     display: flex;
+    align-items: stretch;
     width: 200px;
-    margin-top: 5px;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+.logo-wrapper img {
+    width: 200px;
+    height: 30px;
 }
 
 /* Menu */
@@ -16,11 +24,14 @@
     display: flex;
     align-items: stretch;
     float:right;
-    margin-top: 15px;
 }
 
 .button-meny {
-    margin-top: 3px;
+    margin-top: 7px;
+}
+
+.button-meny button {
+    padding: 5px 35px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -31,10 +42,18 @@
 
 }
 
-@media only screen and (max-width: 1200px) {
-
-    .logo-wrapper img {
-        margin-top: 10px;
+@media only screen and (max-width: 767px) {
+    .menu-class button {
+        top: 0px;
     }
-
+    .logo-mobil {
+        width: 43px;
+        margin-right: 5px;
+    }
+    .logo-text {
+        width: 75px;
+        height: 14px!important;
+        position: relative;
+        top: 7px;
+    }
 }
