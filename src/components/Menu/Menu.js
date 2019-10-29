@@ -12,7 +12,7 @@ class Menu extends React.Component {
             <StaticQuery query={MENU} render={data =>{
               const menu = data.allContentfulPage.edges;
               return menu.map((item, index) => {
-                return <Link key={item.node.slug} to={'/' + item.node.slug} className={'menu-' + index}><span className="menu-item">{item.node.slug}</span></Link>
+                return <Link key={item.node.slug} to={'/' + item.node.slug} className={'menu-' + index}><span className="menu-item">{item.node.slug.charAt(0).toUpperCase()+item.node.slug.slice(1)}</span></Link>
             });
               
             }} />
