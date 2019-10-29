@@ -1,10 +1,9 @@
-
 /* Main Banner */
 
 .masthead {
     height: 100vh;
     min-height: 500px;
-  }
+}
 
 .main-banner h1 {
     padding-bottom: 15px;
@@ -67,6 +66,10 @@
     margin: 0 auto;
     font-size: 1rem;
 }
+.e-icons {
+    text-align: center;
+    padding-top: 50px;
+}
 
 /* Row Mediator */
 .mediator {
@@ -127,6 +130,7 @@
     display:inline-block;
     text-align:left;
     color: #4A4A4A;
+    padding-left: 0px;
 }
 
 .pricing .box li {
@@ -171,6 +175,14 @@
         max-width: 450px;
     }
 }
+@media only screen and (max-width: 1200px) {
+    .wrapper-animation-2 {
+        max-width: 350px;
+    }
+    .wrapper-animation-2 img {
+        max-width: 350px;
+    }
+}
 
 @media only screen and (max-width: 991px) {
     .main-banner {
@@ -181,10 +193,10 @@
     }
     .wrapper-animation-2 {
         margin-bottom: 50px;
-        max-width: 200px;
+        max-width: 300px;
     }
     .wrapper-animation-2 img {
-        max-width: 200px;
+        max-width: 300px;
     }
 }
 
