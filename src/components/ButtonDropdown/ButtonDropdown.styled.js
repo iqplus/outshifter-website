@@ -28,4 +28,10 @@ export const StyledButtonDropdown = styled.button`
     &:focus {
         outline: none;
     }
+
+    @media only screen and (max-width: 1300px) and (min-width: 992px) {
+        svg {font-size:14px;}
+        font-size: 10px;
+    }
+
 `;

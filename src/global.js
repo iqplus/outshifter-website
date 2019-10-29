@@ -54,7 +54,6 @@ export const GlobalStyles = createGlobalStyle`
     color: #9599A8;
   }
   h1 {
-    font-size: 2rem;
     color: #4A4A4A;
   }
   h2 {

@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 
 import Button from '../components/Button/Button'
 import Accordeon from '../components/Accordeon/Accordeon'
+import Accordeon2 from '../components/Accordeon2/Accordeon2'
 
 import './pages.css';
 
@@ -79,23 +80,28 @@ class IndexPage extends React.Component {
               </div>
             </div>
             <div class="row e-icons">
-              <div class="col col1">
+              <div class="col-12 col-md-4 col-lg">
+                <img src={Icon1}></img>
                 <h6>Access</h6>
                 <p>Search, filter and connect with Merchants or Mediators.</p>
               </div>
-              <div class="col col2">
+              <div class="col-12 col-md-4 col-lg">
+                <img src={Icon2}></img>
                 <h6>Products</h6>
                 <p>List or source products and services for your Profile.</p>
               </div>
-              <div class="col col3">
+              <div class="col-12 col-md-4 col-lg">
+                <img src={Icon3}></img>
                 <h6>Outshift</h6>
                 <p>Seamless product outshifting for multi-channel Direct Selling.</p>
               </div>
-              <div class="col col4">
+              <div class="col-12 col-md-6 col-lg">
+                <img src={Icon4}></img>
                 <h6>Manage</h6>
                 <p>Regulate every aspect of your online distribution in one place.</p>
               </div>
-              <div class="col col5">
+              <div class="col-12 col-md-6 col-lg">
+                <img src={Icon5}></img>
                 <h6>Insights</h6>
                 <p>Monitor all orders, channels, data performance and revenue.</p>
               </div>
@@ -136,11 +142,11 @@ class IndexPage extends React.Component {
                 <div className="merchant-width">
                   <h2>Merchant</h2>
                   <p className="user-description">
-                  Handpick products to sell directly through your online channels. For influencers, 
-                  talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
-                  on their online impact, outshifting enables a seamless income stream.
+                    Outshifting is The Distribution-Compounding Tool. Enabling Direct-Selling through
+                    multiple channels, mediums and Mediators simultaneously, to optimise 1st stage impact
+                    on millions of consumers
                   </p>
-                  <Accordeon />
+                  <Accordeon2 />
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 align-self-center merchant-width">
@@ -159,7 +165,6 @@ class IndexPage extends React.Component {
           <div className="row text-center">
             <div className="col">
               <h2>Pricing</h2>
-              <p>Design is the creation of a plan or convention for the construction of an object, systemDesign is th.</p>
             </div>
           </div>
           <div className="row">
@@ -167,7 +172,7 @@ class IndexPage extends React.Component {
               <div className="box">
                 <div className="box-content">
                   <h3>Merchant</h3>
-                  <div><img src={TestIcon} /></div>
+                  <div><img src={IconMerchant} /></div>
                   <ul>
                     <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Limitless Number of Listings</li>
                     <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unrestricted Channel Utilisation</li>
@@ -188,7 +193,7 @@ class IndexPage extends React.Component {
               <div className="box">
                 <div className="box-content">
                   <h3>Mediator</h3>
-                  <div><img src={TestIcon} /></div>
+                  <div><img src={IconMediator} /></div>
                   <ul>
                     <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Independent Monetization Management</li>
                     <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Unlimited Merchant Connections</li>
