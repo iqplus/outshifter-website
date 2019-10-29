@@ -10,6 +10,8 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './../global';
 import { theme } from './../theme';
 
+import Loading from './loading.js';
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -22,6 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
+  <Loading>
     <ThemeProvider theme={theme}>
     <>
     <GlobalStyles />
@@ -45,6 +48,7 @@ const Layout = ({ children }) => {
       </div>
     </>
     </ThemeProvider>
+  </Loading>
   )
 }
 
