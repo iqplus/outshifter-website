@@ -22,6 +22,14 @@ import Animation1Phone from '../images/Animation-1-Phone.png'
 import Animation2Phone from '../images/Animation-2-Phone.png'
 import Animation3Tablet from '../images/Animation-3-Tablet.png'
 
+import Icon1 from '../images/icon-1.png'
+import Icon2 from '../images/icon-2.png'
+import Icon3 from '../images/icon-3.png'
+import Icon4 from '../images/icon-4.png'
+import Icon5 from '../images/icon-5.png'
+import IconMediator from '../images/icon-mediator.png'
+import IconMerchant from '../images/icon-merchant.png'
+
 
 class IndexPage extends React.Component {
   render () {
@@ -68,7 +76,28 @@ class IndexPage extends React.Component {
                   designed to challenge the current value chain by bringing products to where the consumers 
                   are, instead of the other way around.
                 </p>
-                <div className="empty-space"></div>
+              </div>
+            </div>
+            <div class="row e-icons">
+              <div class="col col1">
+                <h6>Access</h6>
+                <p>Search, filter and connect with Merchants or Mediators.</p>
+              </div>
+              <div class="col col2">
+                <h6>Products</h6>
+                <p>List or source products and services for your Profile.</p>
+              </div>
+              <div class="col col3">
+                <h6>Outshift</h6>
+                <p>Seamless product outshifting for multi-channel Direct Selling.</p>
+              </div>
+              <div class="col col4">
+                <h6>Manage</h6>
+                <p>Regulate every aspect of your online distribution in one place.</p>
+              </div>
+              <div class="col col5">
+                <h6>Insights</h6>
+                <p>Monitor all orders, channels, data performance and revenue.</p>
               </div>
             </div>
           </div>
@@ -92,7 +121,7 @@ class IndexPage extends React.Component {
                 talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
                 on their online impact, outshifting enables a seamless income stream.
                 </p>
-                <Accordeon/>
+                <Accordeon />
               </div>
             </div>
           </div>
@@ -111,7 +140,7 @@ class IndexPage extends React.Component {
                   talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
                   on their online impact, outshifting enables a seamless income stream.
                   </p>
-                  <Accordeon/>
+                  <Accordeon />
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 align-self-center merchant-width">
@@ -140,13 +169,14 @@ class IndexPage extends React.Component {
                   <h3>Merchant</h3>
                   <div><img src={TestIcon} /></div>
                   <ul>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Admin console and audit log</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Granular sharing permissions</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />User and company-managed groups</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Smart Sync</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Remote device wipe</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Admin console and audit log</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />120 days of file recovery</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Limitless Number of Listings</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unrestricted Channel Utilisation</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unlimited Mediator Connections</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Independent Scaling Enablement</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Automated Payment Processing</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Cross-channel Management</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Seamless Order fulfilment</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Real-time Data & Insights</li>
                   </ul>
                   <h5>4.8% + 0.18€</h5>
                   <h6>About service fee</h6>
@@ -160,13 +190,14 @@ class IndexPage extends React.Component {
                   <h3>Mediator</h3>
                   <div><img src={TestIcon} /></div>
                   <ul>
-                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Admin console and audit log</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Granular sharing permissions</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />User and company-managed groups</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Smart Sync</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Remote device wipe</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Admin console and audit log</li>
-                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />120 days of file recovery</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Independent Monetization Management</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Unlimited Merchant Connections</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Unrestricted Channel Utilisation</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Unlimited Product Outshifting</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Instant Payment Processing</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Multichannel Direct Sales</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Automated Order Fulfilment</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#3DDFF4" size={15} icon="Check" />Real-time Data & Insights</li>
                   </ul>
                   <h5>FREE</h5>
                   <h6>About service</h6>

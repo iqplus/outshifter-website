@@ -69,7 +69,9 @@ export const GlobalStyles = createGlobalStyle`
   h5 {
     color: #4A4A4A;
   }
-
+  h6 {
+    color: #4A4A4A;
+  }
 
   a {
     color: ${({ theme }) => theme.primaryHover};
