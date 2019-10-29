@@ -49,9 +49,8 @@ class IndexPage extends React.Component {
                 Anywhere
               </h1>
               <p>
-                List products or source products.<br/>
-                Outshifting is the ultimate Direct Selling Solution.<br/>
-                This is the platform where Merchants and Mediators connect.
+                Outshifter is the complete distribution<br/>
+                tool for tomorrows e-commerce.
               </p>
               <Button>Sign up</Button>
             </div>
@@ -71,11 +70,10 @@ class IndexPage extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col">
-                <h2>E-commerce is turning Social</h2>
-                <p>As the process of purchasing gradually integrates with more aspects of online activity, 
-                  the web-store has become a thing of the past. Outshifting is a new online distribution tool 
-                  designed to challenge the current value chain by bringing products to where the consumers 
-                  are, instead of the other way around.
+                <h2>The Web-Store is History</h2>
+                <p>
+                  Outshifting is the way of distributing and managing multichannel direct-sales.<br/>
+                  Social media, instant messaging and streaming platforms are the future of e-commerce.
                 </p>
               </div>
             </div>
@@ -88,22 +86,22 @@ class IndexPage extends React.Component {
               <div class="col-12 col-md-4 col-lg">
                 <img src={Icon2}></img>
                 <h6>Products</h6>
-                <p>List or source products and services for your Profile.</p>
+                <p>List or source products and services for your Profile</p>
               </div>
               <div class="col-12 col-md-4 col-lg">
                 <img src={Icon3}></img>
                 <h6>Outshift</h6>
-                <p>Seamless product outshifting for multi-channel Direct Selling.</p>
+                <p>Seamless product outshifting for multi-channel Direct Selling</p>
               </div>
               <div class="col-12 col-md-6 col-lg">
                 <img src={Icon4}></img>
                 <h6>Manage</h6>
-                <p>Regulate every aspect of your online distribution in one place.</p>
+                <p>Control every aspect of your online distribution in one place</p>
               </div>
               <div class="col-12 col-md-6 col-lg">
                 <img src={Icon5}></img>
                 <h6>Insights</h6>
-                <p>Monitor all orders, channels, data performance and revenue.</p>
+                <p>Monitor all orders, channels, data performance and revenue</p>
               </div>
             </div>
           </div>

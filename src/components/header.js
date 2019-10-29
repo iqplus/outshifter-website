@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 
-import LogoFull from '../images/outshifter-logo-full.png';
+import LogoFull from '../images/logo-icon-text.png';
 import Logo from '../images/logo.png';
 import LogoMobil from '../images/logo-mobil.png';
 import LogoText from '../images/outshifter-logo-text.png';
