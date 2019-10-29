@@ -35,9 +35,9 @@ export default class Header extends Component {
           <MenuMobil open={this.state.isOpen} />
           <div className="col col-lg-4 align-self-center">
             <div className="logo-wrapper">
-              <img className="desktop" src={LogoFull} />
-              <img className="mobil logo-mobil" src={LogoMobil} />
-              <img className="mobil logo-text" src={LogoText} />
+              <Link to={'/'}><img className="desktop" src={LogoFull} /></Link>
+              <Link to={'/'}><img className="mobil logo-mobil" src={LogoMobil} /> </Link>
+              <Link to={'/'}><img className="mobil logo-text" src={LogoText} /> </Link>
             </div>
           </div>
           <div className="col col-lg-8 align-self-center">

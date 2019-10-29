@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"componentChunkName":"component---src-pages-solution-js","path":"/solution/","webpackCompilationHash":"","result":{"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+=======
+{"componentChunkName":"component---src-pages-solution-js","path":"/solution/","webpackCompilationHash":"dce32949071874cb869b","result":{"pageContext":{"isCreatedByStatefulCreatePages":true}}}
+>>>>>>> parent of b1c7732c... Revert "anadi link a logo"
