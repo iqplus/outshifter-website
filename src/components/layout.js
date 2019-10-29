@@ -32,8 +32,8 @@ const Layout = ({ children }) => {
           <div className="container footer">
             <div className="row">
               <div className="col"><p>Terms & Conditions</p></div>
-              <div className="col"><p>Terms & Conditions</p></div>
-              <div className="col"><p>Terms & Conditions</p></div>
+              <div className="col"><p>Legal Notice</p></div>
+              <div className="col"><p>Privacy Policy</p></div>
             </div>
             <div className="row">
               <div className="col">
