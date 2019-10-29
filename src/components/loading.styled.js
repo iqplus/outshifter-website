@@ -2,7 +2,16 @@ import styled from 'styled-components';
 
 export const StyledLoading = styled.div`
     
-    transition: opacity 1s ease-in-out;
-    opacity: ${({ renderloading }) => renderloading ? '1' : '0'};
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+    
+`;
 
+export const StyledNotLoading = styled.div`
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+    
 `;
