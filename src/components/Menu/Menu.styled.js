@@ -25,7 +25,6 @@ export const StyledMenu = styled.nav`
             line-height: 48px;
         }
         .menu-1 {
-            transition: opacity 0.2s linear 0.5s;
             transition: ${({ open }) => open ? 'opacity 0.2s linear 0.5s' : 'opacity 0.2s linear 0.2s'};
             opacity: ${({ open }) => open ? '1' : '0'};
             line-height: 48px;
