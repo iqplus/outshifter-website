@@ -8,6 +8,8 @@ import LogoFull from '../images/logo-icon-text.png';
 import Logo from '../images/logo.png';
 import LogoMobil from '../images/logo-mobil.png';
 import LogoText from '../images/outshifter-logo-text.png';
+import LogoMobilWhite from '../images/logo-mobil_white.png';
+import LogoTextWhite from '../images/outshifter-logo-text_white.png';
 import Menu from './Menu/Menu.js';
 import MenuMobil from './MenuMobil/MenuMobil.js';
 import Burger from './Burger/Burger';
@@ -84,7 +86,9 @@ export default class Header extends Component {
   }
 
   toggleMenu() {
+    
     this.setState({ isOpen: !this.state.isOpen });
+
   }
   
   render() {
@@ -100,8 +104,10 @@ export default class Header extends Component {
           <div className="col col-lg-4 align-self-center">
             <div className="logo-wrapper">
               <Link to={'/'}><img className="desktop" src={LogoFull} /></Link>
-              <Link to={'/'}><img className="mobil logo-mobil" src={LogoMobil} /> </Link>
-              <Link to={'/'}><img className="mobil logo-text" src={LogoText} /> </Link>
+                  <Link to={'/'}><img className="mobil logo-mobil" src={this.state.isOpen ? LogoMobilWhite
+                    : LogoMobil} /> </Link>
+                  <Link to={'/'}><img className="mobil logo-text" src={this.state.isOpen ? LogoTextWhite
+                    : LogoText} /> </Link>
             </div>
           </div>
           <div className="col col-lg-8 align-self-center">
