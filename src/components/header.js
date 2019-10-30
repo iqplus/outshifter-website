@@ -106,7 +106,7 @@ export default class Header extends Component {
               <Link to={'/'}><img className="desktop" src={LogoFull} /></Link>
                   <Link to={'/'}><img className="mobil logo-mobil" src={this.state.isOpen ? LogoMobilWhite
                     : LogoMobil} /> </Link>
-                  <Link to={'/'}><img className="mobil logo-text" src={this.state.isOpen ? LogoTextWhite
+                  <Link to={'/'} className={'logo-line'}><img className="mobil logo-text" src={this.state.isOpen ? LogoTextWhite
                     : LogoText} /> </Link>
             </div>
           </div>
