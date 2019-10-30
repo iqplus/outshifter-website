@@ -89,7 +89,7 @@ export default class Header extends Component {
   
   render() {
     return (
-      <div className={'sticky fixed-top'} id="navbar">
+      <div className={'fixed-top'} id="navbar">
       <div className="container menu-class">
         <div className="row">
           <MenuMobil open={this.state.isOpen} />
