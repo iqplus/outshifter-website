@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
+import styled from 'styled-components';
 
 import LogoFull from '../images/outshifter-logo-full.png';
 import Logo from '../images/logo.png';
@@ -13,7 +14,24 @@ import Burger from './Burger/Burger';
 import Button from './Button/Button';
 
 import './header.css';
-import { StyledMenuName } from './Header.styled';
+
+
+export const StyledMenuName = styled.span`
+
+    transition: ${({ open }) => open ? 'opacity 0.2s linear 0.1s' : 'opacity 0.2s linear 0.5s'};
+    opacity: ${({ open }) => open ? '0' : '1'};
+    position: relative;
+    left: 300px;
+    line-height: 48px;
+    color: #4A4A4A;
+
+    @media only screen and (max-width: 1024px) {
+    
+        display: none;
+
+    }
+
+`;
 
 
 export default class Header extends Component {
