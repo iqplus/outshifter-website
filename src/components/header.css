@@ -13,7 +13,7 @@
     background-color: #fff;
     width:100%;
     height: 5rem;
-            box-shadow: 0 0.1429rem 0.6429rem 0.07143rem rgba(1, 2, 2, 0.1);
+    box-shadow: 0 0.1429rem 0.6429rem 0.07143rem rgba(1, 2, 2, 0.1);
 
 
 }
@@ -52,7 +52,13 @@
     .logo-wrapper img {
         width: 143px;
         height: 30px;
+    
     }
+    
+    .logo-line  {
+        line-height: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -75,7 +81,6 @@
     .logo-text {
         width: 75px;
         height: 14px!important;
-        position: relative;
         top: 7px;
     }
 
