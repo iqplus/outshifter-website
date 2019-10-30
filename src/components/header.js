@@ -89,10 +89,14 @@ export default class Header extends Component {
   
   render() {
     return (
+      <div>
+      
+        <MenuMobil open={this.state.isOpen} />
+
       <div className={'fixed-top'} id="navbar">
       <div className="container menu-class">
         <div className="row">
-          <MenuMobil open={this.state.isOpen} />
+
           <div className="col col-lg-4 align-self-center">
             <div className="logo-wrapper">
               <Link to={'/'}><img className="desktop" src={LogoFull} /></Link>
@@ -111,6 +115,7 @@ export default class Header extends Component {
         </div>
       </div>
       </div>  
+      </div>
     );
   }
 }
