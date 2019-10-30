@@ -123,8 +123,9 @@ class IndexPage extends React.Component {
               <div className="mediator-width">
                 <h2>Mediator</h2>
                 <p className="user-description">
-                  For anyone aspiring to capitalise on their online impact Outshifter enables a seamless income stream. Handpick products
-                  and sell directly through your online channels.
+                Handpick products to sell directly through your online channels. For influencers, 
+                talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
+                on their online impact, outshifting enables a seamless income stream.
                 </p>
                 <Accordeon />
               </div>
@@ -141,8 +142,9 @@ class IndexPage extends React.Component {
                 <div className="merchant-width">
                   <h2>Merchant</h2>
                   <p className="user-description">
-                    Outshifter is The Distribution-Compounding Tool, enabling Direct-Selling through multiple channels, mediums and
-                    Mediators simultaneously. Optimising 1st stage impact on millions of consumers.
+                    Outshifting is The Distribution-Compounding Tool. Enabling Direct-Selling through
+                    multiple channels, mediums and Mediators simultaneously, to optimise 1st stage impact
+                    on millions of consumers
                   </p>
                   <Accordeon2 />
                 </div>
@@ -163,17 +165,16 @@ class IndexPage extends React.Component {
           <div className="row text-center">
             <div className="col">
               <h2>Pricing</h2>
-              <p>There are no upfront costs, no hidden fees, and no risk to get started.</p>
             </div>
           </div>
-          <div className="row pricing-width">
+          <div className="row">
             <div className="col-12 col-sm-12 col-md">
               <div className="box">
                 <div className="box-content">
                   <h3>Merchant</h3>
                   <div><img src={IconMerchant} /></div>
                   <ul>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unlimited Number of Listings</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Limitless Number of Listings</li>
                     <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unrestricted Channel Utilisation</li>
                     <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unlimited Mediator Connections</li>
                     <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Independent Scaling Enablement</li>
