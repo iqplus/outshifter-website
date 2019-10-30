@@ -1,4 +1,15 @@
 /* Main Banner */
+.hidden{
+    display: none;
+}
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.visible {
+    transition: opacity 1s ease-in;
+    opacity: 1;
+}
 
 .masthead {
     height: 100vh;

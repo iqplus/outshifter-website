@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
     <>
     <GlobalStyles />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={'Outshifter'} />
       <div>
         <main>{children}</main>
         <footer>

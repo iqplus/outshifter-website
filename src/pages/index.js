@@ -33,15 +33,17 @@ import IconMerchant from '../images/icon-merchant.png'
 
 
 class IndexPage extends React.Component {
+
+
   render () {
     return (
-      <Layout>
+      <Layout className="hidden">
         <SEO title="Home" />
 
         {/* Banner */}
 
-        <div className="masthead">   
-        <div className="container h-100">
+        <div className={'masthead'}>   
+          <div className={'container ' + 'h-100 '}>
           <div className="row h-100 align-items-center main-banner no-gutters">
             <div className="col-md-12 col-lg-5">
               <h1>Sell Anything<br/>

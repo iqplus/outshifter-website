@@ -1,4 +1,23 @@
 /* header */ 
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.sticky {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #fff;
+    width:100%;
+    height: 5rem;
+    box-shadow: 0 0.1429rem 0.6429rem 0.07143rem rgba(1, 2, 2, 0.1);
+
+
+}
+
 .menu-class {
     margin-top: 15px;
 }
@@ -11,6 +30,8 @@
 .logo-wrapper {
     display: flex;
     align-items: stretch;
+        z-index: 100;
+
 }
 /* Menu */
 .menu-wrapper {
@@ -31,7 +52,13 @@
     .logo-wrapper img {
         width: 143px;
         height: 30px;
+    
     }
+    
+    .logo-line  {
+        line-height: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -54,7 +81,6 @@
     .logo-text {
         width: 75px;
         height: 14px!important;
-        position: relative;
         top: 7px;
     }
 

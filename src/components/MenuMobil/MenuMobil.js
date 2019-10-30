@@ -9,7 +9,7 @@ class MenuMobil extends React.Component {
     return (
         <StyledMenuMobil open={this.props.open}>
           <div className="menu-mobil">
-            <span className="menu-word">Menu</span>
+            {/*<span className="menu-word">Menu</span>*/}
             <ul>
                 <StaticQuery query={MENU} render={data =>{
                     const menu = data.allContentfulPage.edges;
