@@ -1,11 +1,13 @@
 version: 2
 jobs:
-    branches:
-      only:
-        -New-Master
+  build:
     docker:
       - image: circleci/node:10
     working_directory: ~/gatsby-site
+    branches:
+      only:
+        - master
+        - /rc-.*/
     steps:
       - checkout
       - restore_cache:
