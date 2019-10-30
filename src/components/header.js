@@ -35,10 +35,52 @@ export const StyledMenuName = styled.span`
 
 
 export default class Header extends Component {
+
+
+
+
+
+
+
+
+  
   constructor(props) {
     super(props);
     this.state = { isOpen: false };
     this.toggleMenu = this.toggleMenu.bind(this);
+  
+
+    // https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+    if (typeof window !== 'undefined') {
+      let prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        const maxScroll = document.body.clientHeight - window.innerHeight;
+        let currentScrollPos = window.pageYOffset;
+        if (
+          (maxScroll > 0 &&
+            prevScrollpos > currentScrollPos &&
+            prevScrollpos <= maxScroll) ||
+          (maxScroll <= 0 && prevScrollpos > currentScrollPos) ||
+          (prevScrollpos <= 0 && currentScrollPos <= 0)
+        ) {
+
+        } else {
+
+        }
+        if (currentScrollPos > 86) {
+          document.getElementById('navbar').classList.add('sticky');
+        }
+        if (currentScrollPos < 86) {
+          document.getElementById('navbar').classList.remove('sticky');
+        }
+
+
+
+
+        prevScrollpos = currentScrollPos;
+      };
+    }
+  
   }
 
   toggleMenu() {
@@ -47,7 +89,7 @@ export default class Header extends Component {
   
   render() {
     return (
-
+      <div className={'sticky fixed-top'} id="navbar">
       <div className="container menu-class">
         <div className="row">
           <MenuMobil open={this.state.isOpen} />
@@ -68,7 +110,7 @@ export default class Header extends Component {
           </div>
         </div>
       </div>
-
+      </div>  
     );
   }
 }
