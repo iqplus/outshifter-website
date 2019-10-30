@@ -25,10 +25,7 @@ jobs:
           name: Gatsby Build
           command: npm run build
       - persist_to_workspace:
-      root: .
-      paths:
-          - .
-      
+          root: .     
       - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token="$FIREBASE_TOKEN" --non-interactive
