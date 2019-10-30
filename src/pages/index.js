@@ -51,9 +51,8 @@ class IndexPage extends React.Component {
                 Anywhere
               </h1>
               <p>
-                List products or source products.<br/>
-                Outshifting is the ultimate Direct Selling Solution.<br/>
-                This is the platform where Merchants and Mediators connect.
+                Outshifter is the complete distribution<br/>
+                tool for tomorrows e-commerce.
               </p>
               <Button>Sign up</Button>
             </div>
@@ -73,11 +72,10 @@ class IndexPage extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col">
-                <h2>E-commerce is turning Social</h2>
-                <p>As the process of purchasing gradually integrates with more aspects of online activity, 
-                  the web-store has become a thing of the past. Outshifting is a new online distribution tool 
-                  designed to challenge the current value chain by bringing products to where the consumers 
-                  are, instead of the other way around.
+                <h2>The Web-Store is History</h2>
+                <p>
+                  Outshifting is the way of distributing and managing multichannel direct-sales.<br/>
+                  Social media, instant messaging and streaming platforms are the future of e-commerce.
                 </p>
               </div>
             </div>
@@ -90,22 +88,22 @@ class IndexPage extends React.Component {
               <div class="col-12 col-md-4 col-lg">
                 <img src={Icon2}></img>
                 <h6>Products</h6>
-                <p>List or source products and services for your Profile.</p>
+                <p>List or source products and services for your Profile</p>
               </div>
               <div class="col-12 col-md-4 col-lg">
                 <img src={Icon3}></img>
                 <h6>Outshift</h6>
-                <p>Seamless product outshifting for multi-channel Direct Selling.</p>
+                <p>Seamless product outshifting for multi-channel Direct Selling</p>
               </div>
               <div class="col-12 col-md-6 col-lg">
                 <img src={Icon4}></img>
                 <h6>Manage</h6>
-                <p>Regulate every aspect of your online distribution in one place.</p>
+                <p>Control every aspect of your online distribution in one place</p>
               </div>
               <div class="col-12 col-md-6 col-lg">
                 <img src={Icon5}></img>
                 <h6>Insights</h6>
-                <p>Monitor all orders, channels, data performance and revenue.</p>
+                <p>Monitor all orders, channels, data performance and revenue</p>
               </div>
             </div>
           </div>
@@ -125,9 +123,8 @@ class IndexPage extends React.Component {
               <div className="mediator-width">
                 <h2>Mediator</h2>
                 <p className="user-description">
-                Handpick products to sell directly through your online channels. For influencers, 
-                talent, creators, athletes, website proprietors or anyone aspiring to capitalise 
-                on their online impact, outshifting enables a seamless income stream.
+                  For anyone aspiring to capitalise on their online impact Outshifter enables a seamless income stream. Handpick products
+                  and sell directly through your online channels.
                 </p>
                 <Accordeon />
               </div>
@@ -144,9 +141,8 @@ class IndexPage extends React.Component {
                 <div className="merchant-width">
                   <h2>Merchant</h2>
                   <p className="user-description">
-                    Outshifting is The Distribution-Compounding Tool. Enabling Direct-Selling through
-                    multiple channels, mediums and Mediators simultaneously, to optimise 1st stage impact
-                    on millions of consumers
+                    Outshifter is The Distribution-Compounding Tool, enabling Direct-Selling through multiple channels, mediums and
+                    Mediators simultaneously. Optimising 1st stage impact on millions of consumers.
                   </p>
                   <Accordeon2 />
                 </div>
@@ -167,16 +163,17 @@ class IndexPage extends React.Component {
           <div className="row text-center">
             <div className="col">
               <h2>Pricing</h2>
+              <p>There are no upfront costs, no hidden fees, and no risk to get started.</p>
             </div>
           </div>
-          <div className="row">
+          <div className="row pricing-width">
             <div className="col-12 col-sm-12 col-md">
               <div className="box">
                 <div className="box-content">
                   <h3>Merchant</h3>
                   <div><img src={IconMerchant} /></div>
                   <ul>
-                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Limitless Number of Listings</li>
+                    <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unlimited Number of Listings</li>
                     <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unrestricted Channel Utilisation</li>
                     <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Unlimited Mediator Connections</li>
                     <li><IcomoonReact iconSet={iconSet} color="#5851E5" size={15} icon="Check" />Independent Scaling Enablement</li>
