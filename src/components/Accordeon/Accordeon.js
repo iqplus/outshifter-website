@@ -59,61 +59,59 @@ class Accordeon extends React.Component {
             <StyledAccordeon >
 
                 <div className="row no-gutters button-dropdown">
-                    <div className="col-12 col-sm-12 col-md">
+                    <div className="col-12 col-sm-12 col-md text-left">
                         <ButtonDropdown buttonClicked={this.state.button1Clicked} onClick={this.toggleButton1}>Brand Access <FaAngleRight /></ButtonDropdown>
                     </div>
                     <div className="accordeon-mobil mobil"><AccordeonBox buttonClicked={this.state.button1Clicked} onClick={this.toggleButton1}>
-                        Search for and request access to an unlimited amount of proﬁles by a diverse 
-                        range of Merchants. Source the products you are passionate about instantly, 
-                        without being restricted to one brand, contract or timeframe.
+                        Search for and request access to an unlimited amount of profiles by a diverse range of Merchants.
+                        Source the products you are passionate about instantly, without being restricted to one brand, contract or
+                        timeframe.
                     </AccordeonBox></div>
-                    <div className="col-12 col-sm-12 col-md">
-                        <ButtonDropdown buttonClicked={this.state.button3Clicked} onClick={this.toggleButton3}>Revenue <FaAngleRight /></ButtonDropdown>
+                    <div className="col-12 col-sm-12 col-md text-center">
+                        <ButtonDropdown buttonClicked={this.state.button3Clicked} onClick={this.toggleButton3}>Revenue      <FaAngleRight /></ButtonDropdown>
                     </div>
                     <div className="accordeon-mobil mobil"><AccordeonBox buttonClicked={this.state.button3Clicked} onClick={this.toggleButton3}>
-                        With integrated payment processing and automated order fulfilment our IT
-                        infrastructure enables independent monetisation management. Earn DS commissions
-                        while doing what you love, without compromising your image and integrity.
+                        Earn Direct Sales commissions while doing what you love, without compromising your image and integrity.
+                        With integrated payment processing and automated order fulfilment our infrastructure enables independent
+                        monetisation management.
                     </AccordeonBox></div>
-                    <div className="col-12 col-sm-12 col-md">
+                    <div className="col-12 col-sm-12 col-md text-right">
                         <ButtonDropdown buttonClicked={this.state.button2Clicked} onClick={this.toggleButton2}>Cross-channel <FaAngleRight /></ButtonDropdown>
                     </div>
                     <div className="accordeon-mobil mobil"><AccordeonBox className="mobil" buttonClicked={this.state.button2Clicked} onClick={this.toggleButton2}>
-                        Outshifting is the ultimate tool for seamless cross-channel publishing, ensuring
-                        products are just some clicks away from being listed on your favourite platforms, in
-                        order to accommodate multichannel direct sales. 
+                        Outshifter is the ultimate tool for seamless cross-channel publishing, ensuring products are just clicks away from
+                        being listed on your favourite platforms and social media sites.
                     </AccordeonBox></div>
-                    <div className="col-12 col-sm-12 col-md">  
+                    <div className="col-12 col-sm-12 col-md text-right">  
                         <ButtonDropdown buttonClicked={this.state.button4Clicked} onClick={this.toggleButton4}>Insights <FaAngleRight /></ButtonDropdown>
                     </div>
                     <div className="accordeon-mobil mobil"><AccordeonBox className="mobil" buttonClicked={this.state.button4Clicked} onClick={this.toggleButton4}>
-                        Get real-time statistics from your daily performance, sales and total revenue growth.
-                        Become empowered by comparative insights on segments, trends, channels and
-                        products, tailored to maximise your impact.
+                        Get real-time statistics on your performance, sales and total revenue growth.
+                        Become empowered by comparative insights on segments, trends, channels and products, tailored to maximise
+                        your impact.
                     </AccordeonBox></div>                
                 </div>
 
                 <div className="row row-box">
                     <div className="col-12 col-sm-12 col-md">
                         <div className="desktop"><AccordeonBox buttonClicked={this.state.button1Clicked} onClick={this.toggleButton1}>
-                            Search for and request access to an unlimited amount of proﬁles by a diverse 
-                            range of Merchants. Source the products you are passionate about instantly, 
-                            without being restricted to one brand, contract or timeframe.
+                            Search for and request access to an unlimited amount of profiles by a diverse range of Merchants.
+                            Source the products you are passionate about instantly, without being restricted to one brand, contract or
+                            timeframe.
                         </AccordeonBox></div>
                         <div className="desktop"><AccordeonBox buttonClicked={this.state.button2Clicked} onClick={this.toggleButton2}>
-                            Outshifting is the ultimate tool for seamless cross-channel publishing, ensuring
-                            products are just some clicks away from being listed on your favourite platforms, in
-                            order to accommodate multichannel direct sales. 
+                            Outshifter is the ultimate tool for seamless cross-channel publishing, ensuring products are just clicks away from
+                            being listed on your favourite platforms and social media sites.
                         </AccordeonBox></div>
                         <div className="desktop"><AccordeonBox buttonClicked={this.state.button3Clicked} onClick={this.toggleButton3}>
-                            With integrated payment processing and automated order fulfilment our IT
-                            infrastructure enables independent monetisation management. Earn DS commissions
-                            while doing what you love, without compromising your image and integrity.
+                            Earn Direct Sales commissions while doing what you love, without compromising your image and integrity.
+                            With integrated payment processing and automated order fulfilment our infrastructure enables independent
+                            monetisation management.
                         </AccordeonBox></div>
                         <div className="desktop"><AccordeonBox buttonClicked={this.state.button4Clicked} onClick={this.toggleButton4}>
-                            Get real-time statistics from your daily performance, sales and total revenue growth.
-                            Become empowered by comparative insights on segments, trends, channels and
-                            products, tailored to maximise your impact. 
+                            Get real-time statistics on your performance, sales and total revenue growth.
+                            Become empowered by comparative insights on segments, trends, channels and products, tailored to maximise
+                            your impact.
                         </AccordeonBox></div>
                     </div>
                 </div>

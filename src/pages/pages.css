@@ -71,12 +71,17 @@
     text-align: center;
     padding-top: 100px;
 }
+.e-icons h6 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 .e-icons img {
-    max-width: 75px;
+    height: 60px;
     margin-bottom: 20px;
 }
 .e-icons p {
     font-size: 0.8rem;
+    max-width: 200px;
 }
 
 /* Row Mediator */
@@ -101,13 +106,12 @@
 /* Pricing */
 .pricing {
     padding-top: 10%;
-    max-width: 900px!important;
-    margin: 0 auto;
 }
 .pricing p {
     max-width: 540px;
     margin: 0 auto;
     font-size: 1rem;
+    padding-top: 15px;
 }
 .pricing h5 {
     padding-top: 25px;
@@ -116,6 +120,12 @@
     color: #4A90E2;
     font-weight: 400;
     padding-bottom: 25px;
+    font-size: 0.8rem;
+}
+
+.pricing-width {
+    max-width: 900px!important;
+    margin: 0 auto;
 }
 
 .pricing .box {
@@ -128,7 +138,7 @@
 }
 
 .pricing .box img {
-    max-width: 75px;
+    height: 100px;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -163,25 +173,6 @@
     }
 }
 
-/*@media only screen and (min-width: 1201px) {
-    .mediator-width {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-    .merchant-width {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-}*/
-
-@media only screen and (max-width: 1500px) and (min-width: 1201px) {
-    .wrapper-animation-2 {
-        max-width: 450px;
-    }
-    .wrapper-animation-2 img {
-        max-width: 450px;
-    }
-}
 @media only screen and (max-width: 1200px) {
     .wrapper-animation-2 {
         max-width: 350px;
