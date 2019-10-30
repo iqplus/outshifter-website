@@ -15,7 +15,7 @@ export const StyledMenuMobil = styled.nav`
         text-align: center;
         padding: 2rem;
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         top: 0;
         left: 0;
         transition: transform 0.3s ease-in-out;
