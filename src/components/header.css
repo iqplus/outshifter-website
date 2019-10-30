@@ -30,6 +30,8 @@
 .logo-wrapper {
     display: flex;
     align-items: stretch;
+        z-index: 100;
+
 }
 /* Menu */
 .menu-wrapper {
