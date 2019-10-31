@@ -28,6 +28,8 @@ class MenuMobil extends React.Component {
 
   toggleMenu() {
 console.log('soy bton');
+    console.log('sss')
+
   }
   render() {
 
