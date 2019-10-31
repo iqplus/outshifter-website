@@ -2265,6 +2265,10 @@ body-parser@1.19.0:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
+body-scroll-lock@^2.6.4:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/body-scroll-lock/-/body-scroll-lock-2.6.4.tgz#567abc60ef4d656a79156781771398ef40462e94"
+
 bonjour@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/bonjour/-/bonjour-3.5.0.tgz#8e890a183d8ee9a2393b3844c691a42bcf7bc9f5"
@@ -7309,7 +7313,7 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-"lottie-api@github:bodymovin/lottie-api#master":
+lottie-api@bodymovin/lottie-api#master:
   version "1.0.2"
   resolved "https://codeload.github.com/bodymovin/lottie-api/tar.gz/793fcfc4d8f2da1b868977c1a2c36eaf696e28c0"
 
