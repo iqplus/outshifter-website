@@ -7,7 +7,6 @@ jobs:
     branches:
       only:
         - Newtesting
-        - /rc-.*/
     steps:
       - checkout
       - restore_cache:
