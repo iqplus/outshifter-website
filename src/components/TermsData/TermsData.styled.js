@@ -3,14 +3,33 @@ import styled from 'styled-components';
 export const StyledTermsData = styled.div`
 
     padding-top: 25px;
-
     margin-left: 30%;
 
-    .terms-description {
+    .terms-titel-2 {
         padding-top: 25px;
+        padding-bottom: 25px;
     }
     .terms-description h5 {
         padding-bottom: 15px;
+    }
+    .terms-description {
+        padding-bottom: 25px;
+    }
+    .terms-titel h3::before { 
+        display: block; 
+        content: " "; 
+        margin-top: -110px; 
+        height: 110px; 
+        visibility: hidden; 
+        pointer-events: none;
+    }
+    .terms-description h5::before { 
+        display: block; 
+        content: " "; 
+        margin-top: -110px; 
+        height: 110px; 
+        visibility: hidden; 
+        pointer-events: none;
     }
     p {
         color: #4A4A4A;

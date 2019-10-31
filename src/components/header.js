@@ -39,14 +39,6 @@ export const StyledMenuName = styled.span`
 
 export default class Header extends Component {
 
-
-
-
-
-
-
-
-  
   constructor(props) {
     super(props);
     this.state = { 
@@ -55,7 +47,6 @@ export default class Header extends Component {
     };
     this.toggleMenu = this.toggleMenu.bind(this);
   
-
     // https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
     if (typeof window !== 'undefined') {
       let prevScrollpos = window.pageYOffset;
@@ -79,28 +70,21 @@ export default class Header extends Component {
         if (currentScrollPos < 86) {
           document.getElementById('navbar').classList.remove('sticky');
         }
-
-
-
-
         prevScrollpos = currentScrollPos;
       };
     }
-  
   }
 
   toggleMenu() {
-console.log("click");
-    
+    console.log("click"); 
     this.setState({ isOpen: !this.state.isOpen });
-
   }
   
   render() {
     return (
       <div>
 
-        <MenuMobil open={this.state.isOpen} onClick={this.toggleMenu}/>
+      <MenuMobil open={this.state.isOpen} onClick={this.toggleMenu}/>
       <div className={'fixed-top'} id="navbar">
       <div className="container menu-class">
         <div className="row">

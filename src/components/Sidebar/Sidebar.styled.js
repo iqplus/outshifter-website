@@ -4,10 +4,11 @@ export const StyledSidebar = styled.nav`
 
     position: fixed;
     top: 75px;
-    bottom: 0;
+    bottom: 100px;
     overflow: scroll;
-
+    
     width: 25%;
+    border-right: 1px solid #D8D8D8;
 
     .sidebar-item-first {
         border-top: 1px solid #D8D8D8;
@@ -18,6 +19,10 @@ export const StyledSidebar = styled.nav`
         padding-bottom: 25px;
         color: #4A4A4A;
         width: 95%;
+    }
+    .sidebar-item img {
+        height: 30px;
+        padding-right: 15px;
     }
     .undermeny {
         padding-top: 25px;
@@ -43,8 +48,7 @@ export const StyledSidebar = styled.nav`
         color: #4A4A4A;
     }
     a:hover {
-        color: #4A4A4A;
-        opacity: 0.8;
+        color: #4A90E2;
         text-decoration: none;
         cursor: pointer;
     }
