@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledMenuMobil = styled.nav`
-
+.logo-wrapper{
+position: absolute;
+top:-30px;
+left: 20px;
+}
     @media only screen and (min-width: 768px) {
         display: none;
     }
@@ -13,11 +17,10 @@ export const StyledMenuMobil = styled.nav`
         justify-content: center;
         background: linear-gradient(45.36deg,#4D88EB 0%,#3DDFF4 100%);
         text-align: center;
-        padding: 2rem;
-        position: absolute;
-        z-index: 3;
-        top: 0;
-        left: 0;
+       padding: 2rem;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
         transition: transform 0.3s ease-in-out;
         width: 100%;
         height: 100%;

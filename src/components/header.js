@@ -14,6 +14,7 @@ import Menu from './Menu/Menu.js';
 import MenuMobil from './MenuMobil/MenuMobil.js';
 import Burger from './Burger/Burger';
 import Button from './Button/Button';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import './header.css';
 
@@ -48,7 +49,10 @@ export default class Header extends Component {
   
   constructor(props) {
     super(props);
-    this.state = { isOpen: false };
+    this.state = { 
+      isOpen: false,
+      lockScroll: false,
+    };
     this.toggleMenu = this.toggleMenu.bind(this);
   
 
@@ -86,6 +90,7 @@ export default class Header extends Component {
   }
 
   toggleMenu() {
+console.log("click");
     
     this.setState({ isOpen: !this.state.isOpen });
 
@@ -94,9 +99,8 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-      
-        <MenuMobil open={this.state.isOpen} />
 
+        <MenuMobil open={this.state.isOpen} onClick={this.toggleMenu}/>
       <div className={'fixed-top'} id="navbar">
       <div className="container menu-class">
         <div className="row">
@@ -121,6 +125,7 @@ export default class Header extends Component {
         </div>
       </div>
       </div>  
+
       </div>
     );
   }

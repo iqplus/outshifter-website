@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 
-export const StyledBurger = styled.button`
-  position: relative;
-  top: 8px;
+export const StyledBurger = styled.button.attrs(props => ({
+position: props.position || 'relative',
+top: props.top || '8px',
+right: props.right || 'auto',
+}))`
+  right: ${props => props.right};
+  position: ${props => props.position};
+  top: ${props => props.top};
   float: right;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
   height: 2rem;
+    right: ${props => props.right};
+
   background: linear-gradient(45.36deg, #4D88EB 0%, #3DDFF4 100%);
   border: none;
   border-radius: 50%;

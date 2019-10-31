@@ -4,6 +4,10 @@ jobs:
     docker:
       - image: circleci/node:10
     working_directory: ~/gatsby-site
+    branches:
+      only:
+        - Newtesting
+        - /rc-.*/
     steps:
       - checkout
       - restore_cache:
@@ -30,3 +34,5 @@ jobs:
       - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token="$FIREBASE_TOKEN" --non-interactive
+
+
