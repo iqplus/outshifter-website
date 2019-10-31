@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
     <GlobalStyles />
       <Header siteTitle={'Outshifter'} />
       <div>
-        <main>{children}</main>
+        <main className="main-class">{children}</main>
         <footer>
           <div className="container footer">
             <div className="row">

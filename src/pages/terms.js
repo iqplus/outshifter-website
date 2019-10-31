@@ -30,12 +30,14 @@ class TermsPage extends React.Component {
             this.setState({
                 isCollapsed1: !this.state.isCollapsed1,
                 showInfo2: false,
+                isCollapsed2:false
             });
         } else {
             this.setState({
                 isCollapsed1: !this.state.isCollapsed1,
                 showInfo1: !this.state.showInfo1,
                 showInfo2: false,
+                isCollapsed2:false
             });
         }
     }
@@ -44,14 +46,17 @@ class TermsPage extends React.Component {
             this.setState({
                 isCollapsed2: !this.state.isCollapsed2,
                 showInfo1: false,
+                isCollapsed1:false
             });
         } else {
             this.setState({
                 isCollapsed2: !this.state.isCollapsed2,
                 showInfo2: !this.state.showInfo2,
                 showInfo1: false,
+                isCollapsed1:false
             });
-        }    }
+        }
+    }
 
     render () {
         return (
@@ -69,7 +74,12 @@ class TermsPage extends React.Component {
                         info1={this.state.showInfo1}
                         info2={this.state.showInfo2}
                     />
-                    <AccordeonTerms />
+                    <AccordeonTerms 
+                        collapsed1={this.state.isCollapsed1}
+                        collapsed2={this.state.isCollapsed2}
+                        toggle1={this.toggleMenuItem1}
+                        toggle2={this.toggleMenuItem2}
+                    />
                 </div>
         
             </Layout>

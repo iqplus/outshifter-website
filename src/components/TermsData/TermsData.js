@@ -20,7 +20,7 @@ class TermsData extends React.Component {
                     <p>Last updated: 23.10.2019</p>
                 </div>
 
-                <div className="terms-description">
+                <div className="terms-titel-2">
                     <h5>Welcome to Outshifter!</h5>
                     <p>
                         Please carefully review these General Terms and Conditions of Use (“<strong>Terms</strong>”, “<strong>Agreement</strong>”) before registering for or using the platform, outshifer.com and services offered by Outshifter AS. The Agreement sets out the legally binding terms and conditions for your use of the platform, outshifter.com, including any subdomains thereof, and services (hereinafter collectively referred to as the “<strong>Outshifter Platform</strong>” or “<strong>Platform</strong>”) offered by Outshifter AS. By using, accessing, or registering for the Outshifter Platform you agree to comply with and accept these Terms.<br/>
@@ -226,7 +226,7 @@ class TermsData extends React.Component {
                     <p>Last updated: 22.10.2019</p>
                 </div>
 
-                <div className="terms-description">
+                <div className="terms-titel-2">
                     <h5>Thank you for using Outshifter!</h5>
                     <p>
                         At Outshifter we are committed to ensuring the highest level of trust and transparency. Thus, privacy and security of your personal data is of the utmost importance to us. Please carefully review our Privacy Policy before using our platform, website and services (“Platform”).
