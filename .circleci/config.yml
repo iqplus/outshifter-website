@@ -9,6 +9,10 @@ jobs:
         - newtesting
     steps:
       - checkout
+      - run:
+          name: Checkout
+          command: git checkout newtesting
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
