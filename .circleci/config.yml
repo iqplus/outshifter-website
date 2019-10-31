@@ -39,3 +39,6 @@ jobs:
           command: ./node_modules/.bin/firebase deploy --token="$FIREBASE_TOKEN" --non-interactive
 
 
+
+
+
