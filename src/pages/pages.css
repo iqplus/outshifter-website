@@ -14,6 +14,7 @@
 .masthead {
     height: 100vh;
     min-height: 500px;
+    margin-top: -80px;
 }
 
 .main-banner h1 {
