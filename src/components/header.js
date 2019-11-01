@@ -103,7 +103,7 @@ export default class Header extends Component {
               <StyledMenuName open={this.state.isOpen}>Menu</StyledMenuName>
               <Burger open={this.state.isOpen} onClick={this.toggleMenu}/>
               <Menu open={this.state.isOpen} />
-              <div className="button-meny"><Button>Sign in</Button></div>
+              <div className="button-meny"><Link to={'/account'}><Button>Sign in</Button></Link></div>
             </div>
           </div>
         </div>

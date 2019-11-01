@@ -4,6 +4,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import './layout.css'
 import Header from "./header"
 
+import { Link } from 'gatsby'
+
+
 import 'bootstrap/dist/css/bootstrap.css';
 
 import { ThemeProvider } from 'styled-components';
@@ -34,11 +37,11 @@ const Layout = ({ children }) => {
         <footer>
           <div className="container footer">
             <div className="row">
-              <div className="col"><p>Terms & Conditions</p></div>
-              <div className="col"><p>Legal Notice</p></div>
-              <div className="col"><p>Privacy Policy</p></div>
+              <div className="col"><Link to={'/terms'}>Terms & Conditions</Link></div>
+              <div className="col"><Link to={'/terms'}>Legal Notice</Link></div>
+              <div className="col"><Link to={'/terms'}>Privacy Policy</Link></div>
             </div>
-            <div className="row">
+            <div className="row copyright">
               <div className="col">
                 <p>© 2019 Outshifter AS. All rights reserved.</p>
                 </div>

@@ -6,3 +6,18 @@
     padding-top: 250px;
     text-align: center;
 }
+.footer a {
+    color: #9599A8;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.footer a:hover {
+    color: #4A90E2;
+    text-decoration: none;
+    cursor: pointer;
+}
+.copyright {
+    padding-top:25px;
+}

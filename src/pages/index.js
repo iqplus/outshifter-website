@@ -54,7 +54,7 @@ class IndexPage extends React.Component {
                 Outshifter is the complete distribution<br/>
                 tool for tomorrows e-commerce.
               </p>
-              <Button>Sign up</Button>
+              <Link to={'/account'}><Button>Sign up</Button></Link>
             </div>
             <div className="col-md-12 col-lg-7">
               <div className="wrapper-animation-1">
@@ -184,7 +184,7 @@ class IndexPage extends React.Component {
                   </ul>
                   <h5>4.8% + 0.18€</h5>
                   <h6>About service fee</h6>
-                  <Button>Create Account</Button>
+                  <Link to={'/account'}><Button>Create Account</Button></Link>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@ class IndexPage extends React.Component {
                   </ul>
                   <h5>FREE</h5>
                   <h6>About service</h6>
-                  <Button>Create Account</Button>
+                  <Link to={'/account'}><Button>Create Account</Button></Link>
                 </div>
               </div>
             </div>
