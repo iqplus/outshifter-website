@@ -13,7 +13,7 @@ import Button from "../components/button/button"
 const Banner = styled.div`
     background-image: url(${BannerCareer});
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-position: 0% 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,9 +22,9 @@ const Banner = styled.div`
       height: 100%;
       opacity: 0.62;
     }
-    @media only screen and (min-width: 1500px) {
+    {/*@media only screen and (min-width: 1500px) {
       height: 500px;
-    }
+    }/*}
 `;
 const ColImage1 = styled.div`
     background-image: url(${CareerJoinTeam});
@@ -33,6 +33,7 @@ const ColImage1 = styled.div`
     background-size: cover;
     border-radius: 13px;
     background-position: 45% center;
+    box-shadow: 0px 2px 27px grey;
     @media only screen and (max-width: 991px) {
       height: 300px;
     }
@@ -44,6 +45,7 @@ const ColImage2 = styled.div`
     background-size: cover;
     border-radius: 13px;
     background-position: center;
+    box-shadow: 0px 2px 27px grey;
     @media only screen and (max-width: 991px) {
       height: 300px;
     }
@@ -59,8 +61,8 @@ const InnerPages = styled.div`
   .intro h2 {
     padding-bottom: 25px;
   }
-  .intro h5 {
-    font-weight: 500;
+  .intro p {
+    font-size: 1.2rem;
   }
   .information {
     padding-bottom: 10%;
@@ -70,8 +72,6 @@ const InnerPages = styled.div`
   }
   .information p {
     font-size: 1rem;
-    font-weight: 500;
-    color: #4A4A4A;
     text-align: justify;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -84,9 +84,9 @@ const InnerPages = styled.div`
       padding-right: 10%;
     }
   }
-  @media only screen and (max-width: 1500px) and (min-width: 1400px) {
+  {/*@media only screen and (max-width: 1500px) and (min-width: 1400px) {
     .intro {padding-top: 5%;}
-  }
+  }*/}
   @media only screen and (max-width: 991px) {
     .information-col-1 {
       padding-top: 5%;
@@ -114,9 +114,9 @@ const CareersPage = () => (
       <div className="row intro">
         <div className="col">
           <h2>Careers</h2>
-          <h5>
-            Outshifter builds the infrastructure of tomorrow´s e-commerce. We believe the future of e-commerce should empower and work for all, not only the few. And we would like your help!
-          </h5>
+          <p>
+            Outshifter builds the infrastructure of tomorrow´s e-commerce.<br/>We believe the future of e-commerce should empower and work for all, not only the few. And we would like your help!
+          </p>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@ const CareersPage = () => (
     {/* Info 2 */}
     <div className="container">   
       <div className="row information">
-        <div className="order-2 order-md-2 col-md-12 order-lg-1 col-lg-6 align-self-center information-col-1">
+        <div className="order-2 order-md-2 col-md-12 order-lg-1 col-lg-6 align-self-center information-col-2">
           <h4>Students & Interns</h4>
           <p>
             Looking for a part-time position or a company to write your thesis with? At Outshifter we are always open for students and their ideas and projects. The future belongs to the young.

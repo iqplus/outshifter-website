@@ -137,7 +137,7 @@ class IndexPage extends React.Component {
         <div className="container-fluid merchant">
           <div className="container">
             <div className="row no-gutters">            
-              <div className="user-col col-md-12 col-lg-6 align-self-center">
+              <div className="order-2 order-md-2 order-lg-1 user-col col-md-12 col-lg-6 align-self-center">
                 <div className="merchant-width">
                   <h2>Merchant</h2>
                   <p className="user-description">
@@ -147,7 +147,7 @@ class IndexPage extends React.Component {
                   <Accordeon2 />
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 align-self-center merchant-width">
+              <div className="order-1 order-md-1 order-lg-2 col-md-12 col-lg-6 align-self-center merchant-width">
                 <div className="wrapper-animation-3">
                   <div className="animation-background"><img src={Animation3Tablet}></img></div>
                   <div className="class-animation-3"><Lottie options={{animationData: Animation3}}/></div>

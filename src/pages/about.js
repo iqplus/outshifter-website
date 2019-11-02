@@ -12,7 +12,7 @@ import Button from "../components/button/button"
 const Banner = styled.div`
     background-image: url(${BannerCareer});
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-position: 0% 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,9 +21,9 @@ const Banner = styled.div`
       height: 100%;
       opacity: 0.62;
     }
-    @media only screen and (min-width: 1500px) {
+    {/*@media only screen and (min-width: 1500px) {
       height: 500px;
-    }
+    }*/}
 `;
 const ColImage1 = styled.div`
     background-image: url(${AboutVision});
@@ -32,6 +32,7 @@ const ColImage1 = styled.div`
     background-size: cover;
     border-radius: 13px;
     background-position: 45% center;
+    box-shadow: 0px 2px 27px grey;
     @media only screen and (max-width: 991px) {
       height: 300px;
     }
@@ -48,8 +49,8 @@ const InnerPages = styled.div`
   .intro h2 {
     padding-bottom: 25px;
   }
-  .intro h5 {
-    font-weight: 500;
+  .intro p {
+    font-size: 1.2rem;
   }
   .information {
     padding-bottom: 10%;
@@ -59,8 +60,6 @@ const InnerPages = styled.div`
   }
   .information p {
     font-size: 1rem;
-    font-weight: 500;
-    color: #4A4A4A;
     text-align: justify;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -73,9 +72,9 @@ const InnerPages = styled.div`
       padding-right: 10%;
     }
   }
-  @media only screen and (max-width: 1500px) and (min-width: 1400px) {
+  {/*@media only screen and (max-width: 1500px) and (min-width: 1400px) {
     .intro {padding-top: 5%;}
-  }
+  }*/}
   @media only screen and (max-width: 991px) {
     .information-col-1 {
       padding-top: 5%;
@@ -104,9 +103,9 @@ const AboutPage = () => (
       <div className="row intro">
         <div className="col">
           <h2>Disrupting e-commerce</h2>
-          <h5>
+          <p>
           Outshifter is the technology company creating the infrastructure for tomorrows decentralized and transparent e-commerce value-chain.
-          </h5>
+          </p>
         </div>
       </div>
     </div>
