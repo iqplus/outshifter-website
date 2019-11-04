@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import BannerCareer from '../images/banner-career.jpg'
 import CareerJoinTeam from '../images/career-join-team.jpg'
 import CareerStudents from '../images/career-students.jpg'
-import Button from "../components/button/button"
+import Button from "../components/Button/Button"
 
 const Banner = styled.div`
     background-image: url(${BannerCareer});

@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import styled from 'styled-components';
 import BannerCareer from '../images/banner-career.jpg'
 import AboutVision from '../images/about-vision.jpg'
-import Button from "../components/button/button"
+import Button from "../components/Button/Button"
 
 const Banner = styled.div`
     background-image: url(${BannerCareer});
