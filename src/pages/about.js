@@ -4,31 +4,133 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Lottie from 'lottie-react-web'
-import Animation1 from '../animations/animation1.json'
-import Animation1Phone from '../images/Animation-1-Phone.png'
+import styled from 'styled-components';
+import BannerCareer from '../images/banner-career.jpg'
+import AboutVision from '../images/about-vision.jpg'
+import Button from "../components/button/button"
+
+const Banner = styled.div`
+    background-image: url(${BannerCareer});
+    width: 100%;
+    height: 300px;
+    background-position: 0% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    div {
+      background-image: linear-gradient(to top right, #5851e5, #3ddff4);
+      height: 100%;
+      opacity: 0.62;
+    }
+    {/*@media only screen and (min-width: 1500px) {
+      height: 500px;
+    }*/}
+`;
+const ColImage1 = styled.div`
+    background-image: url(${AboutVision});
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 13px;
+    background-position: 45% center;
+    box-shadow: 0px 2px 27px grey;
+    @media only screen and (max-width: 991px) {
+      height: 300px;
+    }
+`;
+
+const InnerPages = styled.div`
+  .intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .intro h2 {
+    padding-bottom: 25px;
+  }
+  .intro p {
+    font-size: 1.2rem;
+  }
+  .information {
+    padding-bottom: 10%;
+  }
+  .information h4 {
+    font-weight: 600;
+  }
+  .information p {
+    font-size: 1rem;
+    text-align: justify;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @media only screen and (min-width: 992px) {
+    .information-col-1 {
+      padding-left: 10%;
+    }
+    .information-col-2 {
+      padding-right: 10%;
+    }
+  }
+  {/*@media only screen and (max-width: 1500px) and (min-width: 1400px) {
+    .intro {padding-top: 5%;}
+  }*/}
+  @media only screen and (max-width: 991px) {
+    .information-col-1 {
+      padding-top: 5%;
+    }
+    .information-col-2 {
+      padding-top: 10%;
+    }
+  }
+`;
 
 const AboutPage = () => (
   <Layout>
   <SEO title="About" />
   
+  <InnerPages>
+  
     {/* Banner */}
-    <div className={'masthead'}>   
-      <div className={'container ' + 'h-100 '}>
-        <div className="row h-100 align-items-center main-banner no-gutters">
-          <div className="col-md-12 col-lg-5">
-            <h1>About Page<br/>Coming Soon</h1>
-            <p>Page under construction</p>
-          </div>
-          <div className="col-md-12 col-lg-7">
-            <div className="wrapper-animation-1">
-              <div className="animation-background"><img src={Animation1Phone}></img></div>
-              <div className="class-animation"><Lottie options={{animationData: Animation1}}/></div>
-            </div>
-          </div>
+    <div className="container-fluid ">   
+      <div className="row banner">
+        <Banner><div></div></Banner>
+      </div>
+    </div>
+
+    {/* Intro */}
+    <div className="container">   
+      <div className="row intro">
+        <div className="col">
+          <h2>Disrupting e-commerce</h2>
+          <p>
+          Outshifter is the technology company creating the infrastructure for tomorrows decentralized and transparent e-commerce value-chain.
+          </p>
         </div>
       </div>
     </div>
+
+    {/* Info 1 */}
+    <div className="container">   
+      <div className="row information">
+        <div className="col-md-12 col-lg-6 align-self-center">
+          <ColImage1 />
+        </div>
+        <div className="col-md-12 col-lg-6 align-self-center information-col-1">
+          <h4>Vision</h4>
+          <p>
+            We were born out of a desire to disrupt the e-commerce value chain for the better -centred on our belief in transparency, empowerment, ease-of-use and innovation.These beliefs are the cornerstones of our platform and the essence of the term outshifting: 
+            <br/><br/>
+            -The act distributing products and services to multiple online channels.
+            <br/><br/>
+            With outshifting we aim to empower both Merchants and Mediators by providing them with the tools, infrastructure and network to scale. Consequently enabling consumers to securely buy what they see, at the places they spend their time online.
+          </p>
+          <Button>Contact</Button>
+        </div>
+      </div>
+    </div>
+  
+  </InnerPages>
 
   </Layout>
 )
