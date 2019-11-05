@@ -30,7 +30,7 @@
 .logo-wrapper {
     display: flex;
     align-items: stretch;
-        z-index: 100;
+    z-index: 100;
 
 }
 /* Menu */
@@ -52,13 +52,17 @@
     .logo-wrapper img {
         width: 143px;
         height: 30px;
-    
     }
     
     .logo-line  {
         line-height: 10px;
     }
 
+}
+@media only screen and (min-width: 1500px) {
+    .fixed-top .container {
+        max-width: 97%!important;
+    }
 }
 
 @media only screen and (max-width: 1200px) {

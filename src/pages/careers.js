@@ -84,9 +84,6 @@ const InnerPages = styled.div`
       padding-right: 10%;
     }
   }
-  {/*@media only screen and (max-width: 1500px) and (min-width: 1400px) {
-    .intro {padding-top: 5%;}
-  }*/}
   @media only screen and (max-width: 991px) {
     .information-col-1 {
       padding-top: 10%;
@@ -98,6 +95,17 @@ const InnerPages = styled.div`
       padding-top: 10%;
     }
   }
+  @media only screen and (max-width: 575px) {
+    .col-md-12 {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    .col {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
 `;
 
 const CareersPage = () => (
@@ -117,9 +125,8 @@ const CareersPage = () => (
       <div className="row intro">
         <div className="col">
           <h2>Careers</h2>
-          <p>
-            Outshifter builds the infrastructure of tomorrow´s e-commerce.<br/>We believe the future of e-commerce should empower and work for all, not only the few. And we would like your help!
-          </p>
+          <p>Outshifter builds the infrastructure of tomorrow´s e-commerce.</p>
+          <p>We believe the future of e-commerce should empower and work for all, not only the few. And we would like your help!</p>
         </div>
       </div>
     </div>
