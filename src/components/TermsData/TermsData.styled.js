@@ -11,6 +11,7 @@ export const StyledTermsData = styled.div`
     }
     .terms-description h5 {
         padding-bottom: 15px;
+        color: #4A4A4A;
     }
     .terms-description {
         padding-bottom: 25px;

@@ -28,10 +28,8 @@ export const StyledMenuName = styled.span`
     line-height: 48px;
     color: #4A4A4A;
 
-    @media only screen and (max-width: 1024px) {
-    
+    @media only screen and (max-width: 1024px) {  
         display: none;
-
     }
 
 `;

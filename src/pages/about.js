@@ -72,15 +72,22 @@ const InnerPages = styled.div`
       padding-right: 10%;
     }
   }
-  {/*@media only screen and (max-width: 1500px) and (min-width: 1400px) {
-    .intro {padding-top: 5%;}
-  }*/}
   @media only screen and (max-width: 991px) {
     .information-col-1 {
       padding-top: 10%;
     }
     .information-col-2 {
       padding-top: 10%;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .col-md-12 {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    .col {
+      padding-left: 25px;
+      padding-right: 25px;
     }
   }
 `;

@@ -264,6 +264,7 @@ class AccordeonTerms extends React.Component {
                                             <li>Continuously improve our Platform. Through collecting information on your recent visits to our Platform and which parts of the Platform you engaged with, this allows us to understand how people use our Platform so we can improve it.</li>
                                             <li>Being Compliant. We use information provided by you to make sure we are compliant with local laws and regulations. For instance, to avoid fraud and tax compliance.</li>
                                         </ul>
+                                        <br/>
                                         Your decision not to supply us with required information could result in us not being able to provide our Platform to you. 
                                         <br/><br/>
                                         <h6>1.1 Information you Provide</h6>
@@ -278,6 +279,7 @@ class AccordeonTerms extends React.Component {
                                             <li>Social Media Account Information</li>
                                             <li>Transaction Information</li>
                                         </ul>
+                                        <br/>
                                         <h6>1.2 Information We Automatically Collect</h6>
                                         When you use and access the Outshifter Platform, such as when you visit our website, we might automatically collect information about how you use it and the devices you use to access it on. Information we might collect automatically:
                                         <ul>
@@ -302,6 +304,7 @@ class AccordeonTerms extends React.Component {
                                             <li>Companies approved by you, such as social media sites (if you choose to link your accounts to us) and Merchants that you place an order from.</li>
                                             <li>Law Enforcement and Authorities. For instance, in tax related matters and to avoid fraud.</li>
                                         </ul>
+                                        <br/>
                                         We may provide third parties with aggregated but anonymized information and analytics about how our Platform is being used, before we do so, we will make sure that it does not identify you.
                                     </p>
                                 </div>
@@ -321,6 +324,7 @@ class AccordeonTerms extends React.Component {
                                             <li>Functionality: These are used to recognize you when you return to our Platform. This enables us to personalize our content for you, greet you by name and remember your preferences (for example, your choice of language or region). An example is stack_ch which allows us to track your entire journey on our Platform or gpv_p12 which captures which page on three.ie you've come from prior to the one you're on.</li>
                                             <li>Session cookies: These are used to maintain your session when you sign in on Outhsifter, or when purchasing a product outshifted through our Platform. If you choose to deny this cookie, this will affect your ability to purchase online or to remain signed in on your account online. An example of a session cookies is PHPSESSID. The PHPSESSID cookie is set by our website to enable it to store state data. It is used to establish a user session and to pass state data via a session cookie. It helps maintain a logged-in status for a user between pages.</li>
                                         </ul>
+                                        <br/>
                                         <h6>3.3 Third party cookies</h6>
                                         We use cookies served by third parties in order to improve our Platform; personalize your experience; and understand how our Platform is used. We also use cookies to make our advertising on other websites more relevant. Using information collected about you for advertising purposes is known as targeted or behavioral advertising. You can opt out of this behavioral advertising on the web browser you are currently using with an "opt-out cookie" by visiting http://www.youronlinechoices.com/ie/your-ad-choices or by using the specific opt-outs listed below. If you choose to turn off online behavioral advertising it does not mean you will no longer receive online advertising, it means that the advertising you see may not be tailored to your interests or preferences on the web browser you are currently using.
                                         <br/><br/>
@@ -350,6 +354,7 @@ class AccordeonTerms extends React.Component {
                                             <li><strong>The right to object to processing</strong> – You have the right to object to Outshifter processing of your personal information, under certain conditions.</li>
                                             <li><strong>The right to data portability</strong> – You have the right to request that Outhifter transfer the information that we have collected to another organization, or directly to you, under certain conditions.</li>
                                         </ul>
+                                        <br/>
                                         These rights can be exercised at any time by updating your information and preferences in the account settings page on the Outshifter Platform or contacting us at privacy@outshifter.com. If you make a request, we have one month to respond to you.
                                     </p>
                                 </div>

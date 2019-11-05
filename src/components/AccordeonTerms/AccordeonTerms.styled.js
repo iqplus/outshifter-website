@@ -32,6 +32,12 @@ export const StyledAccordeonTerms = styled.div`
         padding-bottom: 15px;
         padding-top: 25px;
     }
+    .terms-titel-2 h5 {
+        color: #4A4A4A;
+    }
+    .terms-description h5 {
+        color: #4A4A4A;
+    }
     a {
         color: #4A4A4A;
     }

@@ -45,6 +45,9 @@ export const StyledSidebar = styled.nav`
     h5 {
         color: #9B9B9B;
     }
+    .terms-description h5 {
+        color: #4A4A4A;
+    }
     a {
         color: #4A4A4A;
     }
