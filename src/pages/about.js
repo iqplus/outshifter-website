@@ -77,7 +77,7 @@ const InnerPages = styled.div`
   }*/}
   @media only screen and (max-width: 991px) {
     .information-col-1 {
-      padding-top: 5%;
+      padding-top: 10%;
     }
     .information-col-2 {
       padding-top: 10%;
@@ -102,9 +102,9 @@ const AboutPage = () => (
     <div className="container">   
       <div className="row intro">
         <div className="col">
-          <h2>Disrupting e-commerce</h2>
+          <h2>Shaping the Future of e-Commerce</h2>
           <p>
-          Outshifter is the technology company creating the infrastructure for tomorrows decentralized and transparent e-commerce value-chain.
+          Outshifter is a technology company creating the infrastructure for tomorrows decentralized and transparent e-commerce value-chain.
           </p>
         </div>
       </div>
@@ -117,14 +117,13 @@ const AboutPage = () => (
           <ColImage1 />
         </div>
         <div className="col-md-12 col-lg-6 align-self-center information-col-1">
-          <h4>Vision</h4>
+          <h4>Outshifting</h4>
           <p>
             We were born out of a desire to disrupt the e-commerce value chain for the better -centred on our belief in transparency, empowerment, ease-of-use and innovation.These beliefs are the cornerstones of our platform and the essence of the term outshifting: 
             <br/><br/>
             -The act distributing products and services to multiple online channels.
             <br/><br/>
-            With outshifting we aim to empower both Merchants and Mediators by providing them with the tools, infrastructure and network to scale. Consequently enabling consumers to securely buy what they see, at the places they spend their time online.
-          </p>
+            With outshifting we aim to empower both Merchants and Mediators by providing them with the tools, infrastructure and network to scale. In simplifying online distribution and cross-channel transactions we intend to lower the barriers of monotization, making anyone a potential sales channel. Consequently, enabling consumers to securely buy what they see, at the places they spend their time online.           </p>
           <Button>Contact</Button>
         </div>
       </div>
