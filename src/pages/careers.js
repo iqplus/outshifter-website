@@ -89,9 +89,12 @@ const InnerPages = styled.div`
   }*/}
   @media only screen and (max-width: 991px) {
     .information-col-1 {
-      padding-top: 5%;
+      padding-top: 10%;
     }
     .information-col-2 {
+      padding-top: 10%;
+    }
+    .img-col-2 {
       padding-top: 10%;
     }
   }
@@ -149,7 +152,7 @@ const CareersPage = () => (
           </p>
           <Button>Contact</Button>
         </div>
-        <div className="order-1 order-md-1 col-md-12 order-lg-2 col-lg-6 align-self-center">
+        <div className="order-1 order-md-1 col-md-12 order-lg-2 col-lg-6 align-self-center img-col-2">
           <ColImage2 />
         </div>
       </div>

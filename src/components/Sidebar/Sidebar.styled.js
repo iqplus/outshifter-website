@@ -8,6 +8,7 @@ export const StyledSidebar = styled.nav`
     overflow: scroll;
     
     width: 25%;
+    max-width: 360px;
     border-right: 1px solid #D8D8D8;
 
     .sidebar-item-first {
