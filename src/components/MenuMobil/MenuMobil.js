@@ -64,7 +64,8 @@ console.log('soy bton');
             <ul>
                 <StaticQuery query={MENU} render={data =>{
                     const menu = data.allContentfulPage.edges;
-                    return menu.map((item, index) => {
+                    const menuordenado = menu.sort( (a,b) => a.node.order - b.node.order );
+                    return menuordenado.map((item, index) => {
                         return <li><Link key={item.node.slug} to={'/' + item.node.slug} className={'menu-' + index}><span className="menu-item">{item.node.slug}</span></Link></li>
                 });
                 
@@ -87,6 +88,7 @@ const MENU = graphql `
         node {
           id
           slug
+          order
         }
       }
     }

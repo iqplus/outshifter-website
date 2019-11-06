@@ -19,12 +19,12 @@ import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'bo
 import './header.css';
 
 
-export const StyledMenuName = styled.span`
+const StyledMenuName = styled.span`
 
     transition: ${({ open }) => open ? 'opacity 0.2s linear 0.1s' : 'opacity 0.2s linear 0.5s'};
     opacity: ${({ open }) => open ? '0' : '1'};
     position: relative;
-    left: 300px;
+    left: 440px;
     line-height: 48px;
     color: #4A4A4A;
 
