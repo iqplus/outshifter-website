@@ -6,6 +6,8 @@ import Button from "../Button/Button"
 const FormGroup = styled.div`
     display: block;
     width: 100%;
+    max-width: 991px;
+    margin: 0 auto;
     color: #9C9C9F;
     .submit-button {text-align: right;}
     @media only screen and (max-width: 991px) {

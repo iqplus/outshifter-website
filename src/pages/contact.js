@@ -42,6 +42,7 @@ const ContactStyled = styled.div`
   .position-1 {margin-right: 10%}
   .position-3 {margin-left: 10%}
   .contact-description {padding-top:50px;padding-bottom:50px;}
+
   @media only screen and (max-width: 1300px) {
     .position-1 {margin-right: 5%}
     .position-3 {margin-left: 5%}
@@ -50,6 +51,9 @@ const ContactStyled = styled.div`
     .position-1 {margin-right: 0%}
     .position-3 {margin-left: 0%}
   }
+  @media only screen and (max-width: 1017px) and (min-width: 992px) {
+    .bulletsicon {padding-top: 5px;}
+  }
   @media only screen and (max-width: 991px) {
     .position-2 {margin-top: 25px;margin-bottom:25px;}
   }
@@ -57,6 +61,7 @@ const ContactStyled = styled.div`
 
 const BoxStyled = styled.div`
   box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1px 0 rgba(0,0,0,.07);
+  transition: box-shadow 0.5s;
   padding: 15px;
   border-radius: 6px;
   img {height: 50px;}
@@ -67,7 +72,11 @@ const BoxStyled = styled.div`
     font-size: 0.8rem!important;
   }
   &:hover {
+    transition: box-shadow 1s;
     box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
+  }
+  @media only screen and (max-width: 1017px) and (min-width: 992px) {
+    height: 90px;
   }
   @media only screen and (max-width: 991px) {
     max-width: 350px;
