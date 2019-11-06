@@ -92,9 +92,9 @@ const InnerPages = styled.div`
   }
 `;
 
-const AboutPage = () => (
+const CompanyPage = () => (
   <Layout>
-  <SEO title="About" />
+  <SEO title="Company" />
   
   <InnerPages>
   
@@ -141,4 +141,4 @@ const AboutPage = () => (
   </Layout>
 )
 
-export default AboutPage
+export default CompanyPage

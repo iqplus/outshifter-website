@@ -13,6 +13,8 @@ import MyContact from "../components/MyContact/MyContact"
 
 
 const ContactStyled = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
   .intro {
     padding-top: 5%;
   }
@@ -39,19 +41,15 @@ const ContactStyled = styled.div`
     float: right;
     width: 70%;
   }
-  .position-1 {margin-right: 10%}
-  .position-3 {margin-left: 10%}
+  .position-1 {margin-right: 5%}
+  .position-3 {margin-left: 5%}
   .contact-description {padding-top:50px;padding-bottom:50px;}
 
-  @media only screen and (max-width: 1300px) {
-    .position-1 {margin-right: 5%}
-    .position-3 {margin-left: 5%}
-  }
-  @media only screen and (max-width: 1150px) {
+  @media only screen and (max-width: 1400px) {
     .position-1 {margin-right: 0%}
     .position-3 {margin-left: 0%}
   }
-  @media only screen and (max-width: 1017px) and (min-width: 992px) {
+  @media only screen and (max-width: 1035px) and (min-width: 992px) {
     .bulletsicon {padding-top: 5px;}
   }
   @media only screen and (max-width: 991px) {
@@ -75,7 +73,7 @@ const BoxStyled = styled.div`
     transition: box-shadow 1s;
     box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
   }
-  @media only screen and (max-width: 1017px) and (min-width: 992px) {
+  @media only screen and (max-width: 1035px) and (min-width: 992px) {
     height: 90px;
   }
   @media only screen and (max-width: 991px) {
@@ -88,7 +86,7 @@ const ContactPage = () => (
   <Layout>
   <SEO title="Contact" />
   <ContactStyled>
-  
+
     <div className="container">
 
       {/* Intro */}
