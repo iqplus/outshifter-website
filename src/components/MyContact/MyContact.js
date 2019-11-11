@@ -62,21 +62,21 @@ state= {
 
     onFormSubmit = (e) => {
 
-        e.preventDefault()
+    e.preventDefault()
 
-        axios({
-            method: 'post',
-            url: globalvariables.MailUrl,
-            data: qs.stringify({
-                email: this.state.email,
-                name: this.state.name,
-                segment: this.state.segment,
-                subject: this.state.subject,
-                message: this.state.message,
-            }),
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }})
+    axios({
+        method: 'post',
+        url: globalvariables.MailUrl,
+        data: qs.stringify({
+            email: this.state.email,
+            name: this.state.name,
+            segment: this.state.segment,
+            subject: this.state.subject,
+            message: this.state.message,
+        }),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }})
     .then(function (response) {
         console.log(response);
     })
