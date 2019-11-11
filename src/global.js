@@ -79,3 +79,6 @@ export const GlobalStyles = createGlobalStyle`
 
 
 `
+
+
+export const MailUrl = 'https://outshifter-backend.herokuapp.com/send'
