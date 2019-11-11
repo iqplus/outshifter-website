@@ -1,8 +1,9 @@
 import React from "react"
 import styled from 'styled-components';
-
+import axios from 'axios'
 import Button from "../Button/Button"
-
+import qs from 'qs'
+import * as globalvariables from '../../global'
 const FormGroup = styled.div`
     display: block;
     width: 100%;
@@ -47,18 +48,54 @@ const MyTextArea = styled.textarea`
     };
 `;
 
+
+
 class MyContact extends React.Component {
 
+state= {
+    name: 'angelo sepulveda',
+    email: 'angelo.sv@iqplus.no',
+    segment: 'esi',
+    subject: 'sdaoimmds', 
+    message:  'sdfdf sdflk sdk fsldf'    
+}
+
+    onFormSubmit = (e) => {
+
+        e.preventDefault()
+
+        axios({
+            method: 'post',
+            url: globalvariables.MailUrl,
+            data: qs.stringify({
+                email: this.state.email,
+                name: this.state.name,
+                segment: this.state.segment,
+                subject: this.state.subject,
+                message: this.state.message,
+            }),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }})
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (response) {
+        console.log(response);
+    });
+
+    }
    
     render() {
         return (
-            
+            <form onSubmit={this.onFormSubmit} method="post">
+
             <FormGroup>
         
                 <div className="row">
                     <div className="col-md-12 col-lg-6">
                         <Label>Your Name</Label>
-                        <MyInput type="text" />
+                            <MyInput type="email" name="email" />
                     </div>
                     <div className="col-md-12 col-lg-6">
                         <Label>User Segment</Label>
@@ -78,7 +115,7 @@ class MyContact extends React.Component {
                 </div>
         
             </FormGroup>
-
+</form>
         );
     }
 }
