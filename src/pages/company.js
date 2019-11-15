@@ -126,11 +126,12 @@ const CompanyPage = () => (
         <div className="col-md-12 col-lg-6 align-self-center information-col-1">
           <h4>Outshifting</h4>
           <p>
-            We were born out of a desire to disrupt the e-commerce value chain for the better -centred on our belief in transparency, empowerment, ease-of-use and innovation.These beliefs are the cornerstones of our platform and the essence of the term outshifting: 
+            We were born out of a desire to disrupt the e-commerce value chain for the better - centred on our belief in transparency, empowerment, ease-of-use and innovation. These beliefs are the cornerstones of our platform and the essence of the term outshifting:
             <br/><br/>
-            -The act distributing products and services to multiple online channels.
+            - The act distributing products and services to multiple online channels.
             <br/><br/>
-            With outshifting we aim to empower both Merchants and Mediators by providing them with the tools, infrastructure and network to scale. In simplifying online distribution and cross-channel transactions we intend to lower the barriers of monotization, making anyone a potential sales channel. Consequently, enabling consumers to securely buy what they see, at the places they spend their time online.           </p>
+            With outshifting we aim to empower both Merchants and Mediators by providing them with the tools, infrastructure and network to scale. In simplifying online distribution and cross-channel transactions we intend to lower the barriers of monotization to monetization, making anyone a potential sales channel. Consequently, enabling consumers to securely buy what they see, at the places they spend their time online.
+          </p>  
           <Button>Contact</Button>
         </div>
       </div>
@@ -141,4 +142,4 @@ const CompanyPage = () => (
   </Layout>
 )
 
-export default CompanyPage
+export default CompanyPage;

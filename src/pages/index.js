@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from 'styled-components';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,6 +23,8 @@ import Animation3 from '../animations/animation3.json'
 import Animation1Phone from '../images/Animation-1-Phone.png'
 import Animation2Phone from '../images/Animation-2-Phone.png'
 import Animation3Tablet from '../images/Animation-3-Tablet.png'
+import DevelopersBackground from '../images/developers-studio-code.png'
+import DevelopersTest from '../images/developers-final.png'
 
 import Icon1 from '../images/icon-1.png'
 import Icon2 from '../images/icon-2.png'
@@ -32,8 +35,179 @@ import IconMediator from '../images/icon-mediator.png'
 import IconMerchant from '../images/icon-merchant.png'
 
 
-class IndexPage extends React.Component {
+const DevAnimation = styled.div`
 
+  .anim--typing-code {
+    width: 425px;
+  }
+  .anim {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-shrink: inherit;
+    justify-content: center;
+  }
+
+  .anim--typing-code .bg {
+    background-image: url(${DevelopersTest});
+    height: 100%;
+  }
+
+  .anim .bg {
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+  }
+
+  .anim .bg {
+    background-repeat: no-repeat;
+  }
+
+  .anim--typing-code .typewriter {
+    position: absolute;
+    top: 60px;
+    left: 110px;
+    width: 89%;
+    height: 200px;
+    padding: 0 1rem;
+    color: #999;
+    font-family: 'Courier New',sans-serif;
+  }
+
+  .anim--typing-code .typewriter p {
+    letter-spacing: .025em;
+    font-size: .65em;
+    margin: 0;
+    line-height: 1.1rem;
+    font-weight: 500;
+  }
+  .section p:not(.bold) {
+    font-weight: 300;
+  }
+  .d-lg-inline {
+    display: inline;
+  }
+
+  .anim--typing-code .typewriter .protocol {
+    color: #f9bd66;
+  }
+
+
+  .ml-4, .mx-4 {
+    margin-left: 1.5rem!important;
+  }
+
+  .anim--typing-code .typewriter .key {
+    color: #5873E5;
+  }
+
+  .anim--typing-code .typewriter .value {
+    color: #3DCEF4;
+  }
+
+  .anim.anim--typing.playing .typing-email {
+    animation:
+        typing-email 5s steps(40, end) infinite,
+        blink-caret-none .75s step-end infinite;
+  }
+  .anim.anim--typing.playing .typing-name {
+    animation:
+        typing-name 5s steps(40, end) infinite,
+        blink-caret .75s step-end infinite;
+    animation-delay: 1s;
+  }
+  .anim.anim--typing.playing .typing-run {
+    animation:
+        typing-run 5s steps(40, end) infinite,
+        blink-caret-none .75s step-end infinite;
+    animation-delay: 2s;
+    margin-top: 65px;
+    color: #5873E5;
+  }
+  .anim--typing-code .typewriter .typing {
+    overflow: hidden;
+    border-right: .2em solid #999;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+
+  /* Typing effect */
+  @keyframes typing-email {
+    0% {width: 0;}
+    20% {width: 30%;}
+    100% {width: 30%;}
+  }
+  @keyframes typing-name {
+    0% {width: 0;}
+    20% {width: 20%;}
+    100% {width: 20%;}
+  }
+  @keyframes typing-run {
+    0% {width: 0;}
+    20% {width: 19%;}
+    100% {width: 19%;}
+  }
+  /* Cursor */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  @keyframes blink-caret-none {
+    from, to { border-color: transparent }
+    50% { border-color: transparent; }
+  }
+
+  @media only screen and (max-width: 1399px) and (min-width: 1200px) {
+    .anim {width: 500px;}
+    .d-none {display:none!important;}
+    .d-lg-inline {display: none;}
+    .anim--typing-code .typewriter {top: 90px;}
+    .anim.anim--typing.playing .typing-run {margin-top: 40px;}
+    @keyframes typing-email {
+      0% {width: 0;}
+      20% {width: 40%;}
+      100% {width: 40%;}
+    }
+    @keyframes typing-name {
+      0% {width: 0;}
+      20% {width: 25%;}
+      100% {width: 25%;}
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+    .anim {width: 400px;}
+    .d-none {display:none!important;}
+    .d-lg-inline {display: none;}
+    .d-991 {display: none;}
+    .anim--typing-code .typewriter {top: 110px; left:85px}
+    .anim.anim--typing.playing .typing-run {margin-top: 35px;}
+    @keyframes typing-email {
+      0% {width: 0;}
+      20% {width: 47%;}
+      100% {width: 47%;}
+    }
+    @keyframes typing-name {
+      0% {width: 0;}
+      20% {width: 32%;}
+      100% {width: 32%;}
+    }
+    @keyframes typing-run {
+      0% {width: 0;}
+      20% {width: 25%;}
+      100% {width: 25%;}
+    }
+
+  }
+  @media only screen and (max-width: 991px) {
+    .anim {margin: 0 auto;}
+  }
+
+`;
+
+
+class IndexPage extends React.Component {
 
   render () {
     return (
@@ -211,7 +385,50 @@ class IndexPage extends React.Component {
             </div>
           
           </div>
+        </div>
 
+        {/* Developers */}
+
+        <div className="container-fluid merchant developer">
+          <div className="container">
+            <div className="row no-gutters">            
+              
+              <div className="col-md-12 col-lg-6 align-self-center">
+                <DevAnimation>
+
+                  <div className="anim anim--typing anim--typing-code playing">
+                    <div className="bg">
+                      <div className="typewriter">
+                          <p className="d-none d-lg-inline"><span class="protocol">GET</span> <span class="value">.../outshifter/orders/</span> <span className="protocol d-sm_none">HTTP/1.1</span></p>
+                          <p className="d-none d-lg-inline">&nbsp;</p>
+                          <p>New orders details:</p>
+                          <p>{"{"}</p>
+                          <p className="d-991"><span className="key">"id":</span> <span class="value">"ord_p7ZAMo1xwNJ4xX"</span>,</p>
+                          <p className="d-991"><span className="key">"customer_reference":</span> <span class="value">"TSTNC-21"</span>,</p>
+                          <p><span className="key">"currency":</span> <span class="value">"Euro"</span>,</p>
+                          <p><span className="key">"order_value":</span> <span class="value">100</span></p>
+                          <p><span className="key">"customer":</span> {"{"}</p>
+                          <p className="ml-4 typing typing-email"><span class="key">"email":</span> <span class="value">"hello@customer.io"</span>,</p>
+                          <p className="ml-4 typing typing-name"><span class="key">"name":</span> <span class="value">"John Doe"</span></p>
+                          <p className="ml-4 typing typing-run"><span>Run Program</span></p>
+                      </div>
+                    </div>
+                  </div>
+    
+                </DevAnimation>
+              </div>
+
+              <div className="user-col col-md-12 col-lg-6 align-self-center">
+                <div className="developer-width">
+                  <h2>Developer Community</h2>
+                  <p className="user-description">
+                  Outshifter aims to facilitate a seamless experience across all channels. If we dont have the plug-in to your favourite platform or you desire an integration to import and synchronise products form your back-end system, feel free to either request one or create one yourself.
+                  </p>
+                </div>
+              </div>
+          
+            </div>
+          </div>
         </div>
 
         </Layout>
