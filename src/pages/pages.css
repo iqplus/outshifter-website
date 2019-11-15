@@ -117,6 +117,7 @@
 /* Pricing */
 .pricing {
     padding-top: 10%;
+    padding-bottom: 10%;
 }
 .pricing p {
     max-width: 540px;
@@ -176,6 +177,32 @@
     margin-right: 10px;
 }
 
+.img-wrapper {
+    width: 100%;
+}
+.img-wrapper img {
+    width: 100%;
+}
+
+.typewriter {
+    display: inline-block;
+}
+
+.developer-width {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end) infinite,
+      blink-caret .75s step-end infinite;
+}
 
 @media only screen and (min-width: 992px) {
     .pricing .box {
@@ -198,7 +225,7 @@
         text-align: center;
     }
     .main-banner h1 {
-        padding-top: 50px;
+        padding-top: 100px;
     }
     .wrapper-animation-2 {
         margin-bottom: 50px;
