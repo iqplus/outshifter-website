@@ -31,9 +31,9 @@ const ColImage1 = styled.div`
     height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 13px;
+    border-radius: 6px;
     background-position: 45% center;
-    box-shadow: 0px 2px 27px grey;
+    box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 7px 14px 2px rgba(50,50,93,.1), 0 7px 14px 2px rgba(0,0,0,.07);
     @media only screen and (max-width: 991px) {
       height: 300px;
     }
@@ -43,9 +43,9 @@ const ColImage2 = styled.div`
     height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 13px;
+    border-radius: 6px;
     background-position: center;
-    box-shadow: 0px 2px 27px grey;
+    box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 7px 14px 2px rgba(50,50,93,.1), 0 7px 14px 2px rgba(0,0,0,.07);
     @media only screen and (max-width: 991px) {
       height: 300px;
     }

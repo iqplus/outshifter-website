@@ -13,17 +13,24 @@ const FormGroup = styled.div`
     .submit-button {text-align: right;}
     .thank-you {
         text-align: center;
-        border: 1px solid green;
+        border: 1px solid #4A90E2;
         border-radius: 6px;
         margin: 30px 0px;
     }
     .thank-you h6 {
-        color: green;
+        color: #4A90E2;
         margin-top: 8px;
     }
     @media only screen and (max-width: 991px) {
         .submit-button {text-align: center;}
     }
+
+    @media only screen and (max-width: 500px) {
+        input {box-shadow: 0px 0px 2px 1px rgba(60,60,93,.095);}
+        select {box-shadow: 0px 0px 2px 1px rgba(60,60,93,.095);}
+        textarea {box-shadow: 0px 0px 2px 1px rgba(60,60,93,.095);}
+    }
+
 `;
 
 const Label = styled.label`
@@ -74,7 +81,6 @@ const MyTextArea = styled.textarea`
         border: 1px solid #4A90E2;
     };
 `;
-
 
 
 class MyContact extends React.Component {
