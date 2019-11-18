@@ -12,7 +12,10 @@ class Menu extends React.Component {
             <StaticQuery query={MENU} render={data =>{
               const menu = data.allContentfulPage.edges;
               const menuordenado = menu.sort( (a,b) => a.node.order - b.node.order );
-              return menuordenado.map((item, index) => {
+              function menuyes(value) {return value.node.menu === true;};
+              const menufiltrado = menuordenado.filter(menuyes);
+              console.log(menufiltrado);
+              return menufiltrado.map((item, index) => {
                 return <Link key={item.node.slug} to={'/' + item.node.slug} className={'menu-' + index}><span className="menu-item">{item.node.slug.charAt(0).toUpperCase()+item.node.slug.slice(1)}</span></Link>
             });
               
@@ -33,6 +36,7 @@ const MENU = graphql `
           id
           slug
           order
+          menu
         }
       }
     }

@@ -32,6 +32,7 @@ const ContactStyled = styled.div`
     font-size: 1rem;
     padding-top: 15px;
     padding-bottom: 15px;
+    color: #4A4A4A;
   }
   .bulletsicon {
     float: left;
@@ -41,9 +42,14 @@ const ContactStyled = styled.div`
     float: right;
     width: 70%;
   }
+  .contact-separator {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
   .position-1 {margin-right: 5%}
   .position-3 {margin-left: 5%}
-  .contact-description {padding-top:50px;padding-bottom:50px;}
+  .contact-description {padding-bottom:50px;}
 
   @media only screen and (max-width: 1400px) {
     .position-1 {margin-right: 0%}
@@ -135,6 +141,8 @@ const ContactPage = () => (
           </BoxStyled></Link>
         </div>
       </div>
+
+      <div className="contact-separator"><hr /></div>
 
       <div className="row faq contact-description">
         <div className="col align-self-center">

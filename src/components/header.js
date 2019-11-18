@@ -24,9 +24,11 @@ const StyledMenuName = styled.span`
     transition: ${({ open }) => open ? 'opacity 0.2s linear 0.1s' : 'opacity 0.2s linear 0.5s'};
     opacity: ${({ open }) => open ? '0' : '1'};
     position: relative;
-    left: 440px;
+    left: 385px;
     line-height: 48px;
     color: #4A4A4A;
+
+    pointer-events: none; 
 
     @media only screen and (max-width: 1024px) {  
         display: none;

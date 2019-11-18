@@ -198,10 +198,31 @@ const DevAnimation = styled.div`
       20% {width: 25%;}
       100% {width: 25%;}
     }
-
   }
   @media only screen and (max-width: 991px) {
     .anim {margin: 0 auto;}
+  }
+
+  @media only screen and (max-width: 450px) {
+    .anim {width: 300px;}
+    .d-450 {display:none;}
+    .anim--typing-code .typewriter {top:139px;left:55px}
+    .anim.anim--typing.playing .typing-run {margin-top: 22px;}
+    @keyframes typing-email {
+      0% {width: 0;}
+      20% {width: 65%;}
+      100% {width: 65%;}
+    }
+    @keyframes typing-name {
+      0% {width: 0;}
+      20% {width: 45%;}
+      100% {width: 45%;}
+    }
+    @keyframes typing-run {
+      0% {width: 0;}
+      20% {width: 35%;}
+      100% {width: 35%;}
+    }
   }
 
 `;
@@ -225,10 +246,10 @@ class IndexPage extends React.Component {
                 Anywhere
               </h1>
               <p>
-                Outshifter is the complete distribution<br/>
-                tool for tomorrows e-commerce.
+                Outshifter is the complete<br/>
+                e-commerce distribution tool.
               </p>
-              <Link to={'/account'}><Button>Sign up</Button></Link>
+              <Link to={'/account'}><Button>Get started for free</Button></Link>
             </div>
             <div className="col-md-12 col-lg-7">
               <div className="wrapper-animation-1">
@@ -402,10 +423,10 @@ class IndexPage extends React.Component {
                           <p className="d-none d-lg-inline"><span class="protocol">GET</span> <span class="value">.../outshifter/orders/</span> <span className="protocol d-sm_none">HTTP/1.1</span></p>
                           <p className="d-none d-lg-inline">&nbsp;</p>
                           <p>New orders details:</p>
-                          <p>{"{"}</p>
+                          <p className="d-450">{"{"}</p>
                           <p className="d-991"><span className="key">"id":</span> <span class="value">"ord_p7ZAMo1xwNJ4xX"</span>,</p>
                           <p className="d-991"><span className="key">"customer_reference":</span> <span class="value">"TSTNC-21"</span>,</p>
-                          <p><span className="key">"currency":</span> <span class="value">"Euro"</span>,</p>
+                          <p className="d-450"><span className="key">"currency":</span> <span class="value">"Euro"</span>,</p>
                           <p><span className="key">"order_value":</span> <span class="value">100</span></p>
                           <p><span className="key">"customer":</span> {"{"}</p>
                           <p className="ml-4 typing typing-email"><span class="key">"email":</span> <span class="value">"hello@customer.io"</span>,</p>
@@ -418,12 +439,13 @@ class IndexPage extends React.Component {
                 </DevAnimation>
               </div>
 
-              <div className="user-col col-md-12 col-lg-6 align-self-center">
+              <div className="col-md-12 col-lg-6 align-self-center">
                 <div className="developer-width">
                   <h2>Developer Community</h2>
                   <p className="user-description">
                   Outshifter aims to facilitate a seamless experience across all channels. If we dont have the plug-in to your favourite platform or you desire an integration to import and synchronise products form your back-end system, feel free to either request one or create one yourself.
                   </p>
+                  <div className="button-dev"><Link to={'/dev'}><Button>Contact us</Button></Link></div>
                 </div>
               </div>
           
