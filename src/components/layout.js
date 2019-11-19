@@ -36,16 +36,16 @@ const Layout = ({ children }) => {
         <main className="main-class">{children}</main>
         <footer>
           <div className="container footer">
-            <div className="row">
+            <div className="row footer-links">
               <div className="col"><Link to={'/terms'}>Terms & Conditions</Link></div>
               <div className="col"><Link to={'/terms'}>Legal Notice</Link></div>
               <div className="col"><Link to={'/terms'}>Privacy Policy</Link></div>
             </div>
-            <div className="row copyright">
+          </div>
+          <div className="row copyright">
               <div className="col">
                 <p>© 2019 Outshifter AS. All rights reserved.</p>
                 </div>
-            </div>
           </div>
         </footer>
       </div>

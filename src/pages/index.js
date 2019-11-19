@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components';
+import CookieConsent from "react-cookie-consent";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -227,13 +228,23 @@ const DevAnimation = styled.div`
 
 `;
 
-
 class IndexPage extends React.Component {
 
   render () {
     return (
+      
       <Layout className="hidden">
         <SEO title="Home" />
+
+        {/* Cookie Consent */}
+        <CookieConsent
+          containerClasses="cookie-container"
+          contentClasses="cookie-text"
+          buttonClasses="cookie-button"
+          buttonText="OK"
+        >
+          Outshifter uses cookies to provide necessary site functionality and improve your experience. By using our website, you agree to our privacy policy and our cookie policy.
+        </CookieConsent>
 
         {/* Banner */}
 

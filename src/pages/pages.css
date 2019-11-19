@@ -3,6 +3,40 @@ h2 {
     font-weight: 900;
 }
 
+/* Cookies */
+.cookie-container {
+    background: -moz-linear-gradient(left, #5873e5 0%, #3dcef4 100%)!important;
+    background: -webkit-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+    background: -o-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+    background: -ms-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+    background: linear-gradient(to right, #5873e5 0%,#3dcef4 100%)!important;
+    align-items: center!important;
+}
+.cookie-text {
+    max-width: 991px;
+    margin-right: auto!important;
+    margin-left: auto!important;
+    padding-left: 30px;
+}
+.cookie-button {
+    background-color: white!important;
+    color: #70AAF2!important;
+    border-radius: 30px!important;
+    margin-right: 8%!important;
+    margin-top: 15px!important;
+    padding: 10px 50px!important;
+}
+
+@media only screen and (min-width: 1600px) {
+    .cookie-button {margin-right: 15%!important;}
+}
+@media only screen and (max-width: 1400px) {
+    .cookie-button {margin-right: 30px!important;}
+}
+@media only screen and (max-width: 500px) {
+    .cookie-text {margin-right: 30px!important;}
+}
+
 /* Main Banner */
 .hidden{
     display: none;
