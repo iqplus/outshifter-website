@@ -26,9 +26,9 @@ const FormGroup = styled.div`
     }
 
     @media only screen and (max-width: 500px) {
-        input {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
-        select {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
-        textarea {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
+        input {border: solid 1px lightgrey;box-shadow: none;}
+        select {border: solid 1px lightgrey;box-shadow: none;}
+        textarea {border: solid 1px lightgrey;box-shadow: none;}
     }
 
 `;
@@ -38,6 +38,7 @@ const Label = styled.label`
 `;
 
 const MyInput = styled.input`
+    color: #9C9C9F;
     padding: 0.5em;
     margin-top: 0.5em;
     margin-bottom: 2em;
@@ -52,6 +53,7 @@ const MyInput = styled.input`
 `;
 
 const MySelect = styled.select`
+    color: #9C9C9F;
     background: transparent;
     padding: 0.5em;
     margin-top: 0.5em;
@@ -61,6 +63,13 @@ const MySelect = styled.select`
     box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1px 0 rgba(0,0,0,.07);
     border-radius: 6px;
     width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%239C9C9F'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 20px) 65%;
+    background-repeat: no-repeat;
     &:focus {
         outline:none;
         border: 1px solid #4A90E2;
@@ -68,6 +77,7 @@ const MySelect = styled.select`
 `;
 
 const MyTextArea = styled.textarea`
+    color: #9C9C9F;
     padding: 0.5em;
     margin-top: 0.5em;
     margin-bottom: 2em;
