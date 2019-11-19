@@ -254,7 +254,7 @@ class IndexPage extends React.Component {
             <div className="col-md-12 col-lg-7">
               <div className="wrapper-animation-1">
                 <div className="animation-background"><img src={Animation1Phone}></img></div>
-                <div className="class-animation"><Lottie options={{animationData: Animation1}}/></div>
+                <Lottie options={{animationData: Animation1}}/>
               </div>
             </div>
           </div>
@@ -311,7 +311,7 @@ class IndexPage extends React.Component {
             <div className="col-md-12 col-lg-6 align-self-center">
               <div className="wrapper-animation-2">
                 <div className="animation-background"><img src={Animation2Phone}></img></div>
-                <div className="class-animation-2"><Lottie options={{animationData: Animation2}}/></div>
+                <Lottie options={{animationData: Animation2}}/>
               </div>
             </div>
             <div className="user-col col-md-12 col-lg-6 align-self-center">
@@ -345,7 +345,7 @@ class IndexPage extends React.Component {
               <div className="order-1 order-md-1 order-lg-2 col-md-12 col-lg-6 align-self-center merchant-width">
                 <div className="wrapper-animation-3">
                   <div className="animation-background"><img src={Animation3Tablet}></img></div>
-                  <div className="class-animation-3"><Lottie options={{animationData: Animation3}}/></div>
+                  <Lottie options={{animationData: Animation3}}/>
                 </div>
               </div>
             </div>

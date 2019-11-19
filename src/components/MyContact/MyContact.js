@@ -24,13 +24,6 @@ const FormGroup = styled.div`
     @media only screen and (max-width: 991px) {
         .submit-button {text-align: center;}
     }
-
-    @media only screen and (max-width: 500px) {
-        input {border: solid 1px lightgrey; box-shadow: none;}
-        select {border: solid 1px lightgrey; box-shadow: none;}
-        textarea {border: solid 1px lightgrey; box-shadow: none;}
-    }
-
 `;
 
 const Label = styled.label`
@@ -51,6 +44,10 @@ const MyInput = styled.input`
         outline:none;
         border: 1px solid #4A90E2;
     };
+    @media only screen and (max-width: 500px) {
+        border: solid 1px lightgrey;
+        box-shadow: none;
+    }
 `;
 
 const MySelect = styled.select`
@@ -74,7 +71,11 @@ const MySelect = styled.select`
     &:focus {
         outline:none;
         border: 1px solid #4A90E2;
-    };
+    }
+    @media only screen and (max-width: 500px) {
+        border: solid 1px lightgrey;
+        box-shadow: none;
+    }
 `;
 
 const MyTextArea = styled.textarea`
@@ -91,7 +92,11 @@ const MyTextArea = styled.textarea`
     &:focus {
         outline: none;
         border: 1px solid #4A90E2;
-    };
+    }
+    @media only screen and (max-width: 500px) {
+        border: solid 1px lightgrey;
+        box-shadow: none;
+    }
 `;
 
 
