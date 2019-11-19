@@ -26,9 +26,9 @@ const FormGroup = styled.div`
     }
 
     @media only screen and (max-width: 500px) {
-        input {box-shadow: 0px 0px 2px 1px rgba(60,60,93,.095);}
-        select {box-shadow: 0px 0px 2px 1px rgba(60,60,93,.095);}
-        textarea {box-shadow: 0px 0px 2px 1px rgba(60,60,93,.095);}
+        input {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
+        select {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
+        textarea {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
     }
 
 `;

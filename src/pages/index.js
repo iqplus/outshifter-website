@@ -441,9 +441,9 @@ class IndexPage extends React.Component {
 
               <div className="col-md-12 col-lg-6 align-self-center">
                 <div className="developer-width">
-                  <h2>Developer Community</h2>
+                  <h2>Customize Extensions</h2>
                   <p className="user-description">
-                  Outshifter aims to facilitate a seamless experience across all channels. If we dont have the plug-in to your favourite platform or you desire an integration to import and synchronise products form your back-end system, feel free to either request one or create one yourself.
+                  Flexible artchiterure that allows integration with any other third-party API. 
                   </p>
                   <div className="button-dev"><Link to={'/dev'}><Button>Contact us</Button></Link></div>
                 </div>
