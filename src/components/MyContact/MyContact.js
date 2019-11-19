@@ -26,9 +26,9 @@ const FormGroup = styled.div`
     }
 
     @media only screen and (max-width: 500px) {
-        input {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
-        select {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
-        textarea {border: solid 1px rgba(60,60,93,.095);box-shadow: none;}
+        input {border: solid 1px lightgrey;box-shadow: none;}
+        select {border: solid 1px lightgrey;box-shadow: none;}
+        textarea {border: solid 1px lightgrey;box-shadow: none;}
     }
 
 `;
@@ -38,6 +38,7 @@ const Label = styled.label`
 `;
 
 const MyInput = styled.input`
+    color: #9C9C9F;
     padding: 0.5em;
     margin-top: 0.5em;
     margin-bottom: 2em;
@@ -52,6 +53,7 @@ const MyInput = styled.input`
 `;
 
 const MySelect = styled.select`
+    color: #9C9C9F;
     background: transparent;
     padding: 0.5em;
     margin-top: 0.5em;
@@ -61,6 +63,13 @@ const MySelect = styled.select`
     box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1px 0 rgba(0,0,0,.07);
     border-radius: 6px;
     width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+    &::-ms-expand {
+        display: none;
+    }
     &:focus {
         outline:none;
         border: 1px solid #4A90E2;
@@ -68,6 +77,7 @@ const MySelect = styled.select`
 `;
 
 const MyTextArea = styled.textarea`
+    color: #9C9C9F;
     padding: 0.5em;
     margin-top: 0.5em;
     margin-bottom: 2em;
