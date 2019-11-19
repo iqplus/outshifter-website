@@ -10,7 +10,7 @@ import Lottie from 'lottie-react-web'
 import Animation1 from '../animations/animation1.json'
 import Animation1Phone from '../images/Animation-1-Phone.png'
 
-const SupportPage = () => (
+const PricingPage = () => (
   <Layout>
   <SEO title="FAQ & Support" />
 
@@ -19,7 +19,7 @@ const SupportPage = () => (
       <div className={'container ' + 'h-100 '}>
         <div className="row h-100 align-items-center main-banner no-gutters">
           <div className="col-md-12 col-lg-5">
-            <h1>Support Page<br/>Coming Soon</h1>
+            <h1>Pricing Page<br/>Coming Soon</h1>
             <p>Page under construction</p>
           </div>
           <div className="col-md-12 col-lg-7">
@@ -35,4 +35,4 @@ const SupportPage = () => (
   </Layout>
 )
 
-export default SupportPage
+export default PricingPage

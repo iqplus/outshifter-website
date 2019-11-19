@@ -25,7 +25,7 @@ const SolutionPage = () => (
           <div className="col-md-12 col-lg-7">
             <div className="wrapper-animation-1">
               <div className="animation-background"><img src={Animation1Phone}></img></div>
-              <div className="class-animation"><Lottie options={{animationData: Animation1}}/></div>
+              <Lottie options={{animationData: Animation1}}/>
             </div>
           </div>
         </div>
