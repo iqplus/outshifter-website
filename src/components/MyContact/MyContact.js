@@ -40,6 +40,9 @@ const MyInput = styled.input`
     box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1px 0 rgba(0,0,0,.07);
     border-radius: 6px;
     width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     &:focus {
         outline:none;
         border: 1px solid #4A90E2;
@@ -89,6 +92,9 @@ const MyTextArea = styled.textarea`
     border-radius: 6px;
     width: 100%;
     height: 200px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     &:focus {
         outline: none;
         border: 1px solid #4A90E2;
