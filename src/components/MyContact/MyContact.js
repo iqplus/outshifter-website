@@ -26,9 +26,9 @@ const FormGroup = styled.div`
     }
 
     @media only screen and (max-width: 500px) {
-        input {border: solid 1px lightgrey;box-shadow: none;}
-        select {border: solid 1px lightgrey;box-shadow: none;}
-        textarea {border: solid 1px lightgrey;box-shadow: none;}
+        input {border: solid 1px lightgrey; box-shadow: none;}
+        select {border: solid 1px lightgrey; box-shadow: none;}
+        textarea {border: solid 1px lightgrey; box-shadow: none;}
     }
 
 `;
@@ -39,6 +39,7 @@ const Label = styled.label`
 
 const MyInput = styled.input`
     color: #9C9C9F;
+    background: transparent;
     padding: 0.5em;
     margin-top: 0.5em;
     margin-bottom: 2em;
@@ -77,6 +78,7 @@ const MySelect = styled.select`
 `;
 
 const MyTextArea = styled.textarea`
+    background: transparent;
     color: #9C9C9F;
     padding: 0.5em;
     margin-top: 0.5em;
@@ -87,7 +89,7 @@ const MyTextArea = styled.textarea`
     width: 100%;
     height: 200px;
     &:focus {
-        outline:none;
+        outline: none;
         border: 1px solid #4A90E2;
     };
 `;
