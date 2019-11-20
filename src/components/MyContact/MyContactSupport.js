@@ -187,17 +187,16 @@ class MyContact extends React.Component {
                             />
                     </div>
                     <div className="col-md-12 col-lg-6">
-                        <Label>Occasion</Label>
+                        <Label>User Segment</Label>
                         <MySelect
                             name="segment"
                             value={this.state.segment}
                             onChange={this.handleInputChange}
                         >
-                            <option value="" disabled selected>Select why you contact us</option>
-                            <option value="Customer">Solution</option>
-                            <option value="Mediator">Carreers</option>
-                            <option value="Customer">Pricing</option>
-                            <option value="Merchant">Dev</option>
+                            <option value="" disabled selected>Select a segment</option>
+                            <option value="Mediator">Mediator</option>
+                            <option value="Merchant">Merchant</option>
+                            <option value="Customer">Customer</option>
                         </MySelect>
                     </div>
                 </div>

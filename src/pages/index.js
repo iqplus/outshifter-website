@@ -243,7 +243,7 @@ class IndexPage extends React.Component {
           buttonClasses="cookie-button"
           buttonText="OK"
         >
-          Outshifter uses cookies to provide necessary site functionality and improve your experience. By using our website, you agree to our privacy policy and our cookie policy.
+          Outshifter uses cookies to provide necessary site functionality and improve your experience. By using our website, you agree to our <a href="/terms" target="_blank">privacy policy</a> and our <a href="/terms" target="_blank">cookie policy</a>.
         </CookieConsent>
 
         {/* Banner */}
@@ -367,9 +367,9 @@ class IndexPage extends React.Component {
 
         <div className="container pricing">
           <div className="row text-center">
-            <div className="col">
+            <div className="col-12">
               <h2>Pricing</h2>
-              <p>There are no upfront costs, no hidden fees, and no risk to get started.</p>
+              <p class="p-pricing">There are no upfront costs, no hidden fees, and no risk to get started.</p>
             </div>
           </div>
           <div className="row pricing-width">
@@ -453,7 +453,7 @@ class IndexPage extends React.Component {
               <div className="col-md-12 col-lg-6 align-self-center">
                 <div className="developer-width">
                   <h2>Customize Extensions</h2>
-                  <p className="user-description">
+                  <p>
                   Flexible artchiterure that allows integration with any other third-party API. 
                   </p>
                   <div className="button-dev"><Link to={'/dev'}><Button>Contact us</Button></Link></div>
