@@ -26,10 +26,9 @@ export const GlobalStyles = createGlobalStyle`
     h1, h2 {
       text-align: center;
     }
-
   }
 
-
+  
   /* Fonts styling */
 
   @import url('https://rsms.me/inter/inter.css');

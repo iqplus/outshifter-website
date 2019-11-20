@@ -98,56 +98,9 @@ const ContactPage = () => (
       {/* Intro */}
       <div className="row intro">
         <div className="col">
-          <h3>Contact Outshifter Support</h3>
+          <h3>Contact Outshifter</h3>
           <p>
-            <strong>In need of assistance?</strong> Get familiar with our solution or check out our FAQ:
-          </p>
-        </div>
-      </div>
-
-      {/* FAQ */}
-      <div className="row faq">
-        <div className="col-md-12 col-lg position-1 align-self-center">
-          <Link to={'/'}><BoxStyled >
-            <div className="bulletsicon">
-              <img src={FaqMerchant} />
-            </div>
-            <div className="bulletstext">
-              <h6>Merchant Solution</h6>
-              <p>Service information and FAQ</p>
-            </div>
-          </BoxStyled></Link>
-        </div>
-        <div className="col-md-12 col-lg position-2 align-self-center">
-          <Link to={'/'}><BoxStyled>
-          <div className="bulletsicon">
-              <img src={FaqMediator} />
-            </div>
-            <div className="bulletstext">
-              <h6>Mediator Solution</h6>
-              <p>Service information and FAQ</p>
-            </div>
-          </BoxStyled></Link>
-        </div>
-        <div className="col-md-12 col-lg position-3 align-self-center">
-          <Link to={'/'}><BoxStyled position="3">
-          <div className="bulletsicon">
-              <img src={FaqCustomer} />
-            </div>
-            <div className="bulletstext">
-              <h6>Customer Solution</h6>
-              <p>Service information and FAQ</p>
-            </div>
-          </BoxStyled></Link>
-        </div>
-      </div>
-
-      <div className="contact-separator"><hr /></div>
-
-      <div className="row faq contact-description">
-        <div className="col align-self-center">
-          <p>
-            If you cant find the answer to your inquiry, please contact our support senter and we will be happy to assist you.
+            <strong>In need of assistance?</strong> Contact us and we will get in touch as soon as possible.
           </p>
         </div>
       </div>
@@ -164,5 +117,5 @@ const ContactPage = () => (
   </Layout>
 )
 
-export default ContactPage
+export default ContactPage;
 

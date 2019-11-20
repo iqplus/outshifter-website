@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+
 import PropTypes from 'prop-types';
 import {StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
@@ -17,7 +19,6 @@ import Button from './Button/Button';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import './header.css';
-
 
 const StyledMenuName = styled.span`
 
@@ -46,6 +47,8 @@ export default class Header extends Component {
       lockScroll: false,
     };
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   
     // https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
     if (typeof window !== 'undefined') {
@@ -79,8 +82,27 @@ export default class Header extends Component {
     console.log("click"); 
     this.setState({ isOpen: !this.state.isOpen });
   }
-  
+
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+
+  handleClickOutside(event) {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      this.setState({ isOpen: false });
+    }
+  }
+
   render() {
+
     return (
       <div>
 
@@ -99,7 +121,7 @@ export default class Header extends Component {
             </div>
           </div>
           <div className="col col-lg-8 align-self-center">
-            <div className="menu-wrapper">
+            <div ref={this.setWrapperRef} className="menu-wrapper">
               <StyledMenuName open={this.state.isOpen}>Menu</StyledMenuName>
               <Burger open={this.state.isOpen} onClick={this.toggleMenu}/>
               <Menu open={this.state.isOpen} />
