@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaAngleRight } from 'react-icons/fa';
 
-export const StyledButtonDropdown = styled.button`
+const StyledButtonDropdown = styled.button`
 
     display: inline-block;
     border-radius: 30px;
@@ -40,7 +41,7 @@ export const StyledButtonDropdown = styled.button`
 class ButtonDropdown extends React.Component {
     render() {
         return(
-            <StyledButtonDropdown buttonClicked={this.props.buttonClicked} onClick={this.props.onClick}>{this.props.children}</StyledButtonDropdown>
+            <StyledButtonDropdown buttonClicked={this.props.buttonClicked} onClick={this.props.onClick}>{this.props.children}<FaAngleRight /></StyledButtonDropdown>
         );
     }
 }
