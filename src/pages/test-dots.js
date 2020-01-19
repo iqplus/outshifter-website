@@ -6,31 +6,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Button from '../components/Button/Button'
-import Accordeon from '../components/Accordeon/Accordeon'
-import Accordeon2 from '../components/Accordeon2/Accordeon2'
 
 import './pages.css';
-
-
-import Lottie from 'lottie-react-web'
-import Animation1 from '../animations/animation1.json'
-import Waves from '../animations/waves.json'
-import Animation1Phone from '../images/Animation-1-Phone.png'
-import DevelopersTest from '../images/developers-final.png'
 
 import Icon1 from '../images/icon-1.png'
 import Icon2 from '../images/icon-2.png'
 import Icon3 from '../images/icon-3.png'
 import Icon4 from '../images/icon-4.png'
 import Icon5 from '../images/icon-5.png'
-
-const WavesAnimation = styled.div`
-z-index: 1;
-position: absolute;
-width: 100%;
-height: 100%;
-pointer-events: none;
-`;
 
 const NewBanner = styled.div`
 
@@ -57,6 +40,21 @@ p {
 
 class WavesPage extends React.Component {
 
+  componentDidMount() {
+
+    const scriptVertex = document.createElement("script");
+    scriptVertex.type = "x-shader/x-vertex";
+    scriptVertex.id = "vertexshader";
+    document.body.appendChild(scriptVertex);
+    document.getElementById('vertexshader').append('attribute float scale;attribute vec3 customColor;varying vec3 vColor;void main() {vColor = customColor;vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );gl_PointSize = scale * ( 100.0 / - mvPosition.z );gl_Position = projectionMatrix * mvPosition;}')
+
+    const scriptFragment = document.createElement("script");
+    scriptFragment.type = "x-shader/x-fragment";
+    scriptFragment.id = "fragmentshader";
+    document.body.appendChild(scriptFragment);
+    document.getElementById('fragmentshader').append('uniform vec3 color;varying vec3 vColor;void main() {  if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.275 ) discard;  gl_FragColor = vec4( color * vColor, 1.0 );}')
+  }
+
   render () {
     return (
       
@@ -67,7 +65,6 @@ class WavesPage extends React.Component {
         <NewBanner>
         <div className={'masthead'}>
           <div className={'container-fluid ' + 'h-100 ' + 'no-gutters'}>
-          <WavesAnimation><Lottie options={{animationData: Waves}}/></WavesAnimation>
             <div className="container">
                 <div className="row h-100 align-items-center">
                   <div className="col-md-12 col-lg-4">
@@ -89,8 +86,11 @@ class WavesPage extends React.Component {
         </div>
         </NewBanner>
 
-        {/* E-commerce */}
+        <canvas id="canvas1"></canvas>
+        <canvas id="canvas2"></canvas>
 
+
+        {/* E-commerce */}
         <div className="container-fluid e-commerce">
           <div className="container">
             <div className="row">
@@ -102,28 +102,28 @@ class WavesPage extends React.Component {
                 </p>
               </div>
             </div>
-            <div class="row e-icons">
-              <div class="col-12 col-md-4 col-lg">
+            <div className="row e-icons">
+              <div className="col-12 col-md-4 col-lg">
                 <img src={Icon1}></img>
                 <h6>Access</h6>
                 <p>Search, filter and connect with Merchants or Mediators.</p>
               </div>
-              <div class="col-12 col-md-4 col-lg">
+              <div className="col-12 col-md-4 col-lg">
                 <img src={Icon2}></img>
                 <h6>Products</h6>
                 <p>List or source products and services for your Profile</p>
               </div>
-              <div class="col-12 col-md-4 col-lg">
+              <div className="col-12 col-md-4 col-lg">
                 <img src={Icon3}></img>
                 <h6>Outshift</h6>
                 <p>Seamless product outshifting for multi-channel Direct Selling</p>
               </div>
-              <div class="col-12 col-md-6 col-lg">
+              <div className="col-12 col-md-6 col-lg">
                 <img src={Icon4}></img>
                 <h6>Manage</h6>
                 <p>Control every aspect of your online distribution in one place</p>
               </div>
-              <div class="col-12 col-md-6 col-lg">
+              <div className="col-12 col-md-6 col-lg">
                 <img src={Icon5}></img>
                 <h6>Insights</h6>
                 <p>Monitor all orders, channels, data performance and revenue</p>

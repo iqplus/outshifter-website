@@ -6,6 +6,7 @@ import './layout.css'
 import Header from "./header"
 
 import { Link } from 'gatsby'
+import {Helmet} from "react-helmet"
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -33,6 +34,22 @@ const Layout = ({ children }) => {
     <>
     <GlobalStyles />
       <Header siteTitle={'Outshifter'} />
+      <Helmet>
+        <script src="/src/animations/ParticleWaves/includes/js/aftc.min.js" />
+        <script src="/src/animations/ParticleWaves/includes/js/aftc.min.js" />
+        <script src="/src/animations/ParticleWaves/includes/js/three.min.js" />
+        <script src="/src/animations/ParticleWaves/includes/js/stats.min.js" />
+        <script src="/src/animations/ParticleWaves/includes/js/app.js" />
+        <script
+            dangerouslySetInnerHTML={{
+                __html:`
+                onReady(function(){
+                    new App();
+                })
+                `
+            }}
+        />
+      </Helmet>
       <div>
         <main className="main-class">{children}</main>
         <footer>
