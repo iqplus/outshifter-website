@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
 import axios from 'axios'
-import Button from "../Button/Button"
+import Button from "../Buttons/Button"
 import qs from 'qs'
 import * as globalvariables from '../../global'
 

@@ -56,7 +56,7 @@ class Accordeon extends React.Component {
 
     render() {
         return(
-            <StyledAccordeon >
+            <StyledAccordeon>
 
                 <div className="row no-gutters button-dropdown">
                     <div className="col-12 col-sm-12 col-md text-left">

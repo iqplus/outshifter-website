@@ -21,8 +21,8 @@ export const StyledSidebar = styled.nav`
         color: #4A4A4A;
         width: 95%;
     }
-    .sidebar-item img {
-        height: 30px;
+    .sidebar-item svg {
+        font-size: 36px;
         padding-right: 15px;
     }
     .undermeny {

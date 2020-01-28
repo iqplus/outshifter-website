@@ -6,6 +6,7 @@ import './layout.css'
 import Header from "./header"
 
 import { Link } from 'gatsby'
+import {Helmet} from "react-helmet"
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -33,6 +34,10 @@ const Layout = ({ children }) => {
     <>
     <GlobalStyles />
       <Header siteTitle={'Outshifter'} />
+      <Helmet>
+        <script>{`onReady(function(){new App();})`}</script>
+        <script>{`onReady(function(){new AppTest();})`}</script>
+      </Helmet>
       <div>
         <main className="main-class">{children}</main>
         <footer>
@@ -46,7 +51,7 @@ const Layout = ({ children }) => {
           <div className="container">
             <div className="row copyright">
                 <div className="col">
-                  <p>© 2019 Outshifter AS. All rights reserved.</p>
+                  <p>© 2020 Outshifter AS. All rights reserved.</p>
                 </div>
             </div>
           </div>

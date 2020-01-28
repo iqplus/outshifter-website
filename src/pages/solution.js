@@ -1,38 +1,89 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import './pages.css';
+import './terms.css'
 
-import Lottie from 'lottie-react-web'
-import Animation1 from '../animations/animation1.json'
-import Animation1Phone from '../images/Animation-1-Phone.png'
+import Sidebar from "../components/Sidebar/Sidebar"
+import TermsData from "../components/TermsData/TermsData"
+import AccordeonTerms from "../components/AccordeonTerms/AccordeonTerms"
 
-const SolutionPage = () => (
-  <Layout>
-  <SEO title="Home" />
 
-    {/* Banner */}
-    <div className={'masthead'}>   
-      <div className={'container ' + 'h-100 '}>
-        <div className="row h-100 align-items-center main-banner no-gutters">
-          <div className="col-md-12 col-lg-5">
-            <h1>Solution Page<br/>Coming Soon</h1>
-            <p>Page under construction</p>
-          </div>
-          <div className="col-md-12 col-lg-7">
-            <div className="wrapper-animation-1">
-              <div className="animation-background"><img src={Animation1Phone}></img></div>
-              <Lottie options={{animationData: Animation1}}/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+class SolutionPage extends React.Component {
 
-  </Layout>
-)
+    constructor(props) {
+        super(props);
+        this.state = { 
+            isCollapsed1: false,
+            isCollapsed2: false,
+            showInfo1: true,
+            showInfo2: false
+        };
+        this.toggleMenuItem1 = this.toggleMenuItem1.bind(this);
+        this.toggleMenuItem2 = this.toggleMenuItem2.bind(this);
+    }
 
-export default SolutionPage
+    toggleMenuItem1 () {
+        if (this.state.showInfo1) {
+            this.setState({
+                isCollapsed1: !this.state.isCollapsed1,
+                showInfo2: false,
+                isCollapsed2:false
+            });
+        } else {
+            this.setState({
+                isCollapsed1: !this.state.isCollapsed1,
+                showInfo1: !this.state.showInfo1,
+                showInfo2: false,
+                isCollapsed2:false
+            });
+        }
+    }
+    toggleMenuItem2 () {
+        if (this.state.showInfo2) {
+            this.setState({
+                isCollapsed2: !this.state.isCollapsed2,
+                showInfo1: false,
+                isCollapsed1:false
+            });
+        } else {
+            this.setState({
+                isCollapsed2: !this.state.isCollapsed2,
+                showInfo2: !this.state.showInfo2,
+                showInfo1: false,
+                isCollapsed1:false
+            });
+        }
+    }
+
+    render () {
+        return (
+            <Layout>
+            <SEO title="Terms of Service" />
+
+                <div class="container terms-wrapper">
+                    <Sidebar 
+                        collapsed1={this.state.isCollapsed1}
+                        collapsed2={this.state.isCollapsed2}
+                        toggle1={this.toggleMenuItem1}
+                        toggle2={this.toggleMenuItem2}
+                    />
+                    <TermsData
+                        info1={this.state.showInfo1}
+                        info2={this.state.showInfo2}
+                    />
+                    <AccordeonTerms 
+                        collapsed1={this.state.isCollapsed1}
+                        collapsed2={this.state.isCollapsed2}
+                        toggle1={this.toggleMenuItem1}
+                        toggle2={this.toggleMenuItem2}
+                    />
+                </div>
+        
+            </Layout>
+        );
+    }
+}
+
+export default SolutionPage;

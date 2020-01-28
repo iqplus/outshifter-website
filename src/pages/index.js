@@ -6,7 +6,7 @@ import CookieConsent from "react-cookie-consent";
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Button from '../components/Button/Button'
+import Button from '../components/Buttons/Button'
 import Accordeon from '../components/Accordeon/Accordeon'
 import Accordeon2 from '../components/Accordeon2/Accordeon2'
 

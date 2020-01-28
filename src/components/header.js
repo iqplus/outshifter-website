@@ -7,7 +7,6 @@ import { Link } from 'gatsby'
 import styled from 'styled-components';
 
 import LogoFull from '../images/logo-icon-text.png';
-import Logo from '../images/logo.png';
 import LogoMobil from '../images/logo-mobil.png';
 import LogoText from '../images/outshifter-logo-text.png';
 import LogoMobilWhite from '../images/logo-mobil_white.png';
@@ -15,7 +14,7 @@ import LogoTextWhite from '../images/outshifter-logo-text_white.png';
 import Menu from './Menu/Menu.js';
 import MenuMobil from './MenuMobil/MenuMobil.js';
 import Burger from './Burger/Burger';
-import Button from './Button/Button';
+import ButtonOutline from '../components/Buttons/ButtonOutline'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import './header.css';
@@ -28,7 +27,6 @@ const StyledMenuName = styled.span`
     left: 385px;
     line-height: 48px;
     color: #4A4A4A;
-
     pointer-events: none; 
 
     @media only screen and (max-width: 1024px) {  
@@ -125,7 +123,7 @@ export default class Header extends Component {
               <StyledMenuName open={this.state.isOpen}>Menu</StyledMenuName>
               <Burger open={this.state.isOpen} onClick={this.toggleMenu}/>
               <Menu open={this.state.isOpen} />
-              <div className="button-meny"><Link to={'/account'}><Button>Sign in</Button></Link></div>
+              <div className="button-meny"><Link to={'/account'}><ButtonOutline>Sign in</ButtonOutline></Link></div>
             </div>
           </div>
         </div>

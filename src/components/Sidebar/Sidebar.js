@@ -5,6 +5,9 @@ import { StyledSidebar } from './Sidebar.styled'
 import IconTerms from '../../images/icon-general-terms.png'
 import IconPrivacy from '../../images/icon-privacy-policy.png'
 
+import { FaShieldAlt } from 'react-icons/fa'
+import { FaLock } from 'react-icons/fa'
+
 class Sidebar extends React.Component {
 
     render() {
@@ -20,7 +23,7 @@ class Sidebar extends React.Component {
 
                 <ul className="list-unstyled">
                     <li className="sidebar-item sidebar-item-first">
-                        <a href="#general-terms" onClick={this.props.toggle1}><img src={IconTerms}/>General Terms</a>
+                        <a href="#general-terms" onClick={this.props.toggle1}><FaShieldAlt />General Terms</a>
                         <ol className="undermeny undermeny1">
                             <li><a href="#general-terms-1">The Scope of Outshifter´s Platform</a></li>
                             <li><a href="#general-terms-2">Changes and Modifications to the Agreement</a></li>
@@ -43,7 +46,7 @@ class Sidebar extends React.Component {
                         </ol>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#privacy-policy" onClick={this.props.toggle2}><img src={IconPrivacy}/>Privacy Policy</a>
+                        <a href="#privacy-policy" onClick={this.props.toggle2}><FaLock />Privacy Policy</a>
                         <ol className="undermeny undermeny2">
                             <li><a href="#privacy-policy-1">Personal Information Collected Through the Outshifter Platform</a></li>
                             <li><a href="#privacy-policy-2">Sharing of Your Information</a></li>

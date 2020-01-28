@@ -1,9 +1,144 @@
-/* Fonts */
-h2 {
-    font-weight: 900;
+/*************** Global ***************/
+
+hr {
+    background: linear-gradient(to right, #829DDD, #85E9F7);
+    height: 3px;
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Cookies */
+.shop-badge img {
+    height: 50px;
+}
+
+/*************** Spacing ***************/
+
+  .mt-10 {margin-top: 10%;}
+  .mt-15 {margin-top: 15%;}
+  .mb-10 {margin-bottom: 10%;}
+  .mb-15 {margin-bottom: 15%;}
+  
+  .pt-10 {padding-top: 10%;}
+  .pt-15 {padding-top: 15%;}
+  .pb-10 {padding-bottom: 10%;}
+  .pb-15 {padding-bottom: 15%;}
+
+/*************** Dot Animations ***************/
+
+#canvas1 {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+
+#canvas2 {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#canvas21 {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 45%;
+    right: 25%;
+}
+
+#canvas22 {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#canvas31 {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#canvas32 {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.after-canvas {
+    position: relative;
+    z-index: 15;
+    padding-top: 10%;
+}
+
+
+/*************** Main Banner ***************/
+
+.hidden{
+    display: none;
+}
+.fade-in {
+    opacity: 0;
+}
+.fade-in.visible {
+    transition: opacity 1s ease-in;
+    opacity: 1;
+}
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 20;
+}
+.main-banner {
+    padding-top: 50px;
+}
+.main-banner h1 {
+    font-weight: 900;
+    padding-top: 15%;
+    padding-bottom: 15px;
+    font-weight: 900;
+}
+.main-banner p {
+    color: #4A4A4A;
+    font-size: 1rem;
+    font-weight: 500;
+}
+@media only screen and (max-width: 991px) {
+    .main-banner {
+        text-align: center;
+    }
+}
+.how-works {
+  position: absolute;
+  z-index: 25;
+  bottom: 50px;
+  right: 50px;
+}
+.how-works p {
+  display: inline;
+  margin-left: 10px;
+}
+
+/*************** Cookies ***************/
+
 .cookie-container {
     background: -moz-linear-gradient(left, #5873e5 0%, #3dcef4 100%)!important;
     background: -webkit-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
@@ -45,33 +180,7 @@ h2 {
     .cookie-text {margin-right: 30px!important;}
 }
 
-/* Main Banner */
-.hidden{
-    display: none;
-}
-.fade-in {
-    opacity: 0;
-}
-
-.fade-in.visible {
-    transition: opacity 1s ease-in;
-    opacity: 1;
-}
-
-.masthead {
-    height: 100vh;
-    min-height: 500px;
-    margin-top: -80px;
-}
-
-.main-banner h1 {
-    padding-bottom: 15px;
-    font-weight: 900;
-}
-.main-banner p {
-    font-size: 14px;
-    padding-bottom: 15px;
-}
+/*************** Borrar ***************/
 .wrapper img {
     max-width: 100%;
     height: auto;
@@ -108,39 +217,6 @@ h2 {
 .wrapper-animation-3 img {
     max-width: 100%;
     height: auto;
-}
-
-/* Row e-commerce */
-.e-commerce {
-    background-color: #F5F7F8;
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-.e-commerce h2 {
-    text-align: center;
-    padding-bottom: 25px;
-}
-.e-commerce p {
-    text-align:center;
-    max-width: 816px;
-    margin: 0 auto;
-    font-size: 1rem;
-}
-.e-icons {
-    text-align: center;
-    padding-top: 100px;
-}
-.e-icons h6 {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.e-icons img {
-    height: 60px;
-    margin-bottom: 20px;
-}
-.e-icons p {
-    font-size: 0.8rem;
-    max-width: 200px;
 }
 
 /* Row Mediator */
@@ -297,12 +373,6 @@ h2 {
 }
 
 @media only screen and (max-width: 991px) {
-    .main-banner {
-        text-align: center;
-    }
-    .main-banner h1 {
-        padding-top: 100px;
-    }
     .wrapper-animation-2 {
         margin-bottom: 50px;
         max-width: 300px;
