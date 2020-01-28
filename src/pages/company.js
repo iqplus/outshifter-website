@@ -1,37 +1,35 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import './pages.css';
 import styled from 'styled-components';
-import BannerCareer from '../images/banner-career.jpg'
-import AboutVision from '../images/about-vision.jpg'
-import Button from "../components/Button/Button"
 
-const Banner = styled.div`
-    background-image: url(${BannerCareer});
-    width: 100%;
-    height: 300px;
-    background-position: 0% 25%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    div {
-      background-image: linear-gradient(to top right, #5851e5, #3ddff4);
-      height: 100%;
-      opacity: 0.62;
-    }
-    {/*@media only screen and (min-width: 1500px) {
-      height: 500px;
-    }*/}
-`;
-const ColImage1 = styled.div`
-    background-image: url(${AboutVision});
-    height: 600px;
+import CareerJoinTeam from '../images/career-join-team.jpg'
+import CareerStudents from '../images/career-students.jpg'
+
+import ButtonOutline from "../components/Buttons/ButtonOutline"
+
+const ImageOutshifter = styled.div`
+    background-image: url(${CareerJoinTeam});
+    height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 6px;
-    background-position: 45% center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 7px 14px 2px rgba(50,50,93,.1), 0 7px 14px 2px rgba(0,0,0,.07);
+    @media only screen and (max-width: 991px) {
+      height: 300px;
+    }
+`;
+const ImageTeam = styled.div`
+    background-image: url(${CareerStudents});
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 7px 14px 2px rgba(50,50,93,.1), 0 7px 14px 2px rgba(0,0,0,.07);
     @media only screen and (max-width: 991px) {
       height: 300px;
@@ -52,94 +50,153 @@ const InnerPages = styled.div`
   .intro p {
     font-size: 1.2rem;
   }
-  .information {
-    padding-bottom: 10%;
+  .company {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
-  .information h4 {
-    font-weight: 600;
+  .company p {
+    color: #4A4A4A;
+    margin-top: 30px;
   }
-  .information p {
-    font-size: 1rem;
-    text-align: justify;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  .company button {
+    margin-top: 25px;
   }
-  @media only screen and (min-width: 992px) {
-    .information-col-1 {
-      padding-left: 10%;
-    }
-    .information-col-2 {
-      padding-right: 10%;
-    }
-  }
-  @media only screen and (max-width: 991px) {
-    .information-col-1 {
-      padding-top: 10%;
-    }
-    .information-col-2 {
-      padding-top: 10%;
-    }
-  }
-  @media only screen and (max-width: 575px) {
-    .col-md-12 {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-    .col {
-      padding-left: 25px;
-      padding-right: 25px;
-    }
+  hr {
+    background: linear-gradient(to right, #829DDD, #85E9F7);
+    height: 3px;
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 `;
 
-const CompanyPage = () => (
-  <Layout>
-  <SEO title="Company" />
-  
-  <InnerPages>
-  
-    {/* Banner */}
-    <div className="container-fluid ">   
-      <div className="row banner">
-        <Banner><div></div></Banner>
-      </div>
-    </div>
+class CompanyPage extends React.Component {
 
-    {/* Intro */}
-    <div className="container">   
-      <div className="row intro">
-        <div className="col">
-          <h2>Shaping the Future of e-Commerce</h2>
-          <p>
-          Outshifter is a technology company creating the infrastructure for tomorrows decentralized and transparent e-commerce value-chain.
-          </p>
-        </div>
-      </div>
-    </div>
+  componentDidMount() {
+    const scriptAftc = document.createElement("script");
+    scriptAftc.async = true;
+    scriptAftc.src = "./includes/js/aftc.min.js";
+    document.head.appendChild(scriptAftc);
 
-    {/* Info 1 */}
-    <div className="container">   
-      <div className="row information">
-        <div className="col-md-12 col-lg-6 align-self-center">
-          <ColImage1 />
-        </div>
-        <div className="col-md-12 col-lg-6 align-self-center information-col-1">
-          <h4>Outshifting</h4>
-          <p>
-            We were born out of a desire to disrupt the e-commerce value chain for the better - centred on our belief in transparency, empowerment, ease-of-use and innovation. These beliefs are the cornerstones of our platform and the essence of the term outshifting:
-            <br/><br/>
-            - The act distributing products and services to multiple online channels.
-            <br/><br/>
-            With outshifting we aim to empower both Merchants and Mediators by providing them with the tools, infrastructure and network to scale. In simplifying online distribution and cross-channel transactions we intend to lower the barriers of monotization to monetization, making anyone a potential sales channel. Consequently, enabling consumers to securely buy what they see, at the places they spend their time online.
-          </p>  
-          <Button>Contact</Button>
-        </div>
-      </div>
-    </div>
-  
-  </InnerPages>
+    const scriptThree = document.createElement("script");
+    scriptThree.async = true;
+    scriptThree.src = "./includes/js/three.min.js";
+    document.head.appendChild(scriptThree);
 
-  </Layout>
-)
+    const scriptStats = document.createElement("script");
+    scriptStats.async = true;
+    scriptStats.src = "./includes/js/stats.min.js";
+    document.head.appendChild(scriptStats);
+
+    const scriptApp = document.createElement("script");
+    scriptApp.async = true;
+    scriptApp.src = "./includes/js/appCompany.js";
+    document.head.appendChild(scriptApp);
+
+    const scriptVertex = document.createElement("script");
+    scriptVertex.type = "x-shader/x-vertex";
+    scriptVertex.id = "vertexshader";
+    document.body.appendChild(scriptVertex);
+    document.getElementById('vertexshader').append('attribute float scale;attribute vec3 customColor;varying vec3 vColor;void main() {vColor = customColor;vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );gl_PointSize = scale * ( 100.0 / - mvPosition.z );gl_Position = projectionMatrix * mvPosition;}');
+
+    const scriptFragment = document.createElement("script");
+    scriptFragment.type = "x-shader/x-fragment";
+    scriptFragment.id = "fragmentshader";
+    document.body.appendChild(scriptFragment);
+    document.getElementById('fragmentshader').append('uniform vec3 ccc;varying vec3 vColor;void main() {  if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.275 ) discard;  gl_FragColor = vec4( ccc * vColor, 1.0 );}');
+  }
+
+  render () {
+    return (
+
+      <Layout>
+      <SEO title="Company" />
+      
+      <InnerPages>
+        <canvas id="canvas1"></canvas>
+        <canvas id="canvas2"></canvas>
+
+        {/* Banner */}
+        <div className={'masthead'}>
+          <div className={'container ' + 'h-100 '}>
+            <div className="row h-100 main-banner no-gutters">
+              <div className="container">   
+                <div className="row intro">
+                  <div className="col">
+                    <h2>Democratice e-Commerce</h2>
+                    <p>
+                      Outshifter is the technology company creating the infrastructure for a decentralized and transparent e-commerce value-chain.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="container-fluid back-white after-canvas">
+        <div className="container">
+          <div className="company">
+
+            <div className="row text-center">
+              <div className="col">
+                <h2>Outshifter</h2>
+                <hr />
+                <p>
+                  Outshifter is centered on a belief in transparency, empowerment, ease-of-use and innovation.
+                  <br/><br/>
+                  Through the platforms multi-channel-network we aim to enable all e-commece players regardless of size, 
+                  experience and budget to connect, colaborate and scale online. Consequently, allowing consumers to 
+                  securely buy what they see, at the places they spend their time online.
+                </p>  
+                <ImageOutshifter />
+              </div>
+            </div>
+
+            <div className="row text-center">
+              <div className="col">
+                <h2>Join the team</h2>
+                <p>
+                  Outshifter is looking for great people to complement our team. 
+                  <br/><br/>
+                  We truly believe diversity make for the best ideas. Thus, there is no predefined background, 
+                  age, sex, ethnicity, colour, sexual orientation or religion that make the ideal Outshifter. 
+                  We value curiosity, positivism, teamwork, creativity, disruptive mindsets and problem solvers.
+                  <br/><br/>
+                  Sounds like a something you´d like to be a part of? 
+                </p>
+                <ButtonOutline>Contact</ButtonOutline>
+                <ImageTeam />
+              </div>
+            </div>
+
+            <div className="row text-center">
+              <div className="col">
+                <h2>Students and interns</h2>
+                <p>
+                  Looking for a part-time position or a company to write your thesis with?
+                  <br/>
+                  At Outshifter we are always open for students and their ideas and projects. 
+                  <br/>
+                  The future belongs to the young.
+                  <br/>
+                </p>
+                <ButtonOutline>Contact</ButtonOutline>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        </div>
+
+      </InnerPages>
+      </Layout>
+    );
+  }
+}
 
 export default CompanyPage;

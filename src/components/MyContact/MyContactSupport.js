@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
 import axios from 'axios'
-import Button from "../Button/Button"
+import Button from "../Buttons/Button"
 import qs from 'qs'
 import * as globalvariables from '../../global'
 
@@ -112,7 +112,7 @@ class MyContact extends React.Component {
         super(props);
         this.state = {
             name: '',
-            segment: '',
+            username: '',
             email: '',
             subject: '',
             message: '',
@@ -139,7 +139,7 @@ class MyContact extends React.Component {
             data: qs.stringify({
                 email: this.state.email,
                 name: this.state.name,
-                segment: this.state.segment,
+                username: this.state.username,
                 subject: this.state.subject,
                 message: this.state.message,
             }),
@@ -187,17 +187,13 @@ class MyContact extends React.Component {
                             />
                     </div>
                     <div className="col-md-12 col-lg-6">
-                        <Label>User Segment</Label>
-                        <MySelect
-                            name="segment"
-                            value={this.state.segment}
-                            onChange={this.handleInputChange}
-                        >
-                            <option value="" disabled selected>Select a segment</option>
-                            <option value="Mediator">Mediator</option>
-                            <option value="Merchant">Merchant</option>
-                            <option value="Customer">Customer</option>
-                        </MySelect>
+                        <Label>Username</Label>
+                            <MyInput
+                                type="text"
+                                name="username"
+                                value={this.state.name}
+                                onChange={this.handleInputChange}
+                            />
                     </div>
                 </div>
 

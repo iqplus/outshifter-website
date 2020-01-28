@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { Link } from "gatsby"
-import Button from '../components/Button/Button'
+import Button from '../components/Buttons/Button'
 
 import Lottie from 'lottie-react-web'
 import Animation1 from '../animations/animation1.json'

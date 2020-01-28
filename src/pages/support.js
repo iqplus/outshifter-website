@@ -8,8 +8,12 @@ import styled from 'styled-components';
 import FaqMerchant from '../images/icon-faq-merchant.png'
 import FaqMediator from '../images/icon-faq-mediator.png'
 import FaqCustomer from '../images/icon-faq-customer.png'
-import Button from "../components/Button/Button"
+import Button from "../components/Buttons/Button"
 import MyContact from "../components/MyContact/MyContactSupport"
+
+import { FaInfo } from 'react-icons/fa';
+import { FaCode } from 'react-icons/fa';
+import { FaQuestion } from 'react-icons/fa';
 
 
 const ContactStyled = styled.div`
@@ -36,11 +40,16 @@ const ContactStyled = styled.div`
   }
   .bulletsicon {
     float: left;
-    width: 30%;
+    width: 25%;
+    text-align: center;
+    svg {
+      font-size: 32px;
+      margin-top: 4px;
+    }
   }
   .bulletstext {
     float: right;
-    width: 70%;
+    width: 75%;
   }
   .contact-separator {
     margin-top: 75px;
@@ -54,9 +63,6 @@ const ContactStyled = styled.div`
   @media only screen and (max-width: 1400px) {
     .position-1 {margin-right: 0%}
     .position-3 {margin-left: 0%}
-  }
-  @media only screen and (max-width: 1035px) and (min-width: 992px) {
-    .bulletsicon {padding-top: 5px;}
   }
   @media only screen and (max-width: 991px) {
     .position-2 {margin-top: 25px;margin-bottom:25px;}
@@ -78,9 +84,6 @@ const BoxStyled = styled.div`
   &:hover {
     transition: box-shadow 1s;
     box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
-  }
-  @media only screen and (max-width: 1035px) and (min-width: 992px) {
-    height: 90px;
   }
   @media only screen and (max-width: 991px) {
     max-width: 350px;
@@ -108,35 +111,35 @@ const SupportPage = () => (
       {/* FAQ */}
       <div className="row faq">
         <div className="col-md-12 col-lg position-1 align-self-center">
-          <Link to={'/'}><BoxStyled >
+          <Link to={'/solution'}><BoxStyled >
             <div className="bulletsicon">
-              <img src={FaqMerchant} />
+              <FaInfo />
             </div>
             <div className="bulletstext">
-              <h6>Merchant Solution</h6>
-              <p>Service information and FAQ</p>
+              <h6>Solution</h6>
+              <p>Specific service information</p>
             </div>
           </BoxStyled></Link>
         </div>
         <div className="col-md-12 col-lg position-2 align-self-center">
-          <Link to={'/'}><BoxStyled>
+          <Link to={'/developers'}><BoxStyled>
           <div className="bulletsicon">
-              <img src={FaqMediator} />
+              <FaCode />
             </div>
             <div className="bulletstext">
-              <h6>Mediator Solution</h6>
-              <p>Service information and FAQ</p>
+              <h6>Documentation</h6>
+              <p>Outshifter API for developers</p>
             </div>
           </BoxStyled></Link>
         </div>
-        <div className="col-md-12 col-lg position-3 align-self-center">
-          <Link to={'/'}><BoxStyled position="3">
-          <div className="bulletsicon">
-              <img src={FaqCustomer} />
+        <div className="col-md-12 col-lg position-3">
+          <Link to={'/faq'}><BoxStyled position="3">
+          <div className="bulletsicon align-self-center">
+              <FaQuestion />
             </div>
             <div className="bulletstext">
-              <h6>Customer Solution</h6>
-              <p>Service information and FAQ</p>
+              <h6>FAQ</h6>
+              <p>Frequently Asked Questions </p>
             </div>
           </BoxStyled></Link>
         </div>

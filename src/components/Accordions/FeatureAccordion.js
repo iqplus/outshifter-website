@@ -3,22 +3,25 @@ import styled from 'styled-components'
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'gatsby'
 
-
 const FeatureStylePage = styled.div`
-
 .content {
   margin:  45px auto;
 }
-
+.feature-title {
+  padding-bottom: 15px;
+}
 .tabs-header button {
-  text-align: center;
+  width: 75%;
   cursor: pointer;
   border-radius: 30px;
   border: 1.5px solid #D8D7D7;
-  color: #4A4A4A;
+  color: #6E6C6E;
   margin-bottom: 10px;
   font-size: 14px;
+  padding-bottom: 1px;
+  padding: 10px 20px;
   svg {
+    float: right;
     font-size: 22px;
     position: relative;
     bottom: 1px;
@@ -27,28 +30,20 @@ const FeatureStylePage = styled.div`
   }
   &:focus {
     outline: none;
+  }
 }
+.button-text {
+  float: left;
 }
-  .tabs-header button > a {
-    display: block;
-    padding: 5px 5px 5px 15px;
-    background: transparent;
-    transition: all .2s ease-in;
+.tabs-header button.active {
+  border: 1.5px solid #4A90E2;
+  box-shadow: 0px 0 5px 0 #E1E8EC;
+  color: #4A4A4A;
+  svg {
+    color: #4A90E2;
+    transform: rotate(90deg);
   }
-    .tabs-header button > a span {
-      display: block;
-    }
-  .tabs-header button > a:hover {
-  }
-  .tabs-header button.active {
-    border: 1.5px solid #4A90E2;
-    box-shadow: 0px 0 5px 0 #E1E8EC;
-    svg {
-      color: #4A90E2;
-      transform: rotate(90deg);
-    }
-  }
-
+}
 .tabs-content {
   margin-top: 15px;
   position: relative;
@@ -57,7 +52,6 @@ const FeatureStylePage = styled.div`
   box-shadow: 1px 1px 5px 2px #E2E2E2;
   overflow: hidden;
 }
-
 hr {
   background: linear-gradient(to right, #829DDD, #85E9F7);
   height: 3px;
@@ -66,19 +60,30 @@ hr {
   border-radius: 10px;
   margin-top: 0.5rem;
 }
-  .tabs-content .tabs-textItem {
-    display: none;
-    transform: translateY(100%);
+.tabs-content .tabs-textItem {
+  display: none;
+  transform: translateY(100%);
+}
+.tabs-content .tabs-textItem.show {
+  display: block;
+  transform: translateY(0);
+  animation: change .49s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.tabs-content .tabs-textItem {
+  a {
+    color: #4A4A4A;
+    font-weight: 500;
   }
-  .tabs-content .tabs-textItem.show {
-    display: block;
-    transform: translateY(0);
-    animation: change .49s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  p {
+    color: #4A4A4A;
+    font-size: 1rem;
   }
-  .tabs-content .tabs-textItem p {
-    font: normal 15px/1.5 'Open Sans';
-  }
-
+}
+.tabs-content .tabs-textItem svg {
+  color: #4A90E2;
+  position: relative;
+  bottom: 1px;
+}
 @keyframes change {
   0% {
     transform: translateY(100%);
@@ -89,14 +94,11 @@ hr {
     opacity: 1;
   }
 }
-
 @media only screen and (max-width: 1300px) and (min-width: 992px) {
   svg {font-size:14px;}
   font-size: 10px;
 }
-
 `;
-
 
 const data = [
   {
@@ -182,13 +184,12 @@ const data = [
 
 ];
 
-
 class FeatureAccordion extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: '',
+      activeTab: 'Outsourcing',
       data: data
     }
     this.changeTabOnClick = this.changeTabOnClick.bind(this);
@@ -224,99 +225,108 @@ export default FeatureAccordion;
 
 class TabHeader extends React.Component {
   doClick(index, event) {
-      this.props.click(index);
+    this.props.click(index);
   }
 
   render() {
-      let activeClass = this.props.activeId;
+    let activeClass = this.props.activeId;
 
-      function filtermanagement(value) {return value.category === "Management";};
-      function filterproducts(value) {return value.category === "Products";};
-      function filterchannels(value) {return value.category === "Channels";};
-      function filterresources(value) {return value.category === "Resources";};
-      
-      const dataManagement = this.props.data.filter(filtermanagement);
-      const dataProducts = this.props.data.filter(filterproducts);
-      const dataChannels = this.props.data.filter(filterchannels);
-      const dataResources = this.props.data.filter(filterresources);
+    function filtermanagement(value) {return value.category === "Management";};
+    function filterproducts(value) {return value.category === "Products";};
+    function filterchannels(value) {return value.category === "Channels";};
+    function filterresources(value) {return value.category === "Resources";};
+    
+    const dataManagement = this.props.data.filter(filtermanagement);
+    const dataProducts = this.props.data.filter(filterproducts);
+    const dataChannels = this.props.data.filter(filterchannels);
+    const dataResources = this.props.data.filter(filterresources);
 
-      let management = dataManagement.map((item) => {
-        let feature = item.name;
-        return (
-            <button className={(activeClass === feature ? 'active' : '')}>
-              <a onClick={this.doClick.bind(this, feature)} ><span>{item.name}<FaAngleRight /></span></a>
-            </button>
-        );
-      });
-
-      let products = dataProducts.map((item) => {
-        let feature = item.name;
-        return (
-          <div>
-            <button className={(activeClass === feature ? 'active' : '')}>
-              <a onClick={this.doClick.bind(this, feature)} ><span>{item.name}<FaAngleRight /></span></a>
-            </button>
-            <br />
-          </div>
-        );
-      });
-      
-      let channels = dataChannels.map((item) => {
-        let feature = item.name;
-        return (
-          <div>
-            <button className={(activeClass === feature ? 'active' : '')}>
-              <a onClick={this.doClick.bind(this, feature)} ><span>{item.name}<FaAngleRight /></span></a>
-            </button>
-            <br />
-          </div>
-        );
-      });
-      
-      let resources = dataResources.map((item) => {
-        let feature = item.name;
-        return (
-          <div>
-            <button className={(activeClass === feature ? 'active' : '')}>
-              <a onClick={this.doClick.bind(this, feature)} ><span>{item.name}<FaAngleRight /></span></a>
-            </button>
-            <br />
-          </div>
-        );
-    }); 
-
+    let management = dataManagement.map((item) => {
+      let feature = item.name;
       return (
-        <div className="container">
-          <div className="row">
-            <div className="col align-self-center">
-              <h4>Management</h4>
-                <div className="tabs-header">
-                  {management}
-                </div>
-            </div>
-            <div className="col align-self-center">
-              <h4>Products</h4>
-                <div className="tabs-header">
-                  {products}
-                </div>
-            </div>
-            <div className="col align-self-center">
-              <h4>Channels</h4>
-                <div className="tabs-header">
-                  {channels}
-                </div>
-            </div>
-            <div className="col align-self-center">
-              <h4>Resources</h4>
-                <div className="tabs-header">
-                  {resources}
-                </div>
-            </div>
+        <button onClick={this.doClick.bind(this, feature)} className={(activeClass === feature ? 'active' : '')}>
+          <span className="button-text">{item.name}</span><FaAngleRight />
+        </button>
+      );
+    });
+
+    let products = dataProducts.map((item) => {
+      let feature = item.name;
+      return (
+        <div>
+          <button onClick={this.doClick.bind(this, feature)} className={(activeClass === feature ? 'active' : '')}>
+            <span className="button-text">{item.name}</span><FaAngleRight />
+          </button>
+          <br />
+        </div>
+      );
+    });
+    
+    let channels = dataChannels.map((item) => {
+      let feature = item.name;
+      return (
+        <div>
+          <button onClick={this.doClick.bind(this, feature)} className={(activeClass === feature ? 'active' : '')}>
+            <span className="button-text">{item.name}</span><FaAngleRight />
+          </button>
+          <br />
+        </div>
+      );
+    });
+    
+    let resources = dataResources.map((item) => {
+      let feature = item.name;
+      return (
+        <div>
+            <button onClick={this.doClick.bind(this, feature)} className={(activeClass === feature ? 'active' : '')}>
+            <span className="button-text">{item.name}</span><FaAngleRight />
+          </button>
+          <br />
+        </div>
+      );
+    });
+
+    return (
+      <div className="container text-center">
+        <div className="row feature-title">
+          <div className="col">
+            <h4>Management</h4>
+          </div>
+          <div className="col">
+            <h4>Products</h4>
+          </div>
+          <div className="col">
+            <h4>Channels</h4>
+          </div>
+          <div className="col">
+            <h4>Resources</h4>
           </div>
         </div>
-      )
+        <div className="row">
+          <div className="col align-self-center">
+              <div className="tabs-header">
+                {management}
+              </div>
+          </div>
+          <div className="col align-self-center">
+              <div className="tabs-header">
+                {products}
+              </div>
+          </div>
+          <div className="col align-self-center">
+              <div className="tabs-header">
+                {channels}
+              </div>
+          </div>
+          <div className="col align-self-center">
+              <div className="tabs-header">
+                {resources}
+              </div>
+            </div>
+        </div>
+      </div>
+    )
   }
-
 }
 
 class TabContent extends React.Component {
@@ -341,7 +351,7 @@ class TabContent extends React.Component {
             <hr/>
             <br/><br/>
             <p>{item.text}</p>
-            <Link>Learn more <FaAngleRight /></Link>
+            <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
           </div>
         );
       });
@@ -354,7 +364,7 @@ class TabContent extends React.Component {
             <hr/>
             <br/><br/>
             <p>{item.text}</p>
-            <Link>Learn more <FaAngleRight /></Link>
+            <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
           </div>
           );
       });
@@ -367,7 +377,7 @@ class TabContent extends React.Component {
             <hr/>
             <br/><br/>
             <p>{item.text}</p>
-            <Link>Learn more <FaAngleRight /></Link>
+            <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
           </div>
         );
       });
@@ -380,13 +390,13 @@ class TabContent extends React.Component {
             <hr/>
             <br/><br/>
             <p>{item.text}</p>
-            <Link>Learn more <FaAngleRight /></Link>
+            <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
           </div>
         );
       });
 
       return (
-          <div className="tabs-content">{content1}{content2}{content3}{content4}</div>
+        <div className="tabs-content">{content1}{content2}{content3}{content4}</div>
       );
   }
 }

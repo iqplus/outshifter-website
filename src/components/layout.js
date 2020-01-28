@@ -35,20 +35,8 @@ const Layout = ({ children }) => {
     <GlobalStyles />
       <Header siteTitle={'Outshifter'} />
       <Helmet>
-        <script src="/src/animations/ParticleWaves/includes/js/aftc.min.js" />
-        <script src="/src/animations/ParticleWaves/includes/js/aftc.min.js" />
-        <script src="/src/animations/ParticleWaves/includes/js/three.min.js" />
-        <script src="/src/animations/ParticleWaves/includes/js/stats.min.js" />
-        <script src="/src/animations/ParticleWaves/includes/js/app.js" />
-        <script
-            dangerouslySetInnerHTML={{
-                __html:`
-                onReady(function(){
-                    new App();
-                })
-                `
-            }}
-        />
+        <script>{`onReady(function(){new App();})`}</script>
+        <script>{`onReady(function(){new AppTest();})`}</script>
       </Helmet>
       <div>
         <main className="main-class">{children}</main>
@@ -63,7 +51,7 @@ const Layout = ({ children }) => {
           <div className="container">
             <div className="row copyright">
                 <div className="col">
-                  <p>© 2019 Outshifter AS. All rights reserved.</p>
+                  <p>© 2020 Outshifter AS. All rights reserved.</p>
                 </div>
             </div>
           </div>

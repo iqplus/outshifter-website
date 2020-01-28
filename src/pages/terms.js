@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,6 +8,7 @@ import './terms.css'
 import Sidebar from "../components/Sidebar/Sidebar"
 import TermsData from "../components/TermsData/TermsData"
 import AccordeonTerms from "../components/AccordeonTerms/AccordeonTerms"
+
 
 
 class TermsPage extends React.Component {

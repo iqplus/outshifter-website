@@ -8,7 +8,6 @@ import styled from 'styled-components';
 import FaqMerchant from '../images/icon-faq-merchant.png'
 import FaqMediator from '../images/icon-faq-mediator.png'
 import FaqCustomer from '../images/icon-faq-customer.png'
-import Button from "../components/Button/Button"
 import MyContact from "../components/MyContact/MyContact"
 
 
