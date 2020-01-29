@@ -16,6 +16,8 @@ import { FaAngleDown } from 'react-icons/fa'
 import ShopifyWhite from '../images/Shopify-Badge-White.png'
 import LogoWhite from '../images/logo-mobil_white.png'
 import LogoExtentions from '../images/outshifter-logo-extentions.png'
+import DotsBackground from '../images/pricing2-min.png'
+
 
 import Lottie from 'lottie-react-web'
 import LogoBack from '../animations/logo-back.json'
@@ -92,10 +94,13 @@ const Forside = styled.div`
   }
 }
 /* Dot line animation Universal */
+@media only screen and (max-width: 991px) {
+  #dot-universal {display:none;}
+}
+
 #dot-line-1 {
   transform: rotate(180deg);
   animation-delay: 2s;
-
   right: 265px;
   top: -11px;
 }
@@ -290,12 +295,20 @@ const Forside = styled.div`
 .extentions-content {
   max-width: 400px;
 }
-.extentions-logo img {
+/*extentions-logo img {
   max-width: 400px;
   position: absolute;
   top: 0px;
   right: 0px;
+}*/
+
+.sales-background-mobile img {
+  position: absolute;
+  max-width: 400px;
+  opacity: .5;
+  background-repeat: no-repeat;
 }
+
 `;
 
 class WavesPage extends React.Component {
@@ -387,7 +400,7 @@ class WavesPage extends React.Component {
                     <Lottie options={{animationData: LogoBack}}/>
                     <img src={LogoWhite} alt="logo white" />
                   </div>
-                  <div className="dot-animation">
+                  <div className="dot-animation" id="dot-universal">
                     <svg id="dot-line-1" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
                       <defs>
                         <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
@@ -578,11 +591,13 @@ class WavesPage extends React.Component {
                 <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
               </svg>
             </div>
-            <div className="forsiden-bg-min "></div>
 
+            <div className="forsiden-bg-min"></div>
             <div className="forsiden-bg-min-right"></div>
+
             <div className="row mb-10">
               <div className="col">
+                <div className="sales-background-mobile"><img src={DotsBackground} alt="dots backgorund mobile"/></div>
                 <div className="magic-content mx-auto">
                   <h4>Sales Acceleration</h4>
                   <p>
@@ -616,9 +631,9 @@ class WavesPage extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-12 col-2 col-lg-1 col-lg-6 align-self-center text-center extentions-logo">
-                <div className="wrapper-img-lottie">
+                <div className="wrapper-animation-1">
                   <Lottie options={{animationData: DotsSphere}}/>
-                  <img src={LogoExtentions} alt='logo' />
+                  <div className="animation-background"><img src={LogoExtentions} alt='logo' /></div>
                 </div>
               </div>
               <div className="col-12 col-1 col-lg-2 col-lg-6 align-self-center">

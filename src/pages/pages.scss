@@ -11,6 +11,9 @@ hr {
 
 .shop-badge img {
   height: 50px;
+  @media only screen and (max-width: 991px) {
+    margin-top: 15%;
+  }
 }
 
 .wrapper-img-lottie img {
@@ -409,7 +412,7 @@ margin-left: 10px;
 }
 
 
-/**** Footer ***/
+/**** Footer ****/
 
 .footer {
 position: relative;
@@ -439,17 +442,26 @@ z-index: 15;
       color: #3dcef4;
       }
   }
-  p{
+  p {
     color:white;
 
   }
-  img{
+  img {
     width:40px;
     margin: 20px;
   }
-
-
 }
+
+@media only screen and (max-width: 991px) {
+  .footer-links {
+    h5 {
+      text-align: center;
+      margin-top: 25px;
+    }
+    p {text-align: center;}
+  }
+}
+
 
 /*Pricing page*/
 
@@ -475,8 +487,7 @@ z-index: 15;
 }
 
 
-.forsiden-bg-min{
-  
+.forsiden-bg-min {
   width: 100%;
   height: 600px;
   background: url('../images/pricing2-min.png');
@@ -485,7 +496,7 @@ z-index: 15;
   background-repeat: no-repeat;
   left:-600px;
   top:1200px;
-opacity: .5;
+  opacity: .5;
   z-index: -11;
   position: absolute;
 }
@@ -503,9 +514,13 @@ opacity: .5;
   background-position: right;
   background-repeat: no-repeat;
   top:1200px;
-opacity: .5;
+  opacity: .5;
   z-index: -11;
   position: absolute;
   right: -1113px;
+}
 
+@media only screen and (max-width: 991px) {
+  .forsiden-bg-min-right {display: none;}
+  .forsiden-bg-min {display: none;}
 }
