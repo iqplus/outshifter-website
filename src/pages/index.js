@@ -555,6 +555,9 @@ class WavesPage extends React.Component {
                 <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
               </svg>
             </div>
+            <div className="forsiden-bg-min "></div>
+
+            <div className="forsiden-bg-min-right"></div>
             <div className="row mb-10">
               <div className="col">
                 <div className="magic-content mx-auto">
