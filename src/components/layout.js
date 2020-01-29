@@ -36,7 +36,6 @@ const Layout = ({ children }) => {
       <Header siteTitle={'Outshifter'} />
       <Helmet>
         <script>{`onReady(function(){new App();})`}</script>
-        <script>{`onReady(function(){new AppTest();})`}</script>
       </Helmet>
       <div>
         <main className="main-class">{children}</main>

@@ -35,7 +35,7 @@ const Forside = styled.div`
     color: #4A4A4A;
     font-size: 1rem;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 10px;
   }
   .how-works {
     position: absolute;
@@ -66,18 +66,21 @@ const Forside = styled.div`
   bottom: 90px;
   right: 50px;
   z-index: 2;
+  opacity:0.5;
 }
 .universal img {
   max-width: 45px;
   position: absolute;
   z-index: 3;
-  bottom: 194px;
-  left: 681px;
+/*  bottom: 194px;
+  left: 681px;*/
 }
 
 /* Dot line animation Universal */
 #dot-line-1 {
   transform: rotate(180deg);
+  animation-delay: 2s;
+
   right: 265px;
   top: -11px;
 }
@@ -270,27 +273,27 @@ class WavesPage extends React.Component {
   componentDidMount() {
     const scriptAftc = document.createElement("script");
     scriptAftc.async = true;
-    scriptAftc.src = "./includes/js/aftc.min.js";
+    scriptAftc.src = "../includes/js/aftc.min.js";
     document.head.appendChild(scriptAftc);
 
     const scriptThree = document.createElement("script");
     scriptThree.async = true;
-    scriptThree.src = "./includes/js/three.min.js";
+    scriptThree.src = "../includes/js/three.min.js";
     document.head.appendChild(scriptThree);
 
     const scriptStats = document.createElement("script");
     scriptStats.async = true;
-    scriptStats.src = "./includes/js/stats.min.js";
+    scriptStats.src = "../includes/js/stats.min.js";
     document.head.appendChild(scriptStats);
 
     const scriptApp = document.createElement("script");
     scriptApp.async = true;
-    scriptApp.src = "./includes/js/app.js";
+    scriptApp.src = "../includes/js/app.js";
     document.head.appendChild(scriptApp);
 
     const scriptAppTest = document.createElement("script");
     scriptAppTest.async = true;
-    scriptAppTest.src = "./includes/js/appTest.js";
+    scriptAppTest.src = "../includes/js/appTest.js";
     document.head.appendChild(scriptAppTest);
 
     const scriptVertex = document.createElement("script");
@@ -320,7 +323,7 @@ class WavesPage extends React.Component {
           <div className={'masthead'}>
             <div className={'container ' + 'h-100 '}>
               <div className="row h-100 main-banner no-gutters">
-                <div className="col">
+                <div className="col text-center">
                   <h1>The Sales Network</h1>
                   <p>
                     Connect your sales community<br/>
