@@ -20,6 +20,13 @@ hr {
   width: 100%;
 }
 
+@media only screen and (max-width: 767px) {
+  .mobile-center {
+    text-align: center;
+  }
+}
+
+
 /*************** Spacing ***************/
 
 .mt-10 {margin-top: 10%;}
@@ -189,19 +196,6 @@ margin-left: 10px;
 
 /*************** Borrar ***************/
 .wrapper img {
-  max-width: 100%;
-  height: auto;
-}
-.animation-background {
-  position: absolute;
-}
-.wrapper-animation-1 {
-  display: flex;
-  align-items: stretch;
-  max-width: 100%;
-  margin: 0 auto;
-}
-.wrapper-animation-1 img {
   max-width: 100%;
   height: auto;
 }
