@@ -15,8 +15,7 @@ import { FaAngleDown } from 'react-icons/fa'
 
 import ShopifyWhite from '../images/Shopify-Badge-White.png'
 import LogoWhite from '../images/logo-mobil_white.png'
-import Logo from '../images/outshifter-logo.png'
-
+import LogoExtentions from '../images/outshifter-logo-extentions.png'
 
 import Lottie from 'lottie-react-web'
 import LogoBack from '../animations/logo-back.json'
@@ -72,15 +71,26 @@ const Forside = styled.div`
   right: 50px;
   z-index: 2;
   opacity:0.5;
+  @media only screen and (max-width: 991px) {
+    position:inherit;
+  }
 }
 .universal img {
   max-width: 45px;
   position: absolute;
   z-index: 3;
-/*  bottom: 194px;
-  left: 681px;*/
+  bottom: 194px;
+  left: 681px;
+  display:none;
 }
-
+@media only screen and (max-width: 991px) {
+  .universal .float-right {
+    float: none!important;
+  }
+  .universal .logo-animation {
+    text-align: center;
+  }
+}
 /* Dot line animation Universal */
 #dot-line-1 {
   transform: rotate(180deg);
@@ -122,6 +132,9 @@ const Forside = styled.div`
   position: relative;
   bottom: 888px;
   left: 108px;
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
 }
 #dot-line-5 {
   transform: rotate(280deg);
@@ -160,6 +173,9 @@ const Forside = styled.div`
   position: relative;
   bottom: 682px;
   left: 765px;
+  @media only screen and (max-width: 991px) {
+    display: inherit;
+  }
 }
 #dot-line-9 {
   transform: rotate(360deg);
@@ -233,10 +249,16 @@ const Forside = styled.div`
 .multichannel ul {
   padding-left: 0px;
   display: flex;
+  @media only screen and (max-width: 991px) {
+    display: inherit;
+  }
 }
 .multichannel li {
   display: contents;
   margin-right: 15px;
+  @media only screen and (max-width: 991px) {
+    display: inline-flex;
+  }
 }
 .multichannel svg {
   max-width: 30px;
@@ -246,6 +268,9 @@ const Forside = styled.div`
 .outsourcing ul {
   padding-left: 0px;
   text-align: center;
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
 }
 .outsourcing li {
   display: inline-flex;
@@ -266,10 +291,10 @@ const Forside = styled.div`
   max-width: 400px;
 }
 .extentions-logo img {
-  max-width: 75px;
+  max-width: 400px;
   position: absolute;
-  top: 171px;
-  right: 274px;
+  top: 0px;
+  right: 0px;
 }
 `;
 
@@ -330,7 +355,6 @@ class WavesPage extends React.Component {
         <Forside>
 
         <div className="main-banner">
-
           <canvas id="canvas1"></canvas>
           <canvas id="canvas2"></canvas>
           <div className={'masthead'}>
@@ -350,7 +374,6 @@ class WavesPage extends React.Component {
           <div className="how-works">
             <Link to={''}><ButtonCircle><FaAngleDown /></ButtonCircle></Link><p>How outshifting works</p>
           </div>
-
         </div>
 
         {/* Where the magic begins */}
@@ -358,7 +381,7 @@ class WavesPage extends React.Component {
           <div className="container">
 
             <div className="row mb-10 universal">
-              <div className="col-lg-8 ">
+              <div className="col-12 order-2 order-lg-1 col-lg-8">
                 <div className="float-right">
                   <div className="logo-animation">
                     <Lottie options={{animationData: LogoBack}}/>
@@ -404,7 +427,7 @@ class WavesPage extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
+              <div className="col-12 order-1 order-lg-2 col-lg-4">
                 <div className="magic-content">
                   <h4>Universal Management</h4>
                   <p>
@@ -416,7 +439,7 @@ class WavesPage extends React.Component {
               </div>
             </div>
             <div className="row mb-15 multichannel">
-              <div className="col-lg-7 text-center dot-dots">
+              <div className="col-12 order-2 order-lg-1 col-lg-7 text-center dot-dots">
                 <ul>
                   <li><Lottie options={{animationData: BulletsVioletaAzul}}/>API</li>
                   <li><Lottie options={{animationData: BulletsAzulTurquesa}}/>Storefront</li>
@@ -426,7 +449,7 @@ class WavesPage extends React.Component {
                   <li><Lottie options={{animationData: BulletsTurquesaAzul}}/>Dropshipping</li>
                 </ul>
               </div>
-              <div className="col-lg-5">
+              <div className="col-12 order-1 order-lg-2 col-lg-5">
                 <div className="magic-content">
                   <h4>Multichannel Commerce</h4>
                   <p>
@@ -570,8 +593,6 @@ class WavesPage extends React.Component {
                 </div>
               </div>
             </div>
-            <canvas id="canvas21"></canvas>
-            <canvas id="canvas22"></canvas>
             <div className="row mb-5">
               <div className="col">
                 <div className="magic-content float-left">
@@ -594,11 +615,13 @@ class WavesPage extends React.Component {
         <div className="container-fluid extentions pt-5 pb-5">
           <div className="container">
             <div className="row">
-              <div className="col align-self-center text-center extentions-logo">
-                <img src={Logo} alt='logo' />
-                <Lottie options={{animationData: DotsSphere}}/>         
+              <div className="col-12 col-2 col-lg-1 col-lg-6 align-self-center text-center extentions-logo">
+                <div className="wrapper-img-lottie">
+                  <Lottie options={{animationData: DotsSphere}}/>
+                  <img src={LogoExtentions} alt='logo' />
+                </div>
               </div>
-              <div className="col align-self-center">
+              <div className="col-12 col-1 col-lg-2 col-lg-6 align-self-center">
                 <div className="extentions-content">
                   <h3>Customize Extentions</h3>
                   <p>

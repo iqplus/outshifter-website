@@ -13,6 +13,10 @@ hr {
   height: 50px;
 }
 
+.wrapper-img-lottie img {
+  width: 100%;
+}
+
 /*************** Spacing ***************/
 
 .mt-10 {margin-top: 10%;}
@@ -87,7 +91,6 @@ hr {
   padding-top: 10%;
 }
 
-
 /*************** Main Banner ***************/
 
 .hidden{
@@ -109,22 +112,23 @@ hr {
 }
 .main-banner {
   padding-top: 20px;
+  @media only screen and (max-width: 991px) {
+    text-align: center;
+  }
 }
 .main-banner h1 {
   font-weight: 900;
   padding-top: 15%;
   padding-bottom: 10px;
   font-weight: 900;
+  @media only screen and (max-width: 767px) {
+    padding-top: 25%;
+  }
 }
 .main-banner p {
   color: #4A4A4A;
   font-size: 1rem;
   font-weight: 500;
-}
-@media only screen and (max-width: 991px) {
-  .main-banner {
-      text-align: center;
-  }
 }
 .how-works {
 position: absolute;
@@ -465,7 +469,7 @@ z-index: 15;
   background-position: left;
   background-repeat: no-repeat;
   left:-200px;
-opacity: .5;
+  opacity: .5;
   z-index: 100;
   position: absolute;
 }
