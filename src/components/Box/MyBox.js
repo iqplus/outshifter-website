@@ -9,7 +9,7 @@ const StyledBox = styled.div`
     padding: 30px;
     border-radius: 7px;
     width: 100%;
-
+background:white;
     @media only screen and (max-width: 767px) {
         margin-bottom: 15px;
     }

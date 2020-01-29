@@ -108,12 +108,12 @@ hr {
     z-index: 20;
 }
 .main-banner {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 .main-banner h1 {
     font-weight: 900;
     padding-top: 15%;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     font-weight: 900;
 }
 .main-banner p {
@@ -402,4 +402,19 @@ hr {
 
 @media only screen and (max-width: 400px) {
     .wrapper-animation-1 img {max-width: 100%;}
+}
+
+
+/**** Footer ***/
+
+.footer {
+    background: -moz-linear-gradient(left, #5873e5 0%, #3dcef4 100%)!important;
+    background: -webkit-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+    background: -o-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+    background: -ms-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+    background: linear-gradient(to right, #5873e5 0%,#3dcef4 100%)!important;
+    align-items: center!important;
+
+
+
 }

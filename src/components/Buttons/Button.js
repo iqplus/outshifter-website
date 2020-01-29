@@ -10,7 +10,7 @@ const StyledButton = styled.button`
     position: relative;
     z-index: 1;
     padding: 8px 40px;
-
+    box-shadow: rgb(226, 226, 226) 1px 1px 5px 2px;
     background: #5873e5;
     background: -moz-linear-gradient(left, #5873e5 0%, #3dcef4 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#5873e5), color-stop(100%,#3dcef4));
