@@ -1,0 +1,450 @@
+/*************** Global ***************/
+
+hr {
+  background: linear-gradient(to right, #829DDD, #85E9F7);
+  height: 3px;
+  width: 30%;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.shop-badge img {
+  height: 50px;
+}
+
+/*************** Spacing ***************/
+
+.mt-10 {margin-top: 10%;}
+.mt-15 {margin-top: 15%;}
+.mb-10 {margin-bottom: 10%;}
+.mb-15 {margin-bottom: 15%;}
+
+.pt-10 {padding-top: 10%;}
+.pt-15 {padding-top: 15%;}
+.pb-10 {padding-bottom: 10%;}
+.pb-15 {padding-bottom: 15%;}
+
+/*************** Dot Animations ***************/
+
+#canvas1 {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20%;
+  left: 0;
+}
+
+#canvas2 {
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas21 {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 45%;
+  right: 25%;
+}
+
+#canvas22 {
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas31 {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#canvas32 {
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.after-canvas {
+  position: relative;
+  z-index: 15;
+  padding-top: 10%;
+}
+
+
+/*************** Main Banner ***************/
+
+.hidden{
+  display: none;
+}
+.fade-in {
+  opacity: 0;
+}
+.fade-in.visible {
+  transition: opacity 1s ease-in;
+  opacity: 1;
+}
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 20;
+}
+.main-banner {
+  padding-top: 20px;
+}
+.main-banner h1 {
+  font-weight: 900;
+  padding-top: 15%;
+  padding-bottom: 10px;
+  font-weight: 900;
+}
+.main-banner p {
+  color: #4A4A4A;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media only screen and (max-width: 991px) {
+  .main-banner {
+      text-align: center;
+  }
+}
+.how-works {
+position: absolute;
+z-index: 25;
+bottom: 50px;
+right: 50px;
+}
+.how-works p {
+display: inline;
+margin-left: 10px;
+}
+
+/*************** Cookies ***************/
+
+.cookie-container {
+  background: -moz-linear-gradient(left, #5873e5 0%, #3dcef4 100%)!important;
+  background: -webkit-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+  background: -o-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+  background: -ms-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+  background: linear-gradient(to right, #5873e5 0%,#3dcef4 100%)!important;
+  align-items: center!important;
+}
+.cookie-text {
+  max-width: 991px;
+  margin-right: auto!important;
+  margin-left: auto!important;
+  padding-left: 30px;
+}
+.cookie-text a {
+  color: white;
+  text-decoration: underline;
+}
+.cookie-text a:hover {
+  color: white;
+  opacity: 0.7;
+}
+.cookie-button {
+  background-color: white!important;
+  color: #70AAF2!important;
+  border-radius: 30px!important;
+  margin-right: 8%!important;
+  margin-top: 15px!important;
+  padding: 10px 50px!important;
+}
+
+@media only screen and (min-width: 1600px) {
+  .cookie-button {margin-right: 15%!important;}
+}
+@media only screen and (max-width: 1400px) {
+  .cookie-button {margin-right: 30px!important;}
+}
+@media only screen and (max-width: 500px) {
+  .cookie-text {margin-right: 30px!important;}
+}
+
+/*************** Borrar ***************/
+.wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+.animation-background {
+  position: absolute;
+}
+.wrapper-animation-1 {
+  display: flex;
+  align-items: stretch;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.wrapper-animation-1 img {
+  max-width: 100%;
+  height: auto;
+}
+.wrapper-animation-2 {
+  display: flex;
+  align-items: stretch;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.wrapper-animation-2 img {
+  max-width: 500px;
+  height: auto;
+}
+.wrapper-animation-3 {
+  display: flex;
+  align-items: stretch;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.wrapper-animation-3 img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Row Mediator */
+.mediator {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+@media only screen and (max-width: 767px) {
+  .mediator {
+      padding-right: 15px;
+      padding-left: 15px;
+  }
+}
+.user-description {
+      text-align: justify;
+}
+.user-col {
+  padding-bottom: 100px;
+}
+
+/* Row Merchant */
+.merchant {
+  background: #F5F7F8;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.merchant button:after {
+  background: #F5F7F8;
+}
+
+
+/* Pricing */
+.pricing {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.pricing p {
+  max-width: 540px;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding-top: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .pricing p {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+}
+.pricing h5 {
+  padding-top: 25px;
+}
+.pricing h6 {
+  color: #4A90E2;
+  font-weight: 400;
+  padding-bottom: 25px;
+  font-size: 0.8rem;
+}
+
+.pricing-width {
+  max-width: 900px!important;
+  margin: 0 auto;
+}
+
+.pricing .box {
+  margin: 0 auto;
+  box-shadow: 0 0 0 1px rgba(50,50,93,.05), 0 2px 5px 0 rgba(50,50,93,.1), 0 1px 1px 0 rgba(0,0,0,.07);
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 50px;
+  padding: 50px 25px;
+}
+
+.pricing .box img {
+  height: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.pricing .box ul {
+  display:inline-block;
+  text-align:left;
+  color: #4A4A4A;
+  padding-left: 0px;
+}
+
+.pricing .box li {
+  line-height:2em;
+  padding-left:0px;
+  padding-top:5px;
+  padding-bottom:5px;
+  font-size:14px;
+  list-style-type:none;
+  list-style:none;
+  display: table-row;
+}
+
+.pricing .box svg {
+  margin-right: 10px;
+}
+
+/* Devs */
+
+.img-wrapper {
+  width: 100%;
+}
+.img-wrapper img {
+  width: 100%;
+}
+
+.typewriter {
+  display: inline-block;
+}
+
+.developer-width {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1400px) {
+  .button-dev {
+      margin-top: 25px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .developer-width {text-align:center;}
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end) infinite,
+    blink-caret .75s step-end infinite;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 992px) {
+  .pricing .box {
+      margin-left: 25px;
+      margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper-animation-2 {
+      max-width: 350px;
+  }
+  .wrapper-animation-2 img {
+      max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .wrapper-animation-2 {
+      margin-bottom: 50px;
+      max-width: 300px;
+  }
+  .wrapper-animation-2 img {
+      max-width: 300px;
+  }
+  .e-icons p {
+      margin-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .pricing .box ul {
+      padding-left: 0px;
+  }
+  .pricing .box {
+      padding: 50px 15px;
+  }
+  .wrapper-animation-1 {
+      max-width: 350px;
+  }
+  .wrapper-animation-1 img {
+      max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .wrapper-animation-1 img {max-width: 100%;}
+}
+
+
+/**** Footer ***/
+
+.footer {
+position: relative;
+z-index: 15;
+  padding: 80px 0 80px 0;
+  background: -moz-linear-gradient(left, #5873e5 0%, #3dcef4 100%)!important;
+  background: -webkit-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+  background: -o-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+  background: -ms-linear-gradient(left, #5873e5 0%,#3dcef4 100%)!important;
+  background: linear-gradient(to right, #5873e5 0%,#3dcef4 100%)!important;
+  align-items: center!important;
+
+  h5{
+    color: white;
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 20px;
+    a{
+      font-size: 20px;
+
+    }
+  }
+
+  a {
+    color:white;
+    transition: color 0.3s ease;
+    &:hover{
+      color: #3dcef4;
+      }
+  }
+  p{
+    color:white;
+
+  }
+  img{
+    width:40px;
+    margin: 20px;
+  }
+
+
+}
+

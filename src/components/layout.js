@@ -15,6 +15,7 @@ import { GlobalStyles } from './../global';
 import { theme } from './../theme';
 
 import Loading from './loading.js';
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   
@@ -39,22 +40,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <div>
         <main className="main-class">{children}</main>
-        <footer>
-          <div className="container footer">
-            <div className="row footer-links">
-              <div className="col-12 col-sm-12 col-md"><Link to={'/terms'}>Terms & Conditions</Link></div>
-              <div className="col-12 col-sm-12 col-md"><Link to={'/terms'}>Legal Notice</Link></div>
-              <div className="col-12 col-sm-12 col-md"><Link to={'/terms'}>Privacy Policy</Link></div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row copyright">
-                <div className="col">
-                  <p>© 2020 Outshifter AS. All rights reserved.</p>
-                </div>
-            </div>
-          </div>
-        </footer>
+        <Footer/>
       </div>
     </>
     </ThemeProvider>

@@ -10,7 +10,7 @@ const StyledButtonOutline = styled.button`
     position: relative;
     z-index: 1;
     padding: 8px 40px;
-
+    box-shadow: rgb(226, 226, 226) 1px 1px 5px 2px;
     span {
         line-height: 16px;
     }

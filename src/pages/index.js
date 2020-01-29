@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CookieConsent from "react-cookie-consent";
 
 import styled from 'styled-components';
-import './pages.css';
+import './pages.scss';
 
 import { Link } from "gatsby"
 import Button from '../components/Buttons/Button'
@@ -38,10 +39,14 @@ const Forside = styled.div`
     margin-top: 10px;
   }
   .how-works {
+    background: white;
+    border-radius:30px;
+    padding:10px;
     position: absolute;
     z-index: 25;
     bottom: 50px;
     right: 50px;
+    box-shadow: rgb(226, 226, 226) 1px 1px 5px 2px;
     @media only screen and (max-width: 991px) {
       display: none;
     }
@@ -273,27 +278,27 @@ class WavesPage extends React.Component {
   componentDidMount() {
     const scriptAftc = document.createElement("script");
     scriptAftc.async = true;
-    scriptAftc.src = "../includes/js/aftc.min.js";
+    scriptAftc.src = "../../includes/js/aftc.min.js";
     document.head.appendChild(scriptAftc);
 
     const scriptThree = document.createElement("script");
     scriptThree.async = true;
-    scriptThree.src = "../includes/js/three.min.js";
+    scriptThree.src = "../../includes/js/three.min.js";
     document.head.appendChild(scriptThree);
 
     const scriptStats = document.createElement("script");
     scriptStats.async = true;
-    scriptStats.src = "../includes/js/stats.min.js";
+    scriptStats.src = "../../includes/js/stats.min.js";
     document.head.appendChild(scriptStats);
 
     const scriptApp = document.createElement("script");
     scriptApp.async = true;
-    scriptApp.src = "../includes/js/app.js";
+    scriptApp.src = "../../includes/js/app.js";
     document.head.appendChild(scriptApp);
 
     const scriptAppTest = document.createElement("script");
     scriptAppTest.async = true;
-    scriptAppTest.src = "../includes/js/appTest.js";
+    scriptAppTest.src = "../../includes/js/appTest.js";
     document.head.appendChild(scriptAppTest);
 
     const scriptVertex = document.createElement("script");
@@ -314,6 +319,14 @@ class WavesPage extends React.Component {
       
       <Layout className="hidden">
         <SEO title="Home" />
+        <CookieConsent
+          containerClasses="cookie-container"
+          contentClasses="cookie-text"
+          buttonClasses="cookie-button"
+          buttonText="OK"
+        >
+          Outshifter uses cookies to provide necessary site functionality and improve your experience. By using our website, you agree to our <a href="/terms" target="_blank">privacy policy</a> and our <a href="/terms" target="_blank">cookie policy</a>.
+        </CookieConsent>
         <Forside>
 
         <div className="main-banner">
