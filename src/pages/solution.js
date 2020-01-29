@@ -5,9 +5,9 @@ import SEO from "../components/seo"
 
 import './terms.css'
 
-import Sidebar from "../components/Sidebar/Sidebar"
-import TermsData from "../components/TermsData/TermsData"
-import AccordeonTerms from "../components/AccordeonTerms/AccordeonTerms"
+import Sidebar from "../components/SidebarSolution/Sidebar"
+import TermsData from "../components/SolutionData/SolutionData"
+import AccordeonSolution from "../components/AccordeonSolution/AccordeonSolution"
 
 
 class SolutionPage extends React.Component {
@@ -73,7 +73,7 @@ class SolutionPage extends React.Component {
                         info1={this.state.showInfo1}
                         info2={this.state.showInfo2}
                     />
-                    <AccordeonTerms 
+                    <AccordeonSolution 
                         collapsed1={this.state.isCollapsed1}
                         collapsed2={this.state.isCollapsed2}
                         toggle1={this.toggleMenuItem1}
