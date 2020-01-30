@@ -16,7 +16,8 @@ import { FaAngleDown } from 'react-icons/fa'
 import ShopifyWhite from '../images/Shopify-Badge-White.png'
 import LogoWhite from '../images/logo-mobil_white.png'
 import LogoExtentions from '../images/outshifter-logo-extentions.png'
-import DotsBackground from '../images/pricing2-min.png'
+import DotsBackground from '../images/dots-background-desktop.png'
+import DotsBackgroundMobile from '../images/dots-background-mobile-2.png'
 
 
 import Lottie from 'lottie-react-web'
@@ -219,9 +220,13 @@ const Forside = styled.div`
 #dot-line-4 .c-dashed-line__dash {
   stroke: #3dcef4; /* this must match the background color */
 }
+.dot-line-1000 {
+  display: none;
+}
 
 /* Dot line animation Multichannel */
 #dot-multichannel {
+  display: none;
   position: relative;
   bottom: 888px;
   left: 108px;
@@ -261,19 +266,38 @@ const Forside = styled.div`
 #dot-line-8 .c-dashed-line__dash {
   stroke: #3dcef4; /* this must match the background color */
 }
+#dot-outsourcing-2 {
+  position: relative;
+  top: 691px;
+  left: 56px;
+  transform: rotate(-17deg);
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}
+#dot-multichannel-2 {
+  position: relative;
+  top: 174px;
+  right: 828px;
+  transform: rotate(-79deg);
+  @media only screen and (max-width: 1399px) and (min-width: 992px) {
+    right: 550px;
+  }
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}
 /* Dot line animation Outsourcing */
 #dot-outsourcing {
-  position: absolute;
-  bottom: 682px;
-  left: 765px;
+  display: none;
   @media only screen and (max-width: 991px) {
     display: none;
   }
 }
 #dot-line-9 {
   transform: rotate(360deg);
-  right: 719px;
-  top: 296px;
+  top: 0px;
+  right: 0px;
 }
 #dot-line-9 .c-dashed-line__dash {
   stroke: #5873e5; /* this must match the background color */
@@ -309,7 +333,7 @@ const Forside = styled.div`
     z-index: 1;
   }
   .c-dashed-line__path {
-    animation: c-dashed-line-path 6s ease-in-out infinite alternate;
+    animation: c-dashed-line-path 5s ease-in-out infinite alternate;
     fill: none;
     stroke: white;
     stroke-dasharray: 940; /* this is the entire length of the line */
@@ -375,6 +399,9 @@ const Forside = styled.div`
 .outsourcing button {
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .li-dots-display svg {display: none;}
+}
 .extentions {
   background: #F5F7F8;
   svg {
@@ -393,7 +420,8 @@ const Forside = styled.div`
 
 .sales-background img {
   position: absolute;
-  max-width: 500px;
+  top: -100px;
+  max-width: 700px;
   opacity: .5;
   background-repeat: no-repeat;
   @media only screen and (max-width: 991px) {
@@ -403,9 +431,9 @@ const Forside = styled.div`
 
 .sales-background-right img {
   position: absolute;
-  top: 0px;
+  top: -100px;
   right: 0px;
-  max-width: 500px;
+  max-width: 700px;
   opacity: .5;
   background-repeat: no-repeat;
   -moz-transform: scaleX(-1);
@@ -502,6 +530,44 @@ class WavesPage extends React.Component {
                     <Lottie options={{animationData: LogoBack}}/>
                     <img src={LogoWhite} alt="logo white" />
                   </div>
+                  <div className="dot-animation" id="dot-outsourcing-2">
+                    <svg id="dot-line-1" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
+                      <defs>
+                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                      </defs>
+                      {/* A dashed white line that sits on top of the solid green line */}
+                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                      {/* A solid green line that we'll animate */}
+                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                    </svg>
+                    <svg id="dot-line-2" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
+                      <defs>
+                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                      </defs>
+                      {/* A dashed white line that sits on top of the solid green line */}
+                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                      {/* A solid green line that we'll animate */}
+                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                    </svg>
+                    <svg id="dot-line-3" class="c-dashed-line" width="850" height="240" xmlns="http://www.w3.org/2000/svg" >
+                      <defs>
+                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                      </defs>
+                      {/* A dashed white line that sits on top of the solid green line */}
+                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                      {/* A solid green line that we'll animate */}
+                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                    </svg>
+                    <svg id="dot-line-1000" class="c-dashed-line" width="250" height="240" xmlns="http://www.w3.org/2000/svg" >
+                      <defs>
+                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                      </defs>
+                      {/* A dashed white line that sits on top of the solid green line */}
+                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                      {/* A solid green line that we'll animate */}
+                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                    </svg>
+                  </div>
                   <div className="dot-animation" id="dot-universal">
                     <svg id="dot-line-1" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
                       <defs>
@@ -530,7 +596,45 @@ class WavesPage extends React.Component {
                       {/* A solid green line that we'll animate */}
                       <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
                     </svg>
-                    <svg id="dot-line-4" class="c-dashed-line" width="250" height="240" xmlns="http://www.w3.org/2000/svg" >
+                    <svg id="dot-line-1000" class="c-dashed-line" width="250" height="240" xmlns="http://www.w3.org/2000/svg" >
+                      <defs>
+                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                      </defs>
+                      {/* A dashed white line that sits on top of the solid green line */}
+                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                      {/* A solid green line that we'll animate */}
+                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                    </svg>
+                  </div>
+                  <div className="dot-animation" id="dot-multichannel-2">
+                    <svg id="dot-line-1" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
+                      <defs>
+                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                      </defs>
+                      {/* A dashed white line that sits on top of the solid green line */}
+                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                      {/* A solid green line that we'll animate */}
+                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                    </svg>
+                    <svg id="dot-line-2" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
+                      <defs>
+                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                      </defs>
+                      {/* A dashed white line that sits on top of the solid green line */}
+                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                      {/* A solid green line that we'll animate */}
+                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                    </svg>
+                    <svg id="dot-line-3" class="c-dashed-line" width="850" height="240" xmlns="http://www.w3.org/2000/svg" >
+                      <defs>
+                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                      </defs>
+                      {/* A dashed white line that sits on top of the solid green line */}
+                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                      {/* A solid green line that we'll animate */}
+                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                    </svg>
+                    <svg id="dot-line-1000" class="c-dashed-line" width="250" height="240" xmlns="http://www.w3.org/2000/svg" >
                       <defs>
                         <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
                       </defs>
@@ -614,44 +718,6 @@ class WavesPage extends React.Component {
               </svg>
             </div>
             <div className="row outsourcing mb-10">
-              <div className="dot-animation" id="dot-outsourcing">
-                <svg id="dot-line-9" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                  <defs>
-                    <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                  </defs>
-                  {/* A dashed white line that sits on top of the solid green line */}
-                  <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                  {/* A solid green line that we'll animate */}
-                  <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                </svg>
-                <svg id="dot-line-10" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                  <defs>
-                    <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                  </defs>
-                  {/* A dashed white line that sits on top of the solid green line */}
-                  <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                  {/* A solid green line that we'll animate */}
-                  <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                </svg>
-                <svg id="dot-line-11" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                  <defs>
-                    <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                  </defs>
-                  {/* A dashed white line that sits on top of the solid green line */}
-                  <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                  {/* A solid green line that we'll animate */}
-                  <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                </svg>
-                <svg id="dot-line-12" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                  <defs>
-                    <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                  </defs>
-                  {/* A dashed white line that sits on top of the solid green line */}
-                  <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                  {/* A solid green line that we'll animate */}
-                  <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                </svg>
-              </div>
               <div className="col-lg-8">
                 <ul>
                   <li><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
@@ -672,13 +738,51 @@ class WavesPage extends React.Component {
                   <li><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
                   <li><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
                   <li className="mr-3"><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsTurquesaVioleta}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
-                  <li><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsAzulTurquesa}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsTurquesaVioleta}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
                 </ul>
+                <div className="dot-animation" id="dot-outsourcing">
+                  <svg id="dot-line-9" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
+                    <defs>
+                      <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                    </defs>
+                    {/* A dashed white line that sits on top of the solid green line */}
+                    <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                    {/* A solid green line that we'll animate */}
+                    <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                  </svg>
+                  <svg id="dot-line-10" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
+                    <defs>
+                      <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                    </defs>
+                    {/* A dashed white line that sits on top of the solid green line */}
+                    <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                    {/* A solid green line that we'll animate */}
+                    <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                  </svg>
+                  <svg id="dot-line-11" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
+                    <defs>
+                      <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                    </defs>
+                    {/* A dashed white line that sits on top of the solid green line */}
+                    <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                    {/* A solid green line that we'll animate */}
+                    <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                  </svg>
+                  <svg id="dot-line-12" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
+                    <defs>
+                      <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
+                    </defs>
+                    {/* A dashed white line that sits on top of the solid green line */}
+                    <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
+                    {/* A solid green line that we'll animate */}
+                    <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
+                  </svg>
+                </div>
               </div>
               <div className="col-lg-4">
                 <div className="magic-content mobile-center">
@@ -697,7 +801,7 @@ class WavesPage extends React.Component {
               <div className="col">
                 <div className="sales-background"><img src={DotsBackground} alt="dots backgorund left"/></div>
                 <div className="sales-background-right"><img src={DotsBackground} alt="dots backgorund right"/></div>
-                <div className="sales-background-mobile"><img src={DotsBackground} alt="dots backgorund mobile"/></div>
+                <div className="sales-background-mobile"><img src={DotsBackgroundMobile} alt="dots backgorund mobile"/></div>
                 <div className="magic-content mx-auto">
                   <h4>Sales Acceleration</h4>
                   <p>
