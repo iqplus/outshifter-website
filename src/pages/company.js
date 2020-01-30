@@ -75,40 +75,10 @@ const InnerPages = styled.div`
 
 class CompanyPage extends React.Component {
 
-  componentDidMount() {
-    const scriptAftc = document.createElement("script");
-    scriptAftc.async = true;
-    scriptAftc.src = "./includes/js/aftc.min.js";
-    document.head.appendChild(scriptAftc);
-
-    const scriptThree = document.createElement("script");
-    scriptThree.async = true;
-    scriptThree.src = "./includes/js/three.min.js";
-    document.head.appendChild(scriptThree);
-
-    const scriptStats = document.createElement("script");
-    scriptStats.async = true;
-    scriptStats.src = "./includes/js/stats.min.js";
-    document.head.appendChild(scriptStats);
-
-    const scriptApp = document.createElement("script");
-    scriptApp.async = true;
-    scriptApp.src = "./includes/js/appCompany.js";
-    document.head.appendChild(scriptApp);
-
-    const scriptVertex = document.createElement("script");
-    scriptVertex.type = "x-shader/x-vertex";
-    scriptVertex.id = "vertexshader";
-    document.body.appendChild(scriptVertex);
-    document.getElementById('vertexshader').append('attribute float scale;attribute vec3 customColor;varying vec3 vColor;void main() {vColor = customColor;vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );gl_PointSize = scale * ( 100.0 / - mvPosition.z );gl_Position = projectionMatrix * mvPosition;}');
-
-    const scriptFragment = document.createElement("script");
-    scriptFragment.type = "x-shader/x-fragment";
-    scriptFragment.id = "fragmentshader";
-    document.body.appendChild(scriptFragment);
-    document.getElementById('fragmentshader').append('uniform vec3 ccc;varying vec3 vColor;void main() {  if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.275 ) discard;  gl_FragColor = vec4( ccc * vColor, 1.0 );}');
+  componentDidMount(){
+    document.querySelector('#canvas1').style.visibility = "hidden"
+    document.querySelector('#canvas2').style.visibility = "hidden"
   }
-
   render () {
     return (
 

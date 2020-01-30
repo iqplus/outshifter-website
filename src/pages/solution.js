@@ -11,7 +11,10 @@ import AccordeonSolution from "../components/AccordeonSolution/AccordeonSolution
 
 
 class SolutionPage extends React.Component {
-
+    componentDidMount(){
+        document.querySelector('#canvas1').style.visibility = "hidden"
+        document.querySelector('#canvas2').style.visibility = "hidden"
+      }
     constructor(props) {
         super(props);
         this.state = { 
