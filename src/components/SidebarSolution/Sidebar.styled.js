@@ -24,6 +24,11 @@ export const StyledSidebar = styled.nav`
     .sidebar-item svg {
         font-size: 36px;
         padding-right: 15px;
+        color: #5873e5;
+    }
+    .sidebar-item img {
+        max-width: 30px;
+        margin-right: 10px;
     }
     .undermeny {
         padding-top: 25px;
@@ -36,6 +41,33 @@ export const StyledSidebar = styled.nav`
     }
     .undermeny2 {
         display: ${({ collapsed2 }) => collapsed2 ? 'blocked' : 'none'};
+    }
+    .undermeny3 {
+        display: ${({ collapsed3 }) => collapsed3 ? 'blocked' : 'none'};
+    }
+    .undermeny4 {
+        display: ${({ collapsed4 }) => collapsed4 ? 'blocked' : 'none'};
+    }
+    .undermeny5 {
+        display: ${({ collapsed5 }) => collapsed5 ? 'blocked' : 'none'};
+    }
+    .undermeny6 {
+        display: ${({ collapsed6 }) => collapsed6 ? 'blocked' : 'none'};
+    }
+    .undermeny7 {
+        display: ${({ collapsed7 }) => collapsed7 ? 'blocked' : 'none'};
+    }
+    .undermeny8 {
+        display: ${({ collapsed8 }) => collapsed8 ? 'blocked' : 'none'};
+    }
+    .undermeny9 {
+        display: ${({ collapsed9 }) => collapsed9 ? 'blocked' : 'none'};
+    }
+    .undermeny10 {
+        display: ${({ collapsed10 }) => collapsed10 ? 'blocked' : 'none'};
+    }
+    .undermeny11 {
+        display: ${({ collapsed11 }) => collapsed11 ? 'blocked' : 'none'};
     }
     .sidebar-header {
         padding-top: 50px;

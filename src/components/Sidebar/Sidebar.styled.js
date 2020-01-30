@@ -24,6 +24,7 @@ export const StyledSidebar = styled.nav`
     .sidebar-item svg {
         font-size: 36px;
         padding-right: 15px;
+        color: #5873e5;
     }
     .undermeny {
         padding-top: 25px;

@@ -37,9 +37,11 @@ export const StyledTermsData = styled.div`
     }
     #general-terms {
         display: ${({ info1 }) => info1 ? 'blocked' : 'none'};
+        padding-bottom: 500px;
     }
     #privacy-policy {
         display: ${({ info2 }) => info2 ? 'blocked' : 'none'};
+        padding-bottom: 500px;
     }
 
     @media only screen and (max-width: 767px) {
