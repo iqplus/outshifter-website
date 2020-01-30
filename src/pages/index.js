@@ -280,6 +280,9 @@ const Forside = styled.div`
   top: 174px;
   right: 828px;
   transform: rotate(-79deg);
+  @media only screen and (max-width: 1399px) and (min-width: 992px) {
+    right: 550px;
+  }
   @media only screen and (max-width: 991px) {
     display: none;
   }
@@ -395,6 +398,9 @@ const Forside = styled.div`
 }
 .outsourcing button {
   margin-bottom: 1rem;
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .li-dots-display svg {display: none;}
 }
 .extentions {
   background: #F5F7F8;
@@ -768,12 +774,12 @@ class WavesPage extends React.Component {
                   <li><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
                   <li><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
                   <li className="mr-3"><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsTurquesaVioleta}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
-                  <li><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsAzulTurquesa}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsTurquesaVioleta}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
+                  <li className="li-dots-display"><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
                 </ul>
                 <div className="dot-animation" id="dot-outsourcing">
                   <svg id="dot-line-9" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
