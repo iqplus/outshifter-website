@@ -16,7 +16,7 @@ import { FaAngleDown } from 'react-icons/fa'
 import ShopifyWhite from '../images/Shopify-Badge-White.png'
 import LogoWhite from '../images/logo-mobil_white.png'
 import LogoExtentions from '../images/outshifter-logo-extentions.png'
-import DotsBackground from '../images/pricing2-min.png'
+import DotsBackground from '../images/dots-background-desktop.png'
 import DotsBackgroundMobile from '../images/dots-background-mobile-2.png'
 
 
@@ -414,7 +414,8 @@ const Forside = styled.div`
 
 .sales-background img {
   position: absolute;
-  max-width: 500px;
+  top: -100px;
+  max-width: 700px;
   opacity: .5;
   background-repeat: no-repeat;
   @media only screen and (max-width: 991px) {
@@ -424,9 +425,9 @@ const Forside = styled.div`
 
 .sales-background-right img {
   position: absolute;
-  top: 0px;
+  top: -100px;
   right: 0px;
-  max-width: 500px;
+  max-width: 700px;
   opacity: .5;
   background-repeat: no-repeat;
   -moz-transform: scaleX(-1);
