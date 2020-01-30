@@ -6,6 +6,7 @@ import qs from 'qs'
 import * as globalvariables from '../../global'
 
 const FormGroup = styled.div`
+    padding-bottom: 10%;
     display: block;
     width: 100%;
     margin: 0 auto;
