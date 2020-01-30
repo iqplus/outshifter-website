@@ -8,10 +8,10 @@ export default function HTML(props) {
         <meta charSet="utf-8" />
          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-            <script src="./includes/js/aftc.min.js"></script>
+            <script src="./../includes/js/aftc.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
-    <script src="./includes/js/stats.min.js"></script>
-    <script src="./includes/js/app.js"></script>
+    <script src="./../includes/js/stats.min.js"></script>
+    <script src="./../includes/js/app.js"></script>
         {props.headComponents}
         <script
   dangerouslySetInnerHTML={{

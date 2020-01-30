@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Component} from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -90,10 +90,14 @@ const BoxStyled = styled.div`
     margin: 0 auto;
   }
 `;
-
-const SupportPage = () => (
-  
-  <Layout>
+class SupportPage extends Component {
+  componentDidMount(){
+    document.querySelector('#canvas1').style.visibility = "hidden"
+    document.querySelector('#canvas2').style.visibility = "hidden"
+  }
+  render(){
+    return(
+<Layout>
   <SEO title="Support" />
   <ContactStyled>
 
@@ -166,6 +170,11 @@ const SupportPage = () => (
     </div>
   </ContactStyled>
   </Layout>
-)
+    )
+  }
+}
+  
+  
+
 
 export default SupportPage;

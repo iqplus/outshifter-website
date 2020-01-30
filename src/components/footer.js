@@ -39,8 +39,8 @@ const Footer = () =>{
                   </Link>
                 </p>
                 <p>
-                <Link to={'/carreers'}>
-                  Carreers
+                <Link to={'/careers'}>
+                Careers
                 </Link>
                 </p>
                 <p>

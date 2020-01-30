@@ -76,8 +76,8 @@ const InnerPages = styled.div`
 class CompanyPage extends React.Component {
 
   componentDidMount(){
-    document.querySelector('#canvas1').style.visibility = "hidden"
-    document.querySelector('#canvas2').style.visibility = "hidden"
+    document.querySelector('#canvas1').style.visibility = "visible"
+    document.querySelector('#canvas2').style.visibility = "visible"
   }
   render () {
     return (

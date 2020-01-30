@@ -65,7 +65,10 @@ const InnerPages = styled.div`
 `;
 
 class ShopifyPage extends React.Component {
-
+  componentDidMount(){
+    document.querySelector('#canvas1').style.visibility = "hidden"
+    document.querySelector('#canvas2').style.visibility = "hidden"
+  }
   componentDidMount() {
     const scriptAftc = document.createElement("script");
     scriptAftc.async = true;

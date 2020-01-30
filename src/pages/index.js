@@ -479,7 +479,7 @@ class WavesPage extends React.Component {
                     Connect your sales community<br/>
                     and grow exponentially.
                   </p>
-                  <Link to={'/account'}><Button>Get started for free</Button></Link>
+                  <a href="https://dx6lpv6uyfg06.cloudfront.net/"><Button>Get started for free</Button></a>
                 </div>
               </div>
             </div>
