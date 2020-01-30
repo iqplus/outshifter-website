@@ -34,12 +34,12 @@ const Footer = () =>{
                   </Link>
                   </h5>
                 <p>
-                  <Link to={'/about'}>
+                  <Link to={'/company'}>
                   About
                   </Link>
                 </p>
                 <p>
-                <Link to={'/careers'}>
+                <Link to={'/company'}>
                 Careers
                 </Link>
                 </p>
@@ -56,17 +56,17 @@ const Footer = () =>{
                 </div>
               <div className="col-12 col-sm-12 col-md text-left">
                 <h5>
-                  <Link to={'/company'}>
+                  <Link to={'/features'}>
                   Comunity
                   </Link>
                 </h5>
                 <p>
-                  <Link to={'/about'}>
+                  <Link to={'/contact'}>
                   Developers
                   </Link>
                 </p>
                 <p>
-                  <Link to={'/about'}>
+                  <Link to={'/comming-soon'}>
                   API Documentation
                 </Link>
                 </p>
@@ -78,7 +78,7 @@ const Footer = () =>{
               </div>
               <div className="col-12 col-sm-12 col-md text-left">
                 <h5>
-                  <Link to={'/company'}>
+                  <Link to={'/suport'}>
                     Support
                   </Link>
                 </h5>
@@ -88,12 +88,12 @@ const Footer = () =>{
                 </Link>
                 </p>
                 <p>
-                <Link to={'#'}>
+                <a href={'https://dx6lpv6uyfg06.cloudfront.net/login'}>
                   Getting started
-                </Link>
+                </a>
                 </p>
                 <p>
-                  <Link to={'/solution'}>
+                  <Link to={'/comming-soon'}>
                     Documentation
                   </Link>
                 </p>

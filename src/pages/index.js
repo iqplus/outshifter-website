@@ -475,6 +475,27 @@ const Forside = styled.div`
 
 `;
 
+function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(true);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+  return (
+    <div
+      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      ref={domRef}
+    >
+      {props.children}
+    </div>
+  );
+}
+
+
 class WavesPage extends React.Component {
 
   componentDidMount(){
@@ -502,11 +523,13 @@ class WavesPage extends React.Component {
             <div className={'container ' + 'h-100 '}>
               <div className="row h-100 main-banner no-gutters">
                 <div className="col text-center">
+                  <FadeInSection>
                   <h1>The Sales Network</h1>
                   <p>
                     Connect your sales community<br/>
                     and grow exponentially.
                   </p>
+                  </FadeInSection>
                   <a href="https://dx6lpv6uyfg06.cloudfront.net/"><Button>Get started for free</Button></a>
                 </div>
               </div>
@@ -648,12 +671,16 @@ class WavesPage extends React.Component {
               </div>
               <div className="col-12 order-1 order-lg-2 col-lg-4">
                 <div className="magic-content">
+                <FadeInSection>
+
                   <h4 id="row-universal">Universal Management</h4>
                   <p>
                     Control your entire e-commerce from a single dashboard: With centralized inventory, 
                     outsourcing enablement, order management and more, for physical and digital products.
                   </p>
                   <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
+                  </FadeInSection>
+
                 </div>
               </div>
             </div>
@@ -670,12 +697,16 @@ class WavesPage extends React.Component {
               </div>
               <div className="col-12 order-1 order-lg-2 col-lg-5">
                 <div className="magic-content">
+                <FadeInSection>
+
                   <h4>Multichannel Commerce</h4>
                   <p>
                     One complete solution for all your online sales-channels. Distribute cross-platform with
                     powerfull listing tools and integrations that bridges content seamlessly. 
                   </p>
                   <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
+                  </FadeInSection>
+
                 </div>
               </div>
             </div>
@@ -786,6 +817,8 @@ class WavesPage extends React.Component {
               </div>
               <div className="col-lg-4">
                 <div className="magic-content mobile-center">
+                <FadeInSection>
+
                   <h4>Outsourcing Network</h4>
                   <p>
                     Exponetially scale distribution trough network effects: Administrate third-party product 
@@ -794,6 +827,8 @@ class WavesPage extends React.Component {
                   <ButtonOutline>Start by sourcing</ButtonOutline>
                   <br/>
                   <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
+                  </FadeInSection>
+
                 </div>
               </div>
             </div>
@@ -803,29 +838,37 @@ class WavesPage extends React.Component {
                 <div className="sales-background-right"><img src={DotsBackground} alt="dots backgorund right"/></div>
                 <div className="sales-background-mobile"><img src={DotsBackgroundMobile} alt="dots backgorund mobile"/></div>
                 <div className="magic-content mx-auto">
+                <FadeInSection>
+
                   <h4>Sales Acceleration</h4>
                   <p>
                     Grow sales by maximizing consumer touch points at the 1st stage of their e-commerce journey. 
                     Enable direct purchasing anywhere, with localized payment and shipping options.
                   </p>
                   <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
+                  </FadeInSection>
+
                 </div>
               </div>
             </div>
             <div className="row mb-5">
               <div className="col">
                 <div className="magic-content float-left">
+                <FadeInSection>
+
                   <h4>Data Empowerment</h4>
                   <p>
                     Track your networks impact and total sales in real-time to efficiently adjust channel utilization and optimize your cross-platform strategy with total transparency.
                   </p>
                   <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
+                  </FadeInSection>
+
                 </div>
               </div>
             </div>
             <div className="row text-center mb-5">
               <div className="col">
-                <Button>Start outshifting for free</Button>
+                <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><Button>Start outshifting for free</Button></a>
               </div>
             </div>
           </div>
@@ -842,6 +885,8 @@ class WavesPage extends React.Component {
               </div>
               <div className="col-12 col-1 col-lg-2 col-lg-6 align-self-center">
                 <div className="extentions-content">
+                <FadeInSection>
+
                   <h3>Customize Extentions</h3>
                   <p>
                     Outshifter supports flexible architecture that allows integration with any other third-party API.
@@ -849,6 +894,8 @@ class WavesPage extends React.Component {
                     Join our developer community!
                   </p>
                   <Link to={'/solution'}>Documentation <FaAngleRight /></Link>
+                  </FadeInSection>
+
                 </div>
               </div>
             </div>

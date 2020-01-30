@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Component} from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -13,6 +13,7 @@ import MyContact from "../components/MyContact/MyContact"
 
 const ContactStyled = styled.div`
   max-width: 1024px;
+  height:1000px;
   margin: 0 auto;
   .intro {
     padding-top: 5%;
@@ -87,34 +88,41 @@ const BoxStyled = styled.div`
   }
 `;
 
-const ContactPage = () => (
-  <Layout>
-  <SEO title="Contact" />
-  <ContactStyled>
-
-    <div className="container">
-
-      {/* Intro */}
-      <div className="row intro">
-        <div className="col">
-          <h3>Contact Outshifter</h3>
-          <p>
-            <strong>In need of assistance?</strong> Contact us and we will get in touch as soon as possible.
-          </p>
+class ContactPage extends Component{
+  
+  componentDidMount(){
+    document.querySelector('#canvas1').style.visibility = "hidden"
+    document.querySelector('#canvas2').style.visibility = "hidden"
+  }
+render(){
+  return(
+    <Layout>
+    <SEO title="Contact" />
+    <ContactStyled>
+  
+      <div className="container">
+  
+        {/* Intro */}
+        <div className="row intro">
+          <div className="col">
+            <h3>Contact Outshifter</h3>
+            <p>
+              <strong>In need of assistance?</strong> Contact us and we will get in touch as soon as possible.
+            </p>
+          </div>
         </div>
-      </div>
-
-      {/* Contact Form */}
-      <div className="row contact">
-        <div className="col">
-          <MyContact />
+  
+        {/* Contact Form */}
+        <div className="row contact">
+          <div className="col">
+            <MyContact />
+          </div>
         </div>
+  
       </div>
-
-    </div>
-  </ContactStyled>
-  </Layout>
-)
-
+    </ContactStyled>
+    </Layout>
+  )
+}
+}
 export default ContactPage;
-
