@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import './pages.css';
 import styled from 'styled-components';
+import { Link } from 'gatsby'
 
 import CareerJoinTeam from '../images/career-join-team.jpg'
 import CareerStudents from '../images/career-students.jpg'
@@ -139,7 +140,7 @@ class CompanyPage extends React.Component {
                   <br/><br/>
                   Sounds like a something you´d like to be a part of? 
                 </p>
-                <ButtonOutline>Contact</ButtonOutline>
+                <Link to={"/contact"}><ButtonOutline>Contact</ButtonOutline></Link>
                 <ImageTeam />
               </div>
             </div>
@@ -155,7 +156,7 @@ class CompanyPage extends React.Component {
                   The future belongs to the young.
                   <br/>
                 </p>
-                <ButtonOutline>Contact</ButtonOutline>
+                <Link to={"/contact"}><ButtonOutline>Contact</ButtonOutline></Link>
               </div>
             </div>
 

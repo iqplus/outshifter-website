@@ -100,7 +100,7 @@ class PricingPage extends React.Component {
                           No setup costs, no monthly fees and no hidden fees.<br/>
                           We only charge per transaction to ensure you ROI.
                         </p>
-                        <Link to={'/account'}><ButtonOutline>Get started for free</ButtonOutline></Link>
+                        <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Get started for free</ButtonOutline></a>
                         </div>
                     </div>
                     </div>
@@ -113,17 +113,17 @@ class PricingPage extends React.Component {
                         <div className="col-md-6 col-lg-4 mb-5">
                           <h4>Sourcing</h4>
                           <p>Sourcing products and selling through Outshifter is always completly free.</p>
-                          <ButtonOutline>Start by Outsourcing</ButtonOutline>
+                          <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Start by Outsourcing</ButtonOutline></a>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                           <h4>Transaction Fee</h4>
                           <p>4.8% + € 0.18  is charged from the sales of the products you list. That's it.</p>
-                          <ButtonOutline>Start outsourcing for free</ButtonOutline>
+                          <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Start outsourcing for free</ButtonOutline></a>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                           <h4>Free Trial</h4>
                           <p>Your first 100 sales transactions are free! Try outshifting without any catch or cost.</p>
-                          <ButtonOutline>Create account</ButtonOutline>
+                          <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Create account</ButtonOutline></a>
                         </div>
                     </div>
                     <div className="row text-center">
