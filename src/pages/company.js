@@ -42,8 +42,11 @@ const InnerPages = styled.div`
     text-align: center;
     max-width: 650px;
     margin: 0 auto;
-    padding-top: 10%;
+    padding-top: 20%;
     padding-bottom: 10%;
+    @media only screen and (max-width: 767px) {
+      padding-top: 30%;
+    }
   }
   .intro h2 {
     padding-bottom: 25px;
@@ -97,7 +100,7 @@ class CompanyPage extends React.Component {
               <div className="container">   
                 <div className="row intro">
                   <div className="col">
-                    <h2>Democratice e-Commerce</h2>
+                    <h2>Democratize <br/>e-Commerce</h2>
                     <p>
                       Outshifter is the technology company creating the infrastructure for a decentralized and transparent e-commerce value-chain.
                     </p>

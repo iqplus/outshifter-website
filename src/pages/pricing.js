@@ -19,6 +19,7 @@ const FeatureStylePage = styled.div`
   padding-bottom: 10%;
   img {
     margin-top: 5rem;
+    max-width: 100%;
   }
   h4 {
     margin-bottom: 2rem;
