@@ -10,6 +10,9 @@ export const StyledAccordeonTerms = styled.div`
     #privacy-policy {
         display: ${({ collapsed2 }) => collapsed2 ? 'blocked' : 'none'};
     }
+    #transactions {
+        display: ${({ collapsed3 }) => collapsed3 ? 'blocked' : 'none'};
+    }
 
     .terms-titel {
         padding-top: 50px;
@@ -23,9 +26,9 @@ export const StyledAccordeonTerms = styled.div`
         padding-bottom: 25px;
         color: #4A4A4A;
     }
-    .sidebar-item img {
-        height: 30px;
+    .sidebar-item svg {
         padding-right: 15px;
+        width: 36px;
     }
     h5 {
         color: #9B9B9B;

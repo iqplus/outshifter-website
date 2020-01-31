@@ -880,7 +880,7 @@ class WavesPage extends React.Component {
               <div className="col-12 col-2 col-lg-1 col-lg-6 align-self-center text-center extentions-logo">
                 <div className="wrapper-animation-1">
                   <Lottie options={{animationData: DotsSphere}}/>
-                  <div className="animation-background"><img src={LogoExtentions} alt='logo' /></div>
+                  {/*<div className="animation-background"><img src={LogoExtentions} alt='logo' /></div>*/}
                 </div>
               </div>
               <div className="col-12 col-1 col-lg-2 col-lg-6 align-self-center">

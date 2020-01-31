@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledSidebar = styled.nav`
-
     position: fixed;
     top: 75px;
     bottom: 100px;
@@ -22,9 +21,9 @@ export const StyledSidebar = styled.nav`
         width: 95%;
     }
     .sidebar-item svg {
-        font-size: 36px;
         padding-right: 15px;
         color: #5873e5;
+        width: 30px;
     }
     .undermeny {
         padding-top: 25px;
@@ -37,6 +36,9 @@ export const StyledSidebar = styled.nav`
     }
     .undermeny2 {
         display: ${({ collapsed2 }) => collapsed2 ? 'blocked' : 'none'};
+    }
+    .undermeny3 {
+        display: ${({ collapsed3 }) => collapsed3 ? 'blocked' : 'none'};
     }
     .sidebar-header {
         padding-top: 50px;

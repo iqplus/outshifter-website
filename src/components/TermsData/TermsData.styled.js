@@ -43,6 +43,10 @@ export const StyledTermsData = styled.div`
         display: ${({ info2 }) => info2 ? 'blocked' : 'none'};
         padding-bottom: 500px;
     }
+    #transactions {
+        display: ${({ info3 }) => info3 ? 'blocked' : 'none'};
+        padding-bottom: 500px;
+    }
 
     @media only screen and (max-width: 767px) {
         display: none;

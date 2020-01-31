@@ -637,7 +637,7 @@ class SolutionPage extends React.Component {
     render () {
         return (
             <Layout>
-            <SEO title="Terms of Service" />
+            <SEO title="Solution" />
 
                 <div class="container terms-wrapper">
                     <Sidebar 
