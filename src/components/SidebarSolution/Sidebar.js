@@ -2,19 +2,15 @@ import React from 'react'
 
 import { StyledSidebar } from './Sidebar.styled'
 
-import IconTerms from '../../images/icon-general-terms.png'
-import IconPrivacy from '../../images/icon-privacy-policy.png'
-
 import Logo from '../../images/logo-mobil.png'
-import { FaTasks } from 'react-icons/fa'
-import { FaUser } from 'react-icons/fa'
-import { FaRegGem } from 'react-icons/fa'
-import { FaBattleNet } from 'react-icons/fa'
-import { FaShareAlt } from 'react-icons/fa'
-import { FaFileInvoice } from 'react-icons/fa'
-import { FaMoneyCheckAlt } from 'react-icons/fa'
-import { FaPlane } from 'react-icons/fa'
-import { FaConnectdevelop } from 'react-icons/fa'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import {
+    faTasks, faUser, faShareAlt,
+    faFileInvoice, faMoneyCheckAlt, faPlane
+} from '@fortawesome/pro-duotone-svg-icons'
+
 
 
 class Sidebar extends React.Component {
@@ -48,7 +44,7 @@ class Sidebar extends React.Component {
                         </ol>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#getting-started" onClick={this.props.toggle2}><FaTasks />Getting Started</a>
+                        <a href="#getting-started" onClick={this.props.toggle2}><FontAwesomeIcon icon={faTasks} />Getting Started</a>
                         <ol className="undermeny undermeny2">
                             <li><a href="#getting-started-1">Connect your Channels</a></li>                           
                             <li><a href="#getting-started-2">Connect your Community</a></li>
@@ -57,30 +53,30 @@ class Sidebar extends React.Component {
                         </ol>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#account" onClick={this.props.toggle3}><FaUser />Account</a>
+                        <a href="#account" onClick={this.props.toggle3}><FontAwesomeIcon icon={faUser} />Account</a>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#listings" onClick={this.props.toggle4}><FaRegGem />Listings</a>
+                        <a href="#listings" onClick={this.props.toggle4}><FontAwesomeIcon icon={faShareAlt} />Listings</a>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#sourcing" onClick={this.props.toggle5}><FaShareAlt />Sourcing</a>
+                        <a href="#sourcing" onClick={this.props.toggle5}><FontAwesomeIcon icon={faFileInvoice} />Sourcing</a>
                         <ol className="undermeny undermeny5">
                             <li><a href="#sourcing-1">Outsourcing</a></li>                           
                             <li><a href="#sourcing-2">Sourcing</a></li>
                         </ol>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#channels" onClick={this.props.toggle6}><FaConnectdevelop />Channels</a>
+                        <a href="#channels" onClick={this.props.toggle6}><FontAwesomeIcon icon={faFileInvoice} />Channels</a>
                         <ol className="undermeny undermeny6">
                             <li><a href="#channels-1">Your Channels</a></li>                           
                             <li><a href="#channels-2">Third-party Channels</a></li>
                         </ol>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#orders" onClick={this.props.toggle7}><FaFileInvoice />Orders</a>
+                        <a href="#orders" onClick={this.props.toggle7}><FontAwesomeIcon icon={faPlane} />Orders</a>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#shipping" onClick={this.props.toggle8}><FaPlane />Shipping</a>
+                        <a href="#shipping" onClick={this.props.toggle8}><FontAwesomeIcon icon={faPlane} />Shipping</a>
                         <ol className="undermeny undermeny8">
                             <li><a href="#shipping-1">Connect your courier</a></li>                           
                             <li><a href="#shipping-2">Flat Rate</a></li>
@@ -93,7 +89,7 @@ class Sidebar extends React.Component {
                         <a href="#payments" onClick={this.props.toggle10}><FaLock />Payments & Payout</a>
                     </li>*/}
                     <li className="sidebar-item">
-                        <a href="#service-fee" onClick={this.props.toggle11}><FaMoneyCheckAlt />Service Fee</a>
+                        <a href="#service-fee" onClick={this.props.toggle11}><FontAwesomeIcon icon={faMoneyCheckAlt} />Service Fee</a>
                         <ol className="undermeny undermeny11">
                             <li><a href="#service-fee-1">Per transaction </a></li>                           
                             <li><a href="#service-fee-2">Billing</a></li>

@@ -24,7 +24,6 @@ class TermsData extends React.Component {
             <div id="about-outshifting" className="container">
                 <div className="terms-titel">
                     <h3>About Outshifting</h3>
-                    <p>Last updated: 23.10.2019</p>
                 </div>
                 <div id="about-outshifting-1" className="terms-description">
                     <p>

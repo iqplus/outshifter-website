@@ -9,7 +9,6 @@ import './pages.scss';
 import { Link } from "gatsby"
 import Button from '../components/Buttons/Button'
 import ButtonOutline from '../components/Buttons/ButtonOutline'
-import ButtonCircle from '../components/Buttons/ButtonCircle'
 import { FaAngleRight } from 'react-icons/fa'
 import { FaAngleDown } from 'react-icons/fa'
 

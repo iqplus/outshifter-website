@@ -22,9 +22,9 @@ export const StyledSidebar = styled.nav`
         width: 95%;
     }
     .sidebar-item svg {
-        font-size: 36px;
+        font-size: 26px;
         padding-right: 15px;
-        color: #5873e5;
+        width: 36px;
     }
     .sidebar-item img {
         max-width: 30px;

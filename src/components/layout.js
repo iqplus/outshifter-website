@@ -23,14 +23,16 @@ import {
   fad, faHomeLgAlt, faGem, faAnalytics, faFileInvoice,
   faTags, faUserFriends, faSearch, faChartNetwork,
   faInfo, faCode, faQuestion,
-  faShieldAlt, faLockAlt
+  faShieldAlt, faLockAlt,
+  faTasks, faUser, faShareAlt, faMoneyCheckAlt, faPlane
 } from '@fortawesome/pro-duotone-svg-icons';
 
 library.add(
   fad, faHomeLgAlt, faGem, faAnalytics, faFileInvoice, faTags, faUserFriends,
   faSearch, faChartNetwork,
   faInfo, faCode, faQuestion,
-  faShieldAlt, faLockAlt
+  faShieldAlt, faLockAlt,
+  faTasks, faUser, faShareAlt, faMoneyCheckAlt, faPlane
 );
 
 
