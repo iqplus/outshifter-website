@@ -2,6 +2,46 @@ import styled from 'styled-components';
 
 export const StyledTermsData = styled.div`
 
+    .box-wrapper {
+        width: 265px;
+        display: inline-block;
+        margin-right: 100px;
+
+        img {
+            width: 30px;
+            position: relative;
+            bottom: 3px;
+        }
+        svg {
+            width: 30px;
+            font-size: 22px;
+            position: relative;
+            top: 1px;
+        }
+        h6 {
+            display: inline;
+            margin-left: 25px;
+            @media only screen and (max-width: 991px) and  (min-width: 768px) {
+                font-size: 0.8rem;
+            }
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        
+        @media only screen and (max-width: 1399px) {
+            display: table-cell;
+            margin-right: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 1399px) {
+        .box-wrapper-right {
+            position: relative;
+            left: 20px;
+        }
+    }
+
     padding-top: 25px;
     margin-left: 30%;
 
@@ -39,6 +79,11 @@ export const StyledTermsData = styled.div`
     .disclaimer {
         color: grey;
         font-size: 12px;
+    }
+
+    #all-solutions {
+        display: ${({ info0 }) => info0 ? 'blocked' : 'none'};
+        padding-bottom: 100px;
     }
 
     #about-outshifting {

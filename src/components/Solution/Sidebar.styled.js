@@ -1,46 +1,16 @@
 import styled from 'styled-components';
 
-export const StyledAccordeonTerms = styled.div`
+export const StyledSidebar = styled.nav`
 
-    width: 100%;
+    position: fixed;
+    top: 75px;
+    bottom: 100px;
+    overflow: scroll;
+    
+    width: 25%;
+    max-width: 360px;
+    border-right: 1px solid #D8D8D8;
 
-    #about-outshifting {
-        display: ${({ collapsed1 }) => collapsed1 ? 'blocked' : 'none'};
-    }
-    #getting-started {
-        display: ${({ collapsed2 }) => collapsed2 ? 'blocked' : 'none'};
-    }
-    #account {
-        display: ${({ collapsed3 }) => collapsed3 ? 'blocked' : 'none'};
-    }
-    #listings {
-        display: ${({ collapsed4 }) => collapsed4 ? 'blocked' : 'none'};
-    }
-    #sourcing {
-        display: ${({ collapsed5 }) => collapsed5 ? 'blocked' : 'none'};
-    }
-    #channels {
-        display: ${({ collapsed6 }) => collapsed6 ? 'blocked' : 'none'};
-    }
-    #orders {
-        display: ${({ collapsed7 }) => collapsed7 ? 'blocked' : 'none'};
-    }
-    #shipping {
-        display: ${({ collapsed8 }) => collapsed8 ? 'blocked' : 'none'};
-    }
-    #returns {
-        display: ${({ collapsed9 }) => collapsed9 ? 'blocked' : 'none'};
-    }
-    #payments {
-        display: ${({ collapsed10 }) => collapsed10 ? 'blocked' : 'none'};
-    }
-    #service-fee {
-        display: ${({ collapsed11 }) => collapsed11 ? 'blocked' : 'none'};
-    }
-
-    .terms-titel {
-        padding-top: 50px;
-    }
     .sidebar-item-first {
         border-top: 1px solid #D8D8D8;
     }
@@ -49,23 +19,65 @@ export const StyledAccordeonTerms = styled.div`
         padding-top: 25px;
         padding-bottom: 25px;
         color: #4A4A4A;
-    }
-    .sidebar-item img {
-        height: 30px;
-        padding-right: 15px;
+        width: 95%;
     }
     .sidebar-item svg {
-        margin-right: 15px;
-        color: #5873e5;
-        font-size: 30px;
+        font-size: 26px;
+        padding-right: 15px;
+        width: 36px;
+        position: relative;
+        top: 3px;    
     }
-    h5 {
-        color: #9B9B9B;
-        padding-bottom: 15px;
+    .sidebar-item img {
+        max-width: 30px;
+        margin-right: 10px;
+    }
+    .undermeny {
         padding-top: 25px;
     }
-    .terms-titel-2 h5 {
-        color: #4A4A4A;
+    .undermeny li {
+        padding-bottom: 15px;
+    }
+    .undermeny1 {
+        display: ${({ collapsed1 }) => collapsed1 ? 'blocked' : 'none'};
+    }
+    .undermeny2 {
+        display: ${({ collapsed2 }) => collapsed2 ? 'blocked' : 'none'};
+    }
+    .undermeny3 {
+        display: ${({ collapsed3 }) => collapsed3 ? 'blocked' : 'none'};
+    }
+    .undermeny4 {
+        display: ${({ collapsed4 }) => collapsed4 ? 'blocked' : 'none'};
+    }
+    .undermeny5 {
+        display: ${({ collapsed5 }) => collapsed5 ? 'blocked' : 'none'};
+    }
+    .undermeny6 {
+        display: ${({ collapsed6 }) => collapsed6 ? 'blocked' : 'none'};
+    }
+    .undermeny7 {
+        display: ${({ collapsed7 }) => collapsed7 ? 'blocked' : 'none'};
+    }
+    .undermeny8 {
+        display: ${({ collapsed8 }) => collapsed8 ? 'blocked' : 'none'};
+    }
+    .undermeny9 {
+        display: ${({ collapsed9 }) => collapsed9 ? 'blocked' : 'none'};
+    }
+    .undermeny10 {
+        display: ${({ collapsed10 }) => collapsed10 ? 'blocked' : 'none'};
+    }
+    .undermeny11 {
+        display: ${({ collapsed11 }) => collapsed11 ? 'blocked' : 'none'};
+    }
+    .sidebar-header {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    h5 {
+        color: #9B9B9B;
     }
     .terms-description h5 {
         color: #4A4A4A;
@@ -79,7 +91,7 @@ export const StyledAccordeonTerms = styled.div`
         cursor: pointer;
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 767px) {
         display: none;
     }
 

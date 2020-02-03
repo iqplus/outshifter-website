@@ -8,10 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {
     faTasks, faUser, faShareAlt,
-    faFileInvoice, faMoneyCheckAlt, faPlane
+    faFileInvoice, faMoneyCheckAlt, faPlane, faGem, faChartNetwork
 } from '@fortawesome/pro-duotone-svg-icons'
-
-
 
 class Sidebar extends React.Component {
 
@@ -56,24 +54,24 @@ class Sidebar extends React.Component {
                         <a href="#account" onClick={this.props.toggle3}><FontAwesomeIcon icon={faUser} />Account</a>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#listings" onClick={this.props.toggle4}><FontAwesomeIcon icon={faShareAlt} />Listings</a>
+                        <a href="#listings" onClick={this.props.toggle4}><FontAwesomeIcon icon={faGem} />Listings</a>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#sourcing" onClick={this.props.toggle5}><FontAwesomeIcon icon={faFileInvoice} />Sourcing</a>
+                        <a href="#sourcing" onClick={this.props.toggle5}><FontAwesomeIcon icon={faShareAlt} />Sourcing</a>
                         <ol className="undermeny undermeny5">
                             <li><a href="#sourcing-1">Outsourcing</a></li>                           
                             <li><a href="#sourcing-2">Sourcing</a></li>
                         </ol>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#channels" onClick={this.props.toggle6}><FontAwesomeIcon icon={faFileInvoice} />Channels</a>
+                        <a href="#channels" onClick={this.props.toggle6}><FontAwesomeIcon icon={faChartNetwork} />Channels</a>
                         <ol className="undermeny undermeny6">
                             <li><a href="#channels-1">Your Channels</a></li>                           
                             <li><a href="#channels-2">Third-party Channels</a></li>
                         </ol>
                     </li>
                     <li className="sidebar-item">
-                        <a href="#orders" onClick={this.props.toggle7}><FontAwesomeIcon icon={faPlane} />Orders</a>
+                        <a href="#orders" onClick={this.props.toggle7}><FontAwesomeIcon icon={faFileInvoice} />Orders</a>
                     </li>
                     <li className="sidebar-item">
                         <a href="#shipping" onClick={this.props.toggle8}><FontAwesomeIcon icon={faPlane} />Shipping</a>
