@@ -40,6 +40,36 @@ hr {
   transform: none;
   visibility: visible;
 }
+
+/*************** Dual Icons ***************/
+
+.svg-settings {
+  /* Hiding this content since it's just settings. See - https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* linear gradient */
+.fa-primary {fill: url(#linear)!important;}
+/* setting colors for linear gradient */
+.linear-stop1 {stop-color: #829DDD;}
+.linear-stop2 {stop-color: #85E9F7;}
+
+.fa-secondary {opacity: 1!important;}
+.fa-secondary {fill: url(#linear-2)!important;}
+.linear-stop-1 {stop-color: #829DDD;}
+.linear-stop-2 {stop-color: #83BDE8;}
+
+.fa-code {
+  .fa-primary {fill: url(#linear-2)!important;}
+  .fa-secondary {fill: url(#linear)!important;}
+}
+
+
+
 /*************** Spacing ***************/
 
 .mt-10 {margin-top: 10%;}

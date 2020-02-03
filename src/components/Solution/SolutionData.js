@@ -1,6 +1,14 @@
 import React from 'react'
-
 import { StyledTermsData } from './TermsData.styled'
+
+import MyBoxSolution from "../Box/MyBoxSolution"
+import Logo from '../../images/logo-mobil.png'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faTasks, faUser, faShareAlt,
+    faFileInvoice, faMoneyCheckAlt, faPlane, faGem,faChartNetwork
+} from '@fortawesome/pro-duotone-svg-icons'
 
 class TermsData extends React.Component {
 
@@ -8,6 +16,7 @@ class TermsData extends React.Component {
         return(
 
         <StyledTermsData
+            info0={this.props.info0}
             info1={this.props.info1}
             info2={this.props.info2}
             info3={this.props.info3}
@@ -20,11 +29,131 @@ class TermsData extends React.Component {
             info10={this.props.info10}
             info11={this.props.info11}
         >
+            
+            <div id="all-solutions">
+
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <div className="terms-titel-solution">
+                                <h3>Solution</h3>
+                                <p className="mt-4 mb-4">Welcome to Outshifter! Get familiar with outshifting and explore our solution.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row mb-5">
+                        <div className="col text-center">
+
+                            <div className="box-wrapper">
+                                <a href="/solution#about-outshifting" onClick={this.props.toggle1}>
+                                    <MyBoxSolution>
+                                        <img src={Logo} />
+                                        <h6>About Outshifting</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+                            <div className="box-wrapper box-wrapper-right">
+                                <a href="/solution#getting-started" onClick={this.props.toggle2}>
+                                    <MyBoxSolution>
+                                        <FontAwesomeIcon icon={faTasks} />
+                                        <h6>Getting Started</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="row mb-5">
+                        <div className="col text-center">
+
+                            <div className="box-wrapper">
+                                <a href="/solution#account" onClick={this.props.toggle3}>
+                                    <MyBoxSolution>
+                                        <FontAwesomeIcon icon={faUser} />
+                                        <h6>Account</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+                            <div className="box-wrapper box-wrapper-right">
+                                <a href="/solution#listings" onClick={this.props.toggle4}>
+                                    <MyBoxSolution>
+                                        <FontAwesomeIcon icon={faGem} />
+                                        <h6>Listings</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="row mb-5">
+                        <div className="col text-center">
+
+                            <div className="box-wrapper">
+                                <a href="/solution#channels" onClick={this.props.toggle6}>
+                                    <MyBoxSolution>
+                                        <FontAwesomeIcon icon={faChartNetwork} />
+                                        <h6>Channels</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+                            <div className="box-wrapper box-wrapper-right">
+                                <a href="/solution#sourcing" onClick={this.props.toggle5}>
+                                    <MyBoxSolution>
+                                        <FontAwesomeIcon icon={faShareAlt} />
+                                        <h6>Sourcing</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="row mb-5">
+                        <div className="col text-center">
+
+                            <div className="box-wrapper">
+                                <a href="/solution#orders" onClick={this.props.toggle7}>
+                                    <MyBoxSolution>
+                                        <FontAwesomeIcon icon={faFileInvoice} />
+                                        <h6>Orders</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+                            <div className="box-wrapper box-wrapper-right">
+                                <a href="/solution#shipping" onClick={this.props.toggle8}>
+                                    <MyBoxSolution>
+                                        <FontAwesomeIcon icon={faPlane} />
+                                        <h6>Shipping</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="row mb-5">
+                        <div className="col text-center">
+
+                            <div className="box-wrapper">
+                                <a href="/solution#service-fee" onClick={this.props.toggle11}>
+                                    <MyBoxSolution>
+                                        <FontAwesomeIcon icon={faMoneyCheckAlt} />
+                                        <h6>Service Fee</h6>
+                                    </MyBoxSolution>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
             <div id="about-outshifting" className="container">
                 <div className="terms-titel">
                     <h3>About Outshifting</h3>
-                    <p>Last updated: 23.10.2019</p>
                 </div>
                 <div id="about-outshifting-1" className="terms-description">
                     <p>

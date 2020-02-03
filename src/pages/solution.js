@@ -5,13 +5,13 @@ import SEO from "../components/seo"
 
 import './terms.css'
 
-import Sidebar from "../components/SidebarSolution/Sidebar"
-import TermsData from "../components/SolutionData/SolutionData"
-import AccordeonSolution from "../components/AccordeonSolution/AccordeonSolution"
+import Sidebar from "../components/Solution/Sidebar"
+import TermsData from "../components/Solution/SolutionData"
+import AccordeonSolution from "../components/Solution/AccordeonSolution"
 
 
 class SolutionPage extends React.Component {
-    componentDidMount(){
+    componentDidMount() {
         document.querySelector('#canvas1').style.visibility = "hidden"
         document.querySelector('#canvas2').style.visibility = "hidden"
     }
@@ -30,7 +30,8 @@ class SolutionPage extends React.Component {
             isCollapsed10: false,
             isCollapsed11: false,
 
-            showInfo1: true,
+            showInfo0: true,
+            showInfo1: false,
             showInfo2: false,
             showInfo3: false,
             showInfo4: false,
@@ -61,6 +62,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo1) {
             this.setState({
                 isCollapsed1: !this.state.isCollapsed1,
+                showInfo0: false,
                 showInfo2: false,
                 isCollapsed2:false,
                 showInfo3: false,
@@ -86,6 +88,7 @@ class SolutionPage extends React.Component {
             this.setState({
                 isCollapsed1: !this.state.isCollapsed1,
                 showInfo1: !this.state.showInfo1,
+                showInfo0: false,
                 showInfo2: false,
                 isCollapsed2:false,
                 showInfo3: false,
@@ -113,6 +116,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo2) {
             this.setState({
                 isCollapsed2: !this.state.isCollapsed2,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo3: false,
@@ -138,6 +142,7 @@ class SolutionPage extends React.Component {
             this.setState({
                 isCollapsed2: !this.state.isCollapsed2,
                 showInfo2: !this.state.showInfo2,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo3: false,
@@ -166,6 +171,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo3) {
             this.setState({
                 isCollapsed3: !this.state.isCollapsed3,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -191,6 +197,7 @@ class SolutionPage extends React.Component {
             this.setState({
                 isCollapsed3: !this.state.isCollapsed3,
                 showInfo3: !this.state.showInfo3,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -218,7 +225,8 @@ class SolutionPage extends React.Component {
     toggleMenuItem4 () {
         if (this.state.showInfo4) {
             this.setState({
-                isCollapsed4: !this.state.isCollapsed1,
+                isCollapsed4: !this.state.isCollapsed4,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -242,8 +250,9 @@ class SolutionPage extends React.Component {
             });
         } else {
             this.setState({
-                isCollapsed4: !this.state.isCollapsed1,
-                showInfo4: !this.state.showInfo1,
+                isCollapsed4: !this.state.isCollapsed4,
+                showInfo4: !this.state.showInfo4,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -270,7 +279,8 @@ class SolutionPage extends React.Component {
     toggleMenuItem5 () {
         if (this.state.showInfo5) {
             this.setState({
-                isCollapsed5: !this.state.isCollapsed2,
+                isCollapsed5: !this.state.isCollapsed5,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -294,8 +304,9 @@ class SolutionPage extends React.Component {
             });
         } else {
             this.setState({
-                isCollapsed5: !this.state.isCollapsed2,
+                isCollapsed5: !this.state.isCollapsed5,
                 showInfo5: !this.state.showInfo5,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -324,6 +335,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo6) {
             this.setState({
                 isCollapsed6: !this.state.isCollapsed3,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -349,6 +361,7 @@ class SolutionPage extends React.Component {
             this.setState({
                 isCollapsed6: !this.state.isCollapsed6,
                 showInfo6: !this.state.showInfo6,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -377,6 +390,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo7) {
             this.setState({
                 isCollapsed7: !this.state.isCollapsed7,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -402,6 +416,7 @@ class SolutionPage extends React.Component {
             this.setState({
                 isCollapsed7: !this.state.isCollapsed7,
                 showInfo7: !this.state.showInfo7,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -429,6 +444,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo8) {
             this.setState({
                 isCollapsed8: !this.state.isCollapsed8,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -454,6 +470,7 @@ class SolutionPage extends React.Component {
             this.setState({
                 isCollapsed8: !this.state.isCollapsed8,
                 showInfo8: !this.state.showInfo8,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -481,6 +498,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo9) {
             this.setState({
                 isCollapsed9: !this.state.isCollapsed9,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -506,6 +524,7 @@ class SolutionPage extends React.Component {
             this.setState({
                 isCollapsed9: !this.state.isCollapsed9,
                 showInfo9: !this.state.showInfo9,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -533,6 +552,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo10) {
             this.setState({
                 isCollapsed10: !this.state.isCollapsed10,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -558,6 +578,7 @@ class SolutionPage extends React.Component {
             this.setState({
                 isCollapsed10: !this.state.isCollapsed10,
                 showInfo10: !this.state.showInfo10,
+                showInfo0: false,
                 showInfo1: false,
                 isCollapsed1:false,
                 showInfo2: false,
@@ -585,6 +606,7 @@ class SolutionPage extends React.Component {
         if (this.state.showInfo11) {
         this.setState({
             isCollapsed11: !this.state.isCollapsed11,
+            showInfo0: false,
             showInfo1: false,
             isCollapsed1:false,
             showInfo2: false,
@@ -610,6 +632,7 @@ class SolutionPage extends React.Component {
         this.setState({
             isCollapsed11: !this.state.isCollapsed11,
             showInfo11: !this.state.showInfo11,
+            showInfo0: false,
             showInfo1: false,
             isCollapsed1:false,
             showInfo2: false,
@@ -633,11 +656,10 @@ class SolutionPage extends React.Component {
         });
     }}
 
-
     render () {
         return (
             <Layout>
-            <SEO title="Terms of Service" />
+            <SEO title="Solution" />
 
                 <div class="container terms-wrapper">
                     <Sidebar 
@@ -666,6 +688,7 @@ class SolutionPage extends React.Component {
                     />
 
                     <TermsData
+                        info0={this.state.showInfo0}
                         info1={this.state.showInfo1}
                         info2={this.state.showInfo2}
                         info3={this.state.showInfo3}
@@ -677,6 +700,18 @@ class SolutionPage extends React.Component {
                         info9={this.state.showInfo9}
                         info10={this.state.showInfo10}
                         info11={this.state.showInfo11}
+
+                        toggle1={this.toggleMenuItem1}
+                        toggle2={this.toggleMenuItem2}
+                        toggle3={this.toggleMenuItem3}
+                        toggle4={this.toggleMenuItem4}
+                        toggle5={this.toggleMenuItem5}
+                        toggle6={this.toggleMenuItem6}
+                        toggle7={this.toggleMenuItem7}
+                        toggle8={this.toggleMenuItem8}
+                        toggle9={this.toggleMenuItem9}
+                        toggle10={this.toggleMenuItem10}
+                        toggle11={this.toggleMenuItem11}
                     />
 
                     <AccordeonSolution 

@@ -5,15 +5,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import styled from 'styled-components';
-import FaqMerchant from '../images/icon-faq-merchant.png'
-import FaqMediator from '../images/icon-faq-mediator.png'
-import FaqCustomer from '../images/icon-faq-customer.png'
-import Button from "../components/Buttons/Button"
 import MyContact from "../components/MyContact/MyContactSupport"
 
 import { FaInfo } from 'react-icons/fa';
 import { FaCode } from 'react-icons/fa';
 import { FaQuestion } from 'react-icons/fa';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfo, faCode, faQuestion } from '@fortawesome/pro-duotone-svg-icons';
 
 
 const ContactStyled = styled.div`
@@ -118,7 +117,7 @@ class SupportPage extends Component {
         <div className="col-md-12 col-lg position-1 align-self-center">
           <Link to={'/solution'}><BoxStyled >
             <div className="bulletsicon">
-              <FaInfo />
+              <FontAwesomeIcon icon={faInfo} />
             </div>
             <div className="bulletstext">
               <h6>Solution</h6>
@@ -129,7 +128,7 @@ class SupportPage extends Component {
         <div className="col-md-12 col-lg position-2 align-self-center">
           <Link to={'/developers'}><BoxStyled>
           <div className="bulletsicon">
-              <FaCode />
+            <FontAwesomeIcon icon={faCode} />
             </div>
             <div className="bulletstext">
               <h6>Documentation</h6>
@@ -140,7 +139,7 @@ class SupportPage extends Component {
         <div className="col-md-12 col-lg position-3">
           <Link to={'/faq'}><BoxStyled position="3">
           <div className="bulletsicon align-self-center">
-              <FaQuestion />
+            <FontAwesomeIcon icon={faQuestion} />
             </div>
             <div className="bulletstext">
               <h6>FAQ</h6>

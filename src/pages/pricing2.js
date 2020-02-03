@@ -51,6 +51,8 @@ z-index:100;
     bottom: 2px;
   }
 }
+
+
 `;
 
 class PricingPage extends React.Component {
@@ -108,7 +110,7 @@ class PricingPage extends React.Component {
 
                 </div>
             </div>
-<div className="pricing-bg-image"></div>
+            <div className="pricing-bg-image"></div>
             <div className="container included">
 
               <div className="row text-center mb-5">
@@ -121,7 +123,7 @@ class PricingPage extends React.Component {
               <div className="row text-center">
                   <div className="col-md-6 col-xl-4 mb-5">
                     <MyBox>
-                      <div className="include-title">
+                      <div className="include-title fill-gradient-linear">
                         <FaSlidersH /><h5>Management</h5>
                       </div>
                       <ul className="listings">

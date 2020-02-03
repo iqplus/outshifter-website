@@ -16,6 +16,14 @@ import { FaMoneyCheckAlt } from 'react-icons/fa'
 import { FaPlane } from 'react-icons/fa'
 import { FaConnectdevelop } from 'react-icons/fa'
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faTasks, faUser, faShareAlt,
+    faFileInvoice, faMoneyCheckAlt, faPlane, faGem,faChartNetwork
+} from '@fortawesome/pro-duotone-svg-icons'
+
+
 class AccordeonTerms extends React.Component {
 
     render() {
@@ -87,7 +95,7 @@ class AccordeonTerms extends React.Component {
                     </li>
 
                     <li className="sidebar-item">
-                        <a onClick={this.props.toggle2}><FaTasks />Getting Started</a>
+                        <a onClick={this.props.toggle2}><FontAwesomeIcon icon={faTasks} />Getting Started</a>
                     
                         <div id="getting-started" className="container">
                             <div className="terms-titel">
@@ -131,7 +139,7 @@ class AccordeonTerms extends React.Component {
                     </li>
 
                     <li className="sidebar-item">
-                        <a onClick={this.props.toggle3}><FaUser />Account</a>
+                        <a onClick={this.props.toggle3}><FontAwesomeIcon icon={faUser} />Account</a>
                         <div id="account" className="container">
                             <div className="terms-titel">
                                 <h3>Account</h3>
@@ -142,7 +150,7 @@ class AccordeonTerms extends React.Component {
                     </li>
 
                     <li className="sidebar-item">
-                        <a onClick={this.props.toggle4}><FaRegGem />Listings</a>
+                        <a onClick={this.props.toggle4}><FontAwesomeIcon icon={faGem} />Listings</a>
                         <div id="listings" className="container">
                             <div className="terms-titel">
                                 <h3>Listings</h3>
@@ -157,7 +165,7 @@ class AccordeonTerms extends React.Component {
                     </li>
 
                     <li className="sidebar-item">
-                        <a onClick={this.props.toggle5}><FaShareAlt />Sourcing</a>
+                        <a onClick={this.props.toggle5}><FontAwesomeIcon icon={faShareAlt} />Sourcing</a>
                         <div id="sourcing" className="container">
                             <div className="terms-titel">
                                 <h3>Sourcing</h3>
@@ -182,7 +190,7 @@ class AccordeonTerms extends React.Component {
                     </li>
 
                     <li className="sidebar-item">
-                        <a onClick={this.props.toggle6}><FaConnectdevelop />Channels</a>
+                        <a onClick={this.props.toggle6}><FontAwesomeIcon icon={faChartNetwork} />Channels</a>
                         <div id="channels" className="container">
                             <div className="terms-titel">
                                 <h3>Channels</h3>
@@ -221,7 +229,7 @@ class AccordeonTerms extends React.Component {
                     </li>
 
                     <li className="sidebar-item">
-                        <a onClick={this.props.toggle7}><FaFileInvoice />Orders</a>
+                        <a onClick={this.props.toggle7}><FontAwesomeIcon icon={faFileInvoice} />Orders</a>
                         <div id="orders" className="container">
                             <div className="terms-titel">
                                 <h3>Orders</h3>
@@ -235,7 +243,7 @@ class AccordeonTerms extends React.Component {
                     </li>
 
                     <li className="sidebar-item">
-                        <a onClick={this.props.toggle8}><FaPlane />Shipping</a>
+                        <a onClick={this.props.toggle8}><FontAwesomeIcon icon={faPlane} />Shipping</a>
                         <div id="shipping" className="container">
                            <div className="terms-titel">
                                 <h3>Shipping</h3>
@@ -254,7 +262,7 @@ class AccordeonTerms extends React.Component {
 
 
                     <li className="sidebar-item">
-                        <a onClick={this.props.toggle11}><FaMoneyCheckAlt />Service Fee</a>
+                        <a onClick={this.props.toggle11}><FontAwesomeIcon icon={faMoneyCheckAlt} />Service Fee</a>
 
                         <div id="service-fee" className="container">
                             <div className="terms-titel">
