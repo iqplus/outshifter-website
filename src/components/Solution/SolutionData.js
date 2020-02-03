@@ -45,7 +45,7 @@ class TermsData extends React.Component {
                         <div className="col text-center">
 
                             <div className="box-wrapper">
-                                <a href="/solution#about-outshifting" onClick={this.props.toggle1}>
+                                <a href="#about-outshifting" onClick={this.props.toggle1}>
                                     <MyBoxSolution>
                                         <img src={Logo} />
                                         <h6>About Outshifting</h6>
@@ -53,7 +53,7 @@ class TermsData extends React.Component {
                                 </a>
                             </div>
                             <div className="box-wrapper box-wrapper-right">
-                                <a href="/solution#getting-started" onClick={this.props.toggle2}>
+                                <a href="#getting-started" onClick={this.props.toggle2}>
                                     <MyBoxSolution>
                                         <FontAwesomeIcon icon={faTasks} />
                                         <h6>Getting Started</h6>
@@ -68,7 +68,7 @@ class TermsData extends React.Component {
                         <div className="col text-center">
 
                             <div className="box-wrapper">
-                                <a href="/solution#account" onClick={this.props.toggle3}>
+                                <a href="#account" onClick={this.props.toggle3}>
                                     <MyBoxSolution>
                                         <FontAwesomeIcon icon={faUser} />
                                         <h6>Account</h6>
@@ -91,7 +91,7 @@ class TermsData extends React.Component {
                         <div className="col text-center">
 
                             <div className="box-wrapper">
-                                <a href="/solution#channels" onClick={this.props.toggle6}>
+                                <a href="#channels" onClick={this.props.toggle6}>
                                     <MyBoxSolution>
                                         <FontAwesomeIcon icon={faChartNetwork} />
                                         <h6>Channels</h6>
@@ -99,7 +99,7 @@ class TermsData extends React.Component {
                                 </a>
                             </div>
                             <div className="box-wrapper box-wrapper-right">
-                                <a href="/solution#sourcing" onClick={this.props.toggle5}>
+                                <a href="#sourcing" onClick={this.props.toggle5}>
                                     <MyBoxSolution>
                                         <FontAwesomeIcon icon={faShareAlt} />
                                         <h6>Sourcing</h6>
@@ -114,7 +114,7 @@ class TermsData extends React.Component {
                         <div className="col text-center">
 
                             <div className="box-wrapper">
-                                <a href="/solution#orders" onClick={this.props.toggle7}>
+                                <a href="#orders" onClick={this.props.toggle7}>
                                     <MyBoxSolution>
                                         <FontAwesomeIcon icon={faFileInvoice} />
                                         <h6>Orders</h6>
@@ -137,7 +137,7 @@ class TermsData extends React.Component {
                         <div className="col text-center">
 
                             <div className="box-wrapper">
-                                <a href="/solution#service-fee" onClick={this.props.toggle11}>
+                                <a href="#service-fee" onClick={this.props.toggle11}>
                                     <MyBoxSolution>
                                         <FontAwesomeIcon icon={faMoneyCheckAlt} />
                                         <h6>Service Fee</h6>
