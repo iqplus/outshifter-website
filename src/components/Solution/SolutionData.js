@@ -76,7 +76,7 @@ class TermsData extends React.Component {
                                 </a>
                             </div>
                             <div className="box-wrapper box-wrapper-right">
-                                <a href="/solution#listings" onClick={this.props.toggle4}>
+                                <a href="#listings" onClick={this.props.toggle4}>
                                     <MyBoxSolution>
                                         <FontAwesomeIcon icon={faGem} />
                                         <h6>Listings</h6>
@@ -122,7 +122,7 @@ class TermsData extends React.Component {
                                 </a>
                             </div>
                             <div className="box-wrapper box-wrapper-right">
-                                <a href="/solution#shipping" onClick={this.props.toggle8}>
+                                <a href="#shipping" onClick={this.props.toggle8}>
                                     <MyBoxSolution>
                                         <FontAwesomeIcon icon={faPlane} />
                                         <h6>Shipping</h6>
