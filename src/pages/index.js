@@ -14,12 +14,11 @@ import { FaAngleDown } from 'react-icons/fa'
 
 import ShopifyWhite from '../images/Shopify-Badge-White.png'
 import LogoWhite from '../images/logo-mobil_white.png'
-import LogoExtentions from '../images/outshifter-logo-extentions.png'
 import DotsBackground from '../images/dots-background-desktop.png'
 import DotsBackgroundMobile from '../images/dots-background-mobile-2.png'
 
-
 import Lottie from 'lottie-react-web'
+import Animation1 from '../animations/animation1.json'
 import LogoBack from '../animations/logo-back.json'
 import BulletsAzulTurquesa from '../animations/bullets-azul-turquesa.json'
 import BulletsAzulVioleta from '../animations/bullets-azul-violeta.json'
@@ -501,6 +500,7 @@ class WavesPage extends React.Component {
     document.querySelector('#canvas1').style.visibility = "visible"
     document.querySelector('#canvas2').style.visibility = "visible"
   }
+  
   render () {
     return (
       
@@ -525,7 +525,7 @@ class WavesPage extends React.Component {
                   <FadeInSection>
                   <h1>The Sales Network</h1>
                   <p>
-                    Connect your sales community<br/>
+                    Connect your sales community <br/>
                     and grow exponentially.
                   </p>
                   </FadeInSection>
@@ -700,8 +700,8 @@ class WavesPage extends React.Component {
 
                   <h4>Multichannel Commerce</h4>
                   <p>
-                    One complete solution for all your online sales-channels. Distribute cross-platform with
-                    powerfull listing tools and integrations that bridges content seamlessly. 
+                    One complete solution for all your online sales channels. Distribute cross-platform with 
+                    powerful listing tools and integrations that bridge content seamlessly.
                   </p>
                   <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
                   </FadeInSection>
@@ -820,8 +820,8 @@ class WavesPage extends React.Component {
 
                   <h4>Outsourcing Network</h4>
                   <p>
-                    Exponetially scale distribution trough network effects: Administrate third-party product 
-                    access or expand your inventory by sourcing products from other users. 
+                    Exponentially scale distribution through network effects: Administrate third-party 
+                    product access or expand your inventory by sourcing products from other users.
                   </p>
                   <ButtonOutline>Start by sourcing</ButtonOutline>
                   <br/>
@@ -841,7 +841,7 @@ class WavesPage extends React.Component {
 
                   <h4>Sales Acceleration</h4>
                   <p>
-                    Grow sales by maximizing consumer touch points at the 1st stage of their e-commerce journey. 
+                    Grow sales by maximizing consumer touchpoints at the 1st stage of their e-commerce journey. 
                     Enable direct purchasing anywhere, with localized payment and shipping options.
                   </p>
                   <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
@@ -886,7 +886,7 @@ class WavesPage extends React.Component {
                 <div className="extentions-content">
                 <FadeInSection>
 
-                  <h3>Customize Extentions</h3>
+                  <h3>Customize Extensions</h3>
                   <p>
                     Outshifter supports flexible architecture that allows integration with any other third-party API.
                     <br/><br/>

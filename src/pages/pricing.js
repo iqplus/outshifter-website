@@ -98,8 +98,8 @@ class PricingPage extends React.Component {
                         <div className="col">
                         <h1>Pricing</h1>
                         <p>
-                          No setup costs, no monthly fees and no hidden fees.<br/>
-                          We only charge per transaction to ensure you ROI.
+                          No setup costs, no monthly fees and no hidden fees. <br/>
+                          We only charge per transaction.                        
                         </p>
                         <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Get started for free</ButtonOutline></a>
                         </div>
@@ -112,20 +112,22 @@ class PricingPage extends React.Component {
                 <div className="container">   
                     <div className="row text-center">
                         <div className="col-md-6 col-lg-4 mb-5">
-                          <h4>Sourcing</h4>
-                          <p>Sourcing products and selling through Outshifter is always completly free.</p>
-                          <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Start by Outsourcing</ButtonOutline></a>
+                          <h4>Sourcing & Listing</h4>
+                          <p>Listing products and selling sourced products is completely free.</p>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                           <h4>Transaction Fee</h4>
-                          <p>4.8% + € 0.18  is charged from the sales of the products you list. That's it.</p>
-                          <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Start outsourcing for free</ButtonOutline></a>
+                          <p>4.8% of the sales value + € 0.18 is charged per sales transaction on products you list.</p>
                         </div>
                         <div className="col-md-6 col-lg-4 mb-5">
                           <h4>Free Trial</h4>
-                          <p>Your first 100 sales transactions are free! Try outshifting without any catch or cost.</p>
-                          <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Create account</ButtonOutline></a>
+                          <p>Your first 100 sales transactions are free! There´s no catch!</p>
                         </div>
+                    </div>
+                    <div className="row text-center">
+                      <div className="col">
+                        <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Start outshifting</ButtonOutline></a>
+                      </div>
                     </div>
                     <div className="row text-center">
                       <div className="col">

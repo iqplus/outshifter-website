@@ -114,7 +114,7 @@ const data = [
   {
     category: 'Products',
     name: 'Outsourcing',
-    text: 'Exponentionaly scale your e-commerce distrebution through network effects. \n\nAdminister which third-parties can source your original products, set fixed sales commissions and track their impact across all your chosen channels.'
+    text: 'Exponentially scale your e-commerce distribution through network effects. Administer which third-parties can source your original products, set fixed sales commissions and track their impact across all your selected channels.'
   },
   {
     category: 'Products',
@@ -123,7 +123,7 @@ const data = [
   },
   {
     category: 'Channels',
-    name: 'Extentions',
+    name: 'Extensions',
     text: 'Customize your own integrations.\n\nOutshifter supports flexible architecture that allows integration with any other third-party API. Connect your backend system directly to Outshifter or create a plug-in for your favorite channel.'
   },
   {
@@ -149,12 +149,12 @@ const data = [
   {
     category: 'Resources',
     name: 'Data',
-    text: 'Become empowerd with cross-platform analytics. \n\nTrack total sales, revenue and distribution impact through your entire e-commerce network. This enables you to adjust and specifically target the most profitable online avenues.'
+    text: 'Empower yourself with deep insights and analytics. Track total sales, revenue and distribution impact within your entire e-commerce network. Adjust accordingly and target the most profitable online avenues.'
   },
   {
     category: 'Resources',
     name: 'Checkout',
-    text: 'Integrated, fast and secure checkout solutions for any channel.\n\nOutshifter makes sure customers are having a trustworthy and quick checkout prosess no matter where, when and through whom they are purchasing.'
+    text: 'Integrated, fast and secure checkout solutions for any channel. Outshifter makes sure customers are having a trustworthy and quick checkout process no matter where, when and through whom they are purchasing.'
   },
   {
     category: 'Resources',
@@ -164,7 +164,7 @@ const data = [
   {
     category: 'Resources',
     name: 'Orders',
-    text: 'Easily fulfill, track and edit all orders. \n\nOrdes are instantly available on your Outshifter dashboard and updates are mirrored across all channels.'
+    text: 'Easily fulfill, track and edit all orders. Orders are instantly available on your Outshifter dashboard and updates are mirrored across all channels.'
   },
   {
     category: 'Resources',
@@ -179,7 +179,7 @@ const data = [
   {
     category: 'Resources',
     name: 'Developers',
-    text: 'Join our developer community.\n\nLearn about Outshifter extentions and how to develop your own.'
+    text: 'Join our developer community. Learn about Outshifter extensions and how to develop your own.'
   },
 
 ];

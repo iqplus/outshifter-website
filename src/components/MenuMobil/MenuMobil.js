@@ -27,21 +27,17 @@ class MenuMobil extends React.Component {
   }
 
   toggleMenu() {
-console.log('soy bton');
+    console.log('soy bton');
     console.log('sss')
-
   }
+  
   render() {
 
     if (this.props.open){
       disableBodyScroll(this.targetElement);
-    }else{
+    } else{
       enableBodyScroll(this.targetElement);
-
     }
-
-
-    
 
     console.log(this.props)
     return (
@@ -52,11 +48,11 @@ console.log('soy bton');
           <Link to={'/'} className={'logo-line'}><img className="mobil logo-text" src={LogoTextWhite} /> </Link>
         </div>
         <Burger 
-        open={this.props.open} 
-        onClick={this.props.onClick}
-        position={'absolute'}
-        top={'20px'}
-        right={'20px'}
+          open={this.props.open} 
+          onClick={this.props.onClick}
+          position={'absolute'}
+          top={'20px'}
+          right={'20px'}
         />
 
       <div className="menu-mobil">
