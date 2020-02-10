@@ -94,10 +94,11 @@ export default class Header extends Component {
   }
 
   handleClickOutside(event) {
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+    if (window.innerWidth > 767 && this.wrapperRef && !this.wrapperRef.contains(event.target) ) {
       this.setState({ isOpen: false });
     }
   }
+  
 
   render() {
 
