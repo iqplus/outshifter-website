@@ -24,7 +24,8 @@ import {
   faTags, faUserFriends, faSearch, faChartNetwork,
   faInfo, faCode, faQuestion,
   faShieldAlt, faLockAlt,
-  faTasks, faUser, faShareAlt, faMoneyCheckAlt, faPlane
+  faTasks, faUser, faShareAlt, faMoneyCheckAlt, faPlane,
+  faAngleRight
 } from '@fortawesome/pro-duotone-svg-icons';
 
 library.add(
@@ -32,7 +33,8 @@ library.add(
   faSearch, faChartNetwork,
   faInfo, faCode, faQuestion,
   faShieldAlt, faLockAlt,
-  faTasks, faUser, faShareAlt, faMoneyCheckAlt, faPlane
+  faTasks, faUser, faShareAlt, faMoneyCheckAlt, faPlane,
+  faAngleRight
 );
 
 const Layout = ({ children }) => {

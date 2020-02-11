@@ -9,23 +9,20 @@ import './pages.scss';
 import { Link } from "gatsby"
 import Button from '../components/Buttons/Button'
 import ButtonOutline from '../components/Buttons/ButtonOutline'
-import { FaAngleRight } from 'react-icons/fa'
 import { FaAngleDown } from 'react-icons/fa'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/pro-duotone-svg-icons';
+
 import ShopifyWhite from '../images/Shopify-Badge-White.png'
-import LogoWhite from '../images/logo-mobil_white.png'
-import DotsBackground from '../images/dots-background-desktop.png'
-import DotsBackgroundMobile from '../images/dots-background-mobile-2.png'
 
 import Lottie from 'lottie-react-web'
 import Animation1 from '../animations/animation1.json'
-import LogoBack from '../animations/logo-back.json'
-import BulletsAzulTurquesa from '../animations/bullets-azul-turquesa.json'
-import BulletsAzulVioleta from '../animations/bullets-azul-violeta.json'
-import BulletsTurquesaVioleta from '../animations/bullets-turquesa-violeta.json'
-import BulletsVioletaTurquesa from '../animations/bullets-violeta-turquesa.json'
-import BulletsTurquesaAzul from '../animations/bullets-turquesa-azul.json'
-import BulletsVioletaAzul from '../animations/bullets-violeta-azul.json'
+import Animation1Phone from '../images/Animation-1-Phone.png'
+
+import Animation3Tablet from '../images/Animation-3-Tablet.png'
+import DevelopersTest from '../images/developers-final.png'
+
 import DotsSphere from '../animations/dots-sphere.json'
 
 const CircleIcon = styled.div`
@@ -54,10 +51,11 @@ const CircleIcon = styled.div`
 const Forside = styled.div`
 .main-banner {
   p {
-    color: #4A4A4A;
+    color: #4C4C4C;
     font-size: 1rem;
     font-weight: 500;
     margin-top: 10px;
+    opacity: 0.84;
   }
   .how-works {
     background: white;
@@ -134,6 +132,19 @@ const Forside = styled.div`
   }
 }
 
+.parallax {
+  position: sticky;
+  height: 100%;
+  left: 0px;
+  top: 200px;
+  @media only screen and (max-width: 991px) {
+    position: inherit;
+    top: none;
+    left: none;
+    margin-bottom: 50px;
+  }
+}
+
 .universal h4::before { 
   display: block; 
   content: " "; 
@@ -145,31 +156,26 @@ const Forside = styled.div`
 .magic {
   h4 {
     margin-bottom: 1rem;
+    opacity: 0.9;
   }
   p {
     line-height: 2;
+    color: #4E4046;
+    opacity: 0.84;
+  }
+  a {
+    color: #444244;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.84;
+  }
+  .svg-inline--fa {
+    font-size: 1.3rem;
+    vertical-align: -0.3em;
+    margin-left: 5px;
   }
 }
 
-.universal .logo-animation svg {
-  max-width: 200px;
-  position: absolute;
-  bottom: 90px;
-  right: 50px;
-  z-index: 2;
-  opacity:0.5;
-  @media only screen and (max-width: 991px) {
-    position:inherit;
-  }
-}
-.universal img {
-  max-width: 45px;
-  position: absolute;
-  z-index: 3;
-  bottom: 194px;
-  left: 681px;
-  display:none;
-}
 @media only screen and (max-width: 991px) {
   .universal .float-right {
     float: none!important;
@@ -357,9 +363,17 @@ const Forside = styled.div`
 
 .magic-content {
   max-width: 400px;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
   position: relative;
   z-index: 50;
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 5rem;
+  }
+}
+.magic-content button {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  padding: 8px 20px;
 }
 .multichannel ul {
   padding-left: 0px;
@@ -378,8 +392,6 @@ const Forside = styled.div`
 }
 .multichannel svg {
   max-width: 30px;
-  position: relative;
-  bottom: 2px;
 }
 .outsourcing ul {
   padding-left: 0px;
@@ -394,9 +406,7 @@ const Forside = styled.div`
 .outsourcing svg {
   max-width: 25px;
 }
-.outsourcing button {
-  margin-bottom: 1rem;
-}
+
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
   .li-dots-display svg {display: none;}
 }
@@ -408,6 +418,7 @@ const Forside = styled.div`
 }
 .extentions-content {
   max-width: 400px;
+  margin: 0 auto;
 }
 /*extentions-logo img {
   max-width: 400px;
@@ -455,21 +466,197 @@ const Forside = styled.div`
   }
 }
 
-.animation-background {
-  position: absolute;
-}
+`;
 
-.wrapper-animation-1 {
-  display: flex;
-  align-items: stretch;
-  max-width: 400px;
-  margin: 0 auto;
-}
+const DevAnimation = styled.div`
 
-.wrapper-animation-1 img {
-  max-width: 100%;
-  height: auto;
-}
+  .anim--typing-code {
+    width: 425px;
+  }
+  .anim {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-shrink: inherit;
+    justify-content: center;
+  }
+
+  .anim--typing-code .bg {
+    background-image: url(${DevelopersTest});
+    height: 100%;
+  }
+
+  .anim .bg {
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+  }
+
+  .anim .bg {
+    background-repeat: no-repeat;
+  }
+
+  .anim--typing-code .typewriter {
+    position: absolute;
+    top: 60px;
+    left: 110px;
+    width: 89%;
+    height: 200px;
+    padding: 0 1rem;
+    color: #999;
+    font-family: 'Courier New',sans-serif;
+  }
+
+  .anim--typing-code .typewriter p {
+    letter-spacing: .025em;
+    font-size: .65em;
+    margin: 0;
+    line-height: 1.1rem;
+    font-weight: 500;
+  }
+  .section p:not(.bold) {
+    font-weight: 300;
+  }
+  .d-lg-inline {
+    display: inline;
+  }
+
+  .anim--typing-code .typewriter .protocol {
+    color: #f9bd66;
+  }
+
+
+  .ml-4, .mx-4 {
+    margin-left: 1.5rem!important;
+  }
+
+  .anim--typing-code .typewriter .key {
+    color: #5873E5;
+  }
+
+  .anim--typing-code .typewriter .value {
+    color: #3DCEF4;
+  }
+
+  .anim.anim--typing.playing .typing-email {
+    animation:
+        typing-email 5s steps(40, end) infinite,
+        blink-caret-none .75s step-end infinite;
+  }
+  .anim.anim--typing.playing .typing-name {
+    animation:
+        typing-name 5s steps(40, end) infinite,
+        blink-caret .75s step-end infinite;
+    animation-delay: 1s;
+  }
+  .anim.anim--typing.playing .typing-run {
+    animation:
+        typing-run 5s steps(40, end) infinite,
+        blink-caret-none .75s step-end infinite;
+    animation-delay: 2s;
+    margin-top: 65px;
+    color: #5873E5;
+  }
+  .anim--typing-code .typewriter .typing {
+    overflow: hidden;
+    border-right: .2em solid #999;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+
+  /* Typing effect */
+  @keyframes typing-email {
+    0% {width: 0;}
+    20% {width: 30%;}
+    100% {width: 30%;}
+  }
+  @keyframes typing-name {
+    0% {width: 0;}
+    20% {width: 20%;}
+    100% {width: 20%;}
+  }
+  @keyframes typing-run {
+    0% {width: 0;}
+    20% {width: 19%;}
+    100% {width: 19%;}
+  }
+  /* Cursor */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  @keyframes blink-caret-none {
+    from, to { border-color: transparent }
+    50% { border-color: transparent; }
+  }
+
+  @media only screen and (max-width: 1399px) and (min-width: 1200px) {
+    .anim {width: 500px;}
+    .d-none {display:none!important;}
+    .d-lg-inline {display: none;}
+    .anim--typing-code .typewriter {top: 90px;}
+    .anim.anim--typing.playing .typing-run {margin-top: 40px;}
+    @keyframes typing-email {
+      0% {width: 0;}
+      20% {width: 40%;}
+      100% {width: 40%;}
+    }
+    @keyframes typing-name {
+      0% {width: 0;}
+      20% {width: 25%;}
+      100% {width: 25%;}
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+    .anim {width: 400px;}
+    .d-none {display:none!important;}
+    .d-lg-inline {display: none;}
+    .d-991 {display: none;}
+    .anim--typing-code .typewriter {top: 110px; left:85px}
+    .anim.anim--typing.playing .typing-run {margin-top: 35px;}
+    @keyframes typing-email {
+      0% {width: 0;}
+      20% {width: 47%;}
+      100% {width: 47%;}
+    }
+    @keyframes typing-name {
+      0% {width: 0;}
+      20% {width: 32%;}
+      100% {width: 32%;}
+    }
+    @keyframes typing-run {
+      0% {width: 0;}
+      20% {width: 25%;}
+      100% {width: 25%;}
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .anim {margin: 0 auto;}
+  }
+
+  @media only screen and (max-width: 450px) {
+    .anim {width: 300px;}
+    .d-450 {display:none;}
+    .anim--typing-code .typewriter {top:139px;left:55px}
+    .anim.anim--typing.playing .typing-run {margin-top: 22px;}
+    @keyframes typing-email {
+      0% {width: 0;}
+      20% {width: 65%;}
+      100% {width: 65%;}
+    }
+    @keyframes typing-name {
+      0% {width: 0;}
+      20% {width: 45%;}
+      100% {width: 45%;}
+    }
+    @keyframes typing-run {
+      0% {width: 0;}
+      20% {width: 35%;}
+      100% {width: 35%;}
+    }
+  }
 
 `;
 
@@ -529,7 +716,7 @@ class WavesPage extends React.Component {
                     and grow exponentially.
                   </p>
                   </FadeInSection>
-                  <a href="https://dx6lpv6uyfg06.cloudfront.net/"><Button>Get started for free</Button></a>
+                  <a href="https://app.outshifter.com/"><Button>Get started for free</Button></a>
                 </div>
               </div>
             </div>
@@ -546,363 +733,128 @@ class WavesPage extends React.Component {
           <div className="container">
 
             <div className="row mb-10 universal">
-              <div className="col-12 order-2 order-lg-1 col-lg-8">
-                <div className="float-right">
-                  <div className="logo-animation">
-                    <Lottie options={{animationData: LogoBack}}/>
-                    <img src={LogoWhite} alt="logo white" />
-                  </div>
-                  <div className="dot-animation" id="dot-outsourcing-2">
-                    <svg id="dot-line-1" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-2" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-3" class="c-dashed-line" width="850" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-1000" class="c-dashed-line" width="250" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                  </div>
-                  <div className="dot-animation" id="dot-universal">
-                    <svg id="dot-line-1" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-2" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-3" class="c-dashed-line" width="850" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-1000" class="c-dashed-line" width="250" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                  </div>
-                  <div className="dot-animation" id="dot-multichannel-2">
-                    <svg id="dot-line-1" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-2" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-3" class="c-dashed-line" width="850" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                    <svg id="dot-line-1000" class="c-dashed-line" width="250" height="240" xmlns="http://www.w3.org/2000/svg" >
-                      <defs>
-                        <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                      </defs>
-                      {/* A dashed white line that sits on top of the solid green line */}
-                      <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                      {/* A solid green line that we'll animate */}
-                      <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="col-12 order-1 order-lg-2 col-lg-4">
-                <div className="magic-content">
-                <FadeInSection>
 
-                  <h4 id="row-universal">Universal Management</h4>
-                  <p>
-                    Control your entire e-commerce from a single dashboard: With centralized inventory, 
-                    outsourcing enablement, order management and more, for physical and digital products.
-                  </p>
-                  <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
-                  </FadeInSection>
+              <div className="col-12 col-lg-7 align-items-center parallax">
+                  <div className="wrapper-animation-1">
+                    <div className="animation-background"><img src={Animation1Phone}></img></div>
+                    <Lottie options={{animationData: Animation1}}/>
+                  </div>
+              </div>
 
-                </div>
-              </div>
-            </div>
-            <div className="row mb-15 multichannel">
-              <div className="col-12 order-2 order-lg-1 col-lg-7 text-center dot-dots">
-                <ul>
-                  <li><Lottie options={{animationData: BulletsVioletaAzul}}/>API</li>
-                  <li><Lottie options={{animationData: BulletsAzulTurquesa}}/>Storefront</li>
-                  <li><Lottie options={{animationData: BulletsTurquesaVioleta}}/>Websites</li>
-                  <li><Lottie options={{animationData: BulletsVioletaTurquesa}}/>Socialmedia</li>
-                  <li><Lottie options={{animationData: BulletsAzulVioleta}}/>Marketplaces</li>
-                  <li><Lottie options={{animationData: BulletsTurquesaAzul}}/>Dropshipping</li>
-                </ul>
-              </div>
-              <div className="col-12 order-1 order-lg-2 col-lg-5">
-                <div className="magic-content">
-                <FadeInSection>
-
-                  <h4>Multichannel Commerce</h4>
-                  <p>
-                    One complete solution for all your online sales channels. Distribute cross-platform with 
-                    powerful listing tools and integrations that bridge content seamlessly.
-                  </p>
-                  <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
-                  </FadeInSection>
-
-                </div>
-              </div>
-            </div>
-            <div className="dot-animation" id="dot-multichannel">
-              <svg id="dot-line-5" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                <defs>
-                  <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                </defs>
-                {/* A dashed white line that sits on top of the solid green line */}
-                <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                {/* A solid green line that we'll animate */}
-                <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-              </svg>
-              <svg id="dot-line-6" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                <defs>
-                  <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                </defs>
-                {/* A dashed white line that sits on top of the solid green line */}
-                <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                {/* A solid green line that we'll animate */}
-                <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-              </svg>
-              <svg id="dot-line-7" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                <defs>
-                  <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                </defs>
-                {/* A dashed white line that sits on top of the solid green line */}
-                <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                {/* A solid green line that we'll animate */}
-                <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-              </svg>
-              <svg id="dot-line-8" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                <defs>
-                  <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                </defs>
-                {/* A dashed white line that sits on top of the solid green line */}
-                <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                {/* A solid green line that we'll animate */}
-                <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-              </svg>
-            </div>
-            <div className="row outsourcing mb-10">
-              <div className="col-lg-8">
-                <ul>
-                  <li><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsTurquesaVioleta}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
-                  <li className="mr-3"><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsTurquesaVioleta}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
-                  <li className="mr-3"><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsTurquesaVioleta}}/></li>
-                  <li><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
-                  <li><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
-                  <li className="mr-3"><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
-                  <li className="li-dots-display"><Lottie options={{animationData: BulletsVioletaAzul}}/></li>
-                  <li className="li-dots-display"><Lottie options={{animationData: BulletsAzulTurquesa}}/></li>
-                  <li className="li-dots-display"><Lottie options={{animationData: BulletsTurquesaVioleta}}/></li>
-                  <li className="li-dots-display"><Lottie options={{animationData: BulletsVioletaTurquesa}}/></li>
-                  <li className="li-dots-display"><Lottie options={{animationData: BulletsAzulVioleta}}/></li>
-                  <li className="li-dots-display"><Lottie options={{animationData: BulletsTurquesaAzul}}/></li>
-                </ul>
-                <div className="dot-animation" id="dot-outsourcing">
-                  <svg id="dot-line-9" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                    <defs>
-                      <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                    </defs>
-                    {/* A dashed white line that sits on top of the solid green line */}
-                    <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                    {/* A solid green line that we'll animate */}
-                    <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                  </svg>
-                  <svg id="dot-line-10" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                    <defs>
-                      <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                    </defs>
-                    {/* A dashed white line that sits on top of the solid green line */}
-                    <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                    {/* A solid green line that we'll animate */}
-                    <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                  </svg>
-                  <svg id="dot-line-11" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                    <defs>
-                      <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                    </defs>
-                    {/* A dashed white line that sits on top of the solid green line */}
-                    <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                    {/* A solid green line that we'll animate */}
-                    <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                  </svg>
-                  <svg id="dot-line-12" class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg" >
-                    <defs>
-                      <path id="c-dashed-line" d="M300 0s3 30-150 150-435 120-435 120"/>
-                    </defs>
-                    {/* A dashed white line that sits on top of the solid green line */}
-                    <use class="c-dashed-line__dash" xlinkHref="#c-dashed-line"/>
-                    {/* A solid green line that we'll animate */}
-                    <use class="c-dashed-line__path" xlinkHref="#c-dashed-line"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="col-lg-4">
+              <div className="col-12 col-lg-5">
                 <div className="magic-content mobile-center">
-                <FadeInSection>
-
-                  <h4>Outsourcing Network</h4>
-                  <p>
-                    Exponentially scale distribution through network effects: Administrate third-party 
-                    product access or expand your inventory by sourcing products from other users.
-                  </p>
-                  <ButtonOutline>Start by sourcing</ButtonOutline>
-                  <br/>
-                  <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
+                  <FadeInSection>
+                    <h4 id="row-universal">Universal Management</h4>
+                    <p>
+                      Control your entire e-commerce from a single dashboard: With centralized inventory, 
+                      outsourcing enablement, order management and more, for physical and digital products.
+                    </p>
+                    <Link to={'/solution'}>Learn more <FontAwesomeIcon icon={faAngleRight} /></Link>
                   </FadeInSection>
-
+                </div>
+                <div className="magic-content mobile-center">
+                  <FadeInSection>
+                    <h4>Multichannel Commerce</h4>
+                    <p>
+                      One complete solution for all your online sales channels. Distribute cross-platform with 
+                      powerful listing tools and integrations that bridge content seamlessly.
+                    </p>
+                    <Link to={'/solution'}>Learn more <FontAwesomeIcon icon={faAngleRight} /></Link>
+                  </FadeInSection>
+                </div>
+                <div className="magic-content mobile-center">
+                  <FadeInSection>
+                    <h4>Outsourcing Network</h4>
+                    <p>
+                      Exponentially scale distribution through network effects: Administrate third-party 
+                      product access or expand your inventory by sourcing products from other users.
+                    </p>
+                    <ButtonOutline>Start by sourcing</ButtonOutline>
+                    <br/>
+                    <Link to={'/solution'}>Learn more <FontAwesomeIcon icon={faAngleRight} /></Link>
+                  </FadeInSection>
+                </div>
+                <div className="magic-content mobile-center">
+                  <FadeInSection>
+                    <h4>Sales Acceleration</h4>
+                    <p>
+                      Grow sales by maximizing consumer touchpoints at the 1st stage of their e-commerce journey. 
+                      Enable direct purchasing anywhere, with localized payment and shipping options.
+                    </p>
+                    <Link to={'/solution'}>Learn more <FontAwesomeIcon icon={faAngleRight} /></Link>
+                  </FadeInSection>
+                </div>
+                <div className="magic-content mobile-center">
+                  <FadeInSection>
+                    <h4>Data Empowerment</h4>
+                    <p>
+                      Track your networks impact and total sales in real-time to efficiently adjust channel utilization and optimize your cross-platform strategy with total transparency.
+                    </p>
+                    <Link to={'/solution'}>Learn more <FontAwesomeIcon icon={faAngleRight} /></Link>
+                  </FadeInSection>
                 </div>
               </div>
             </div>
-            <div className="row mb-10">
-              <div className="col">
-                <div className="sales-background"><img src={DotsBackground} alt="dots backgorund left"/></div>
-                <div className="sales-background-right"><img src={DotsBackground} alt="dots backgorund right"/></div>
-                <div className="sales-background-mobile"><img src={DotsBackgroundMobile} alt="dots backgorund mobile"/></div>
-                <div className="magic-content mx-auto">
-                <FadeInSection>
 
-                  <h4>Sales Acceleration</h4>
-                  <p>
-                    Grow sales by maximizing consumer touchpoints at the 1st stage of their e-commerce journey. 
-                    Enable direct purchasing anywhere, with localized payment and shipping options.
-                  </p>
-                  <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
-                  </FadeInSection>
 
-                </div>
-              </div>
-            </div>
-            <div className="row mb-5">
-              <div className="col">
-                <div className="magic-content float-left">
-                <FadeInSection>
-
-                  <h4>Data Empowerment</h4>
-                  <p>
-                    Track your networks impact and total sales in real-time to efficiently adjust channel utilization and optimize your cross-platform strategy with total transparency.
-                  </p>
-                  <Link to={'/solution'}>Learn more <FaAngleRight /></Link>
-                  </FadeInSection>
-
-                </div>
-              </div>
-            </div>
             <div className="row text-center mb-5">
               <div className="col">
-                <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><Button>Start outshifting for free</Button></a>
+                <a href="https://app.outshifter.com/"><Button>Start outshifting for free</Button></a>
               </div>
             </div>
+
           </div>
         </div>
 
-        <div className="container-fluid extentions pt-5 pb-5">
+
+        {/* Developers */}
+
+        <div className="container-fluid merchant developer magic">
           <div className="container">
-            <div className="row">
-              <div className="col-12 col-2 col-lg-1 col-lg-6 align-self-center text-center extentions-logo">
-                <div className="wrapper-animation-1">
-                  <Lottie options={{animationData: DotsSphere}}/>
-                  {/*<div className="animation-background"><img src={LogoExtentions} alt='logo' /></div>*/}
+            <div className="row no-gutters">
+              <div className="col-12 col-lg-6 align-self-center">
+                <div className="extentions-content">
+                  <FadeInSection>
+                    <h3>Customize Extensions</h3>
+                    <p>
+                      Outshifter supports flexible architecture that allows integration with any other third-party API.
+                      <br/><br/>
+                      Join our developer community!
+                    </p>
+                    <Link to={'/solution'}>Documentation <FontAwesomeIcon icon={faAngleRight} /></Link>
+                  </FadeInSection>
                 </div>
               </div>
-              <div className="col-12 col-1 col-lg-2 col-lg-6 align-self-center">
-                <div className="extentions-content">
-                <FadeInSection>
-
-                  <h3>Customize Extensions</h3>
-                  <p>
-                    Outshifter supports flexible architecture that allows integration with any other third-party API.
-                    <br/><br/>
-                    Join our developer community!
-                  </p>
-                  <Link to={'/solution'}>Documentation <FaAngleRight /></Link>
-                  </FadeInSection>
-
-                </div>
+              <div className="col-md-12 col-lg-6 align-self-center">
+                <DevAnimation>
+                  <div className="anim anim--typing anim--typing-code playing">
+                    <div className="bg">
+                      <div className="typewriter">
+                        <p className="d-none d-lg-inline"><span class="protocol">GET</span> <span class="value">.../outshifter/orders/</span> <span className="protocol d-sm_none">HTTP/1.1</span></p>
+                        <p className="d-none d-lg-inline">&nbsp;</p>
+                        <p>New orders details:</p>
+                        <p className="d-450">{"{"}</p>
+                        <p className="d-991"><span className="key">"id":</span> <span class="value">"ord_p7ZAMo1xwNJ4xX"</span>,</p>
+                        <p className="d-991"><span className="key">"customer_reference":</span> <span class="value">"TSTNC-21"</span>,</p>
+                        <p className="d-450"><span className="key">"currency":</span> <span class="value">"Euro"</span>,</p>
+                        <p><span className="key">"order_value":</span> <span class="value">100</span></p>
+                        <p><span className="key">"customer":</span> {"{"}</p>
+                        <p className="ml-4 typing typing-email"><span class="key">"email":</span> <span class="value">"hello@customer.io"</span>,</p>
+                        <p className="ml-4 typing typing-name"><span class="key">"name":</span> <span class="value">"John Doe"</span></p>
+                        <p className="ml-4 typing typing-run"><span>Run Program</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </DevAnimation>
               </div>
             </div>
-            <div className="row text-center shop-badge">
+
+            <div className="row text-center shop-badge mt-10">
               <div className="col">
                 <img src={ShopifyWhite} alt='shopify badge white' />
               </div>
-            </div>  
+            </div>
+
           </div>
         </div>
 
