@@ -124,7 +124,7 @@ export default class Header extends Component {
               <StyledMenuName open={this.state.isOpen}>Menu</StyledMenuName>
               <Burger open={this.state.isOpen} onClick={this.toggleMenu}/>
               <Menu open={this.state.isOpen} />
-              <div className="button-meny"><a href="https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Sign in</ButtonOutline></a></div>
+              <div className="button-meny"><a href="https://app.outshifter.com/"><ButtonOutline>Sign in</ButtonOutline></a></div>
             </div>
           </div>
         </div>

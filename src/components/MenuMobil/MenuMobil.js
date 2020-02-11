@@ -47,7 +47,7 @@ class MenuMobil extends React.Component {
           <Link to={'/'}><img className="mobil logo-mobil" src={LogoMobilWhite} /> </Link>
           <Link to={'/'} className={'logo-line'}><img className="mobil logo-text" src={LogoTextWhite} /> </Link>
         </div>
-        <span className="menu-sign-in"><a href="https://dx6lpv6uyfg06.cloudfront.net">Sign in</a></span>
+        <span className="menu-sign-in"><a href="https://app.outshifter.com/">Sign in</a></span>
         <Burger 
           open={this.props.open} 
           onClick={this.props.onClick}

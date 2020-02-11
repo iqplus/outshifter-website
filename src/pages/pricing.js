@@ -101,7 +101,7 @@ class PricingPage extends React.Component {
                           No setup costs, no monthly fees and no hidden fees. <br/>
                           We only charge per transaction.                        
                         </p>
-                        <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Get started for free</ButtonOutline></a>
+                        <a href="https://app.outshifter.com/"><ButtonOutline>Get started for free</ButtonOutline></a>
                         </div>
                     </div>
                     </div>
@@ -126,7 +126,7 @@ class PricingPage extends React.Component {
                     </div>
                     <div className="row text-center">
                       <div className="col">
-                        <a href="'https://dx6lpv6uyfg06.cloudfront.net/login"><ButtonOutline>Start outshifting</ButtonOutline></a>
+                        <a href="https://app.outshifter.com/"><ButtonOutline>Start outshifting</ButtonOutline></a>
                       </div>
                     </div>
                     <div className="row text-center">

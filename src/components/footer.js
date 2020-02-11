@@ -88,7 +88,7 @@ const Footer = () =>{
                 </Link>
                 </p>
                 <p>
-                <a href={'https://dx6lpv6uyfg06.cloudfront.net/login'}>
+                <a href={'https://app.outshifter.com/'}>
                   Getting started
                 </a>
                 </p>
