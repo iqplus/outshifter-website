@@ -56,11 +56,16 @@ export const StyledTermsData = styled.div`
     .terms-description {
         padding-bottom: 25px;
     }
+    .terms-titel button {
+        padding: 4px 20px;
+        position: absolute;
+        top: 105px;
+    }
     .terms-titel h3::before { 
         display: block; 
         content: " "; 
         margin-top: -110px; 
-        height: 110px; 
+        height: 150px; 
         visibility: hidden; 
         pointer-events: none;
     }

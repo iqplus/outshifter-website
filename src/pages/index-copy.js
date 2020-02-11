@@ -12,8 +12,6 @@ import Accordeon2 from '../components/Accordeon2/Accordeon2'
 
 import './pages.css';
 
-import TestIcon from '../images/test-icon.png';
-
 import iconSet from '../icons/selection.json'
 import IcomoonReact, {iconList} from 'icomoon-react'
 
@@ -24,7 +22,6 @@ import Animation3 from '../animations/animation3.json'
 import Animation1Phone from '../images/Animation-1-Phone.png'
 import Animation2Phone from '../images/Animation-2-Phone.png'
 import Animation3Tablet from '../images/Animation-3-Tablet.png'
-import DevelopersBackground from '../images/developers-studio-code.png'
 import DevelopersTest from '../images/developers-final.png'
 
 import Icon1 from '../images/icon-1.png'

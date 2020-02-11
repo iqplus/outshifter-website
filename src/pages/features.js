@@ -43,7 +43,7 @@ class FeaturesPage extends React.Component {
                         <div className="col text-center">
                         <h1>Features</h1>
                         <p>
-                        Grow your sales network and<br/>
+                        Grow your sales network and <br/>
                         scale your e-commerce impact
                         </p>
                         <Link to={'/account'}><ButtonOutline>Get started for free</ButtonOutline></Link>

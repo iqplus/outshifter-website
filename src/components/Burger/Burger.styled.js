@@ -14,7 +14,7 @@ right: props.right || 'auto',
   justify-content: space-around;
   width: 2rem;
   height: 2rem;
-    right: ${props => props.right};
+  right: ${props => props.right};
 
   background: linear-gradient(45.36deg, #4D88EB 0%, #3DDFF4 100%);
   border: none;
@@ -32,11 +32,10 @@ right: props.right || 'auto',
     background: ${({ open }) => open ? 'none' : 'linear-gradient(45.36deg, #4D88EB 0%, #3DDFF4 100%)'};
   }
 
-
   &:focus {
     outline: none;
   }
-
+  
   div {
     width: 1rem;
     height: 2px;

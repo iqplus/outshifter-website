@@ -153,7 +153,7 @@ const data = [
   {
     category: 'Resources',
     name: 'Checkout',
-    text: 'Integrated, fast and secure checkout solutions for any channel.\n\nOutshifter makes sure customers are having a trustworthy and quick checkout prosess no matter where, when and through whom they are purchasing.'
+    text: 'Integrated, fast and secure checkout solutions for any channel.\n\nOutshifter makes sure customers are having a trustworthy and quick checkout process no matter where, when and through whom they are purchasing.'
   },
   {
     category: 'Resources',
