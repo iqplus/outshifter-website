@@ -150,7 +150,8 @@ class SupportPage extends Component {
       <div className="row faq contact-description">
         <div className="col align-self-center">
           <p>
-            If you cant find the answer to your inquiry, please contact our support senter and we will be happy to assist you.
+            <b>Can’t find what you’re looking for?</b><br/><br/>
+            Contact our support center and we will be happy to assist you.
           </p>
         </div>
       </div>

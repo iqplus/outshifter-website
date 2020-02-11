@@ -35,7 +35,6 @@ library.add(
   faTasks, faUser, faShareAlt, faMoneyCheckAlt, faPlane
 );
 
-
 const Layout = ({ children }) => {
   
   const data = useStaticQuery(graphql`

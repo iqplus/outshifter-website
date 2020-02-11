@@ -3,6 +3,7 @@ import { StyledTermsData } from './TermsData.styled'
 
 import MyBoxSolution from "../Box/MyBoxSolution"
 import Logo from '../../images/logo-mobil.png'
+import ButtonOutline from "../Buttons/ButtonOutline"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -153,6 +154,7 @@ class TermsData extends React.Component {
 
             <div id="about-outshifting" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>About Outshifting</h3>
                 </div>
                 <div id="about-outshifting-1" className="terms-description">
@@ -165,7 +167,7 @@ class TermsData extends React.Component {
                     <p>
                     When you create a listing on Outhifter, you set a sales commission that is a percentage of the items full price. Whenever a user in your community makes a sale from outshifting your listing, this commission is automatically transferred to that user.                     </p>
                     <p>
-                    Outshifter facilitates the proses of outshifting in a seamless manner through our deep integrations and powerful cross-channel listing tools. Allowing you to manage and monitor your e-commerce distribution, network and sales from one dashboard. 
+                    Outshifter facilitates the process of outshifting in a seamless manner through our deep integrations and powerful cross-channel listing tools. Allowing you to manage and monitor your e-commerce distribution, network and sales from one dashboard. 
                     </p>
                 </div>
                 <div id="about-outshifting-1" className="terms-description">
@@ -188,6 +190,7 @@ class TermsData extends React.Component {
 
             <div id="getting-started" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>Getting Started</h3>
                     <p>Ready to connect your sales community and start growing your e-commerce exponentially?</p>
                     <p>Here are 4 easy steps to help you start outshifting immediately:</p>
@@ -228,6 +231,7 @@ class TermsData extends React.Component {
 
             <div id="account" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>Account</h3>
                     <p>To change your account information, go to settings and edit. From here you can change your username, password and contact information as well as update your online channels, shipping information, payment details and more.</p>
                     <br/>
@@ -236,6 +240,7 @@ class TermsData extends React.Component {
 
             <div id="listings" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>Listings</h3>
                     <p>Listings refer to products and services available for sale through the Outshifter Platform and network.</p>
                     <p> Go to “Products” -> “Listings” in the menu to create a listing or to manage / edit your listings.</p>
@@ -248,6 +253,7 @@ class TermsData extends React.Component {
        
             <div id="sourcing" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>Sourcing</h3>
                     <p>Listing outsourcing and sourcing.</p>
                     <br/>
@@ -269,8 +275,9 @@ class TermsData extends React.Component {
 
             <div id="channels" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>Channels</h3>
-                    <p>Outshifter allows you to export listings onto multiple online channels: Outshifter facilitates the proses of outshifting in a seamless manner through our deep integrations and powerful cross-channel listing tools.</p>
+                    <p>Outshifter allows you to export listings onto multiple online channels: Outshifter facilitates the process of outshifting in a seamless manner through our deep integrations and powerful cross-channel listing tools.</p>
                     <p>By “channel” we refer to other platforms and user accounts. Meaning that by outshifting you can sell through multiple platforms and third-parties simultaneously, in order to exponentially scale your e-commerce distribution and sales. </p>
                     <p>We are constantly adding new channels and allow for our users to create plug-ins for their favorite platforms through our open API. Please see our developer community for more information. If you can´t find your channel of choice leave us some feedback and we will see what we can do. Please keep in mind that third party channels and platforms may have different terms and conditions and privacy policy standards than us.</p>
                     <br/>
@@ -305,6 +312,7 @@ class TermsData extends React.Component {
 
             <div id="orders" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>Orders</h3>
                     <p>All orders can be tracked through you Outshifter dashboard. The flow of how you treat an order depends on whether you are the supplier of the listing or you sourced the listing. </p>
                     <p>As a supplier you are responsible for order fulfillment. Once we receive an order, we forward you the order details. It is then your responsibility to fulfill the order includin packaging and shipping. Making sure you include return information and labels. The purchase agreement is between you and the end customer. Meaning you are also responsible for communications with the end customer and own the customer relationship.</p>
@@ -316,6 +324,7 @@ class TermsData extends React.Component {
 
             <div id="shipping" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>Shipping</h3>
                     <br/>
                 </div>
@@ -331,6 +340,7 @@ class TermsData extends React.Component {
 
             <div id="service-fee" className="container">
                 <div className="terms-titel">
+                    <a href="/solution"><ButtonOutline>Back</ButtonOutline></a>
                     <h3>Service Fee</h3>
                     <p>The Service Fee is how we charge for using our services. We are determined to keep it as low as we can. However, it is what makes us able to keep the platform running and provide you with payments, shipping integrations, insights and continued innovation. It is and will always be completely free to get started at Outshifter.</p>
                     <br/>

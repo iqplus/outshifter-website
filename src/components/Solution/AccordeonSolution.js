@@ -72,7 +72,7 @@ class AccordeonTerms extends React.Component {
                                         <p>
                                         When you create a listing on Outhifter, you set a sales commission that is a percentage of the items full price. Whenever a user in your community makes a sale from outshifting your listing, this commission is automatically transferred to that user.                     </p>
                                         <p>
-                                        Outshifter facilitates the proses of outshifting in a seamless manner through our deep integrations and powerful cross-channel listing tools. Allowing you to manage and monitor your e-commerce distribution, network and sales from one dashboard. 
+                                        Outshifter facilitates the process of outshifting in a seamless manner through our deep integrations and powerful cross-channel listing tools. Allowing you to manage and monitor your e-commerce distribution, network and sales from one dashboard. 
                                         </p>
                                     </div>
                                     <div id="about-outshifting-1" className="terms-description">
@@ -194,7 +194,7 @@ class AccordeonTerms extends React.Component {
                         <div id="channels" className="container">
                             <div className="terms-titel">
                                 <h3>Channels</h3>
-                                <p>Outshifter allows you to export listings onto multiple online channels: Outshifter facilitates the proses of outshifting in a seamless manner through our deep integrations and powerful cross-channel listing tools.</p>
+                                <p>Outshifter allows you to export listings onto multiple online channels: Outshifter facilitates the process of outshifting in a seamless manner through our deep integrations and powerful cross-channel listing tools.</p>
                                 <p>By “channel” we refer to other platforms and user accounts. Meaning that by outshifting you can sell through multiple platforms and third-parties simultaneously, in order to exponentially scale your e-commerce distribution and sales. </p>
                                 <p>We are constantly adding new channels and allow for our users to create plug-ins for their favorite platforms through our open API. Please see our developer community for more information. If you can´t find your channel of choice leave us some feedback and we will see what we can do. Please keep in mind that third party channels and platforms may have different terms and conditions and privacy policy standards than us.</p>
                                 <br/>

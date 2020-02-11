@@ -100,9 +100,9 @@ class CompanyPage extends React.Component {
               <div className="container">   
                 <div className="row intro">
                   <div className="col">
-                    <h2>Democratize <br/>e-Commerce</h2>
+                    <h2>Democratizing <br/>E-Commerce</h2>
                     <p>
-                      Outshifter is the technology company creating the infrastructure for a decentralized and transparent e-commerce value-chain.
+                      Connect your network, grow your sales, and succeed together.                    
                     </p>
                   </div>
                 </div>
@@ -118,44 +118,45 @@ class CompanyPage extends React.Component {
 
             <div className="row text-center">
               <div className="col">
-                <h2>Outshifter</h2>
+                <h2>About Us</h2>
                 <hr />
                 <p>
-                  Outshifter is centered on a belief in transparency, empowerment, ease-of-use and innovation.
+                  To democratize means making something accessible to everyone. The e-commerce value chain is currently not 
+                  working for all. Outshifter helps allocate the value creation in e-commerce from the few to the many. 
+                  We aim to enable all individuals and E-commerce participants regardless of size, experience and budget 
+                  to connect, collaborate and scale.
                   <br/><br/>
-                  Through the platforms multi-channel-network we aim to enable all e-commece players regardless of size, 
-                  experience and budget to connect, colaborate and scale online. Consequently, allowing consumers to 
-                  securely buy what they see, at the places they spend their time online.
+                  Our platform connects suppliers and mediators and provides them with infrastructure to 
+                  succeed together. At Outshifter we call it democratizing e-commerce and we want you to become part of it.
                 </p>  
-                <ImageOutshifter />
               </div>
             </div>
 
-            <div className="row text-center">
+            <div className="row mt-5 text-center">
               <div className="col">
                 <h2>Join the team</h2>
                 <p>
-                  Outshifter is looking for great people to complement our team. 
+                  Do you want to revolutionize e-commerce?
                   <br/><br/>
-                  We truly believe diversity make for the best ideas. Thus, there is no predefined background, 
-                  age, sex, ethnicity, colour, sexual orientation or religion that make the ideal Outshifter. 
-                  We value curiosity, positivism, teamwork, creativity, disruptive mindsets and problem solvers.
+                  We are always looking for great people to complement our team. 
+                  Diversity makes for the best ideas. We value curiosity, positivism, 
+                  teamwork, creativity, disruptive mindsets and problem solvers.                  
                   <br/><br/>
-                  Sounds like a something you´d like to be a part of? 
+                  If you want to join, shoot us a message right away and we will get back to you shortly.
                 </p>
                 <Link to={"/contact"}><ButtonOutline>Contact</ButtonOutline></Link>
                 <ImageTeam />
               </div>
             </div>
 
-            <div className="row text-center">
+            <div className="row mt-5 text-center">
               <div className="col">
                 <h2>Students and interns</h2>
                 <p>
                   Looking for a part-time position or a company to write your thesis with?
-                  <br/>
+                  <br/><br/>
                   At Outshifter we are always open for students and their ideas and projects. 
-                  <br/>
+                  <br/><br/>
                   The future belongs to the young.
                   <br/>
                 </p>
