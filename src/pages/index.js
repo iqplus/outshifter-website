@@ -365,7 +365,7 @@ const Forside = styled.div`
   max-width: 400px;
   margin-bottom: 15rem;
   position: relative;
-  z-index: 50;
+  z-index: 150;
   @media only screen and (max-width: 991px) {
     margin-bottom: 5rem;
   }
@@ -732,7 +732,7 @@ class WavesPage extends React.Component {
         <div className="container-fluid back-white after-canvas magic">
           <div className="container">
 
-            <div className="row mb-10 universal">
+            <div className="row mb-10">
 
               <div className="col-12 col-lg-7 align-items-center parallax">
                   <div className="wrapper-animation-1">
@@ -742,7 +742,7 @@ class WavesPage extends React.Component {
               </div>
 
               <div className="col-12 col-lg-5">
-                <div className="magic-content mobile-center">
+                <div className="magic-content mobile-center universal">
                   <FadeInSection>
                     <h4 id="row-universal">Universal Management</h4>
                     <p>
@@ -812,7 +812,7 @@ class WavesPage extends React.Component {
         <div className="container-fluid merchant developer magic">
           <div className="container">
             <div className="row no-gutters">
-              <div className="col-12 col-lg-6 align-self-center">
+              <div className="col-12 col-lg-6 align-self-center mobile-center">
                 <div className="extentions-content">
                   <FadeInSection>
                     <h3>Customize Extensions</h3>

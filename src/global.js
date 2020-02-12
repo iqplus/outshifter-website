@@ -82,15 +82,19 @@ export const GlobalStyles = createGlobalStyle`
   }
   h1 {
     color: #4A4A4A;
+    font-weight: 900!important;
   }
   h2 {
     color: #4A4A4A;
+    font-weight: 900!important;
   }
   h3 {
     color: #4A4A4A;
+    font-weight: 900!important;
   }
   h4 {
     color: #4A4A4A;
+    font-weight: 900!important;
   }
   h5 {
     color: #4A4A4A;

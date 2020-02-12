@@ -57,7 +57,7 @@ const Footer = () =>{
               <div className="col-12 col-sm-12 col-md text-left">
                 <h5>
                   <Link to={'/features'}>
-                  Comunity
+                  Community
                   </Link>
                 </h5>
                 <p>
