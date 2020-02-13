@@ -2,20 +2,7 @@ import React from 'react'
 
 import { StyledAccordeonTerms } from './AccordeonTerms.styled'
 
-import IconTerms from '../../images/icon-general-terms.png'
-import IconPrivacy from '../../images/icon-privacy-policy.png'
-
 import Logo from '../../images/logo-mobil.png'
-import { FaTasks } from 'react-icons/fa'
-import { FaUser } from 'react-icons/fa'
-import { FaRegGem } from 'react-icons/fa'
-import { FaBattleNet } from 'react-icons/fa'
-import { FaShareAlt } from 'react-icons/fa'
-import { FaFileInvoice } from 'react-icons/fa'
-import { FaMoneyCheckAlt } from 'react-icons/fa'
-import { FaPlane } from 'react-icons/fa'
-import { FaConnectdevelop } from 'react-icons/fa'
-
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {

@@ -3,20 +3,25 @@ import styled from 'styled-components';
 export const StyledTermsData = styled.div`
 
     .box-wrapper {
-        width: 265px;
+        width: 300px;
         display: inline-block;
         margin-right: 100px;
-
         img {
-            width: 30px;
+            width: 47px;
             position: relative;
-            bottom: 3px;
+            top: 8px;
+            filter: drop-shadow(0px 2px 4px #A8A8A8);
         }
         svg {
-            width: 30px;
-            font-size: 22px;
+            width: 54px;
+            font-size: 36px;
             position: relative;
-            top: 1px;
+            top: 15px;
+            left: 5px;
+            filter: drop-shadow(0px 2px 4px #A8A8A8);
+            @media only screen and (max-width: 1399px) {
+                width: 35px;
+            }
         }
         h6 {
             display: inline;
@@ -39,6 +44,19 @@ export const StyledTermsData = styled.div`
         .box-wrapper-right {
             position: relative;
             left: 20px;
+        }
+    }
+    
+    .about-out {
+        p {
+            color: #929292!important;
+            margin-left: 80px;
+            font-size: 12px;
+            margin-bottom: 0px;
+            @media only screen and (max-width: 1399px) {
+                font-size: 10px;
+                margin-left: 60px;
+            }
         }
     }
 

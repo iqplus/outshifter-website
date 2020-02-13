@@ -2,7 +2,10 @@ import React from 'react'
 import { StyledTermsData } from './TermsData.styled'
 
 import MyBoxSolution from "../Box/MyBoxSolution"
-import Logo from '../../images/logo-mobil.png'
+import MyBox from "../Box/MyBox"
+import MyBoxSolutionLogo from "../Box/MyBoxSolutionLogo"
+
+import Logo from '../../images/new-logo-solutions.png'
 import ButtonOutline from "../Buttons/ButtonOutline"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -47,41 +50,47 @@ class TermsData extends React.Component {
 
                             <div className="box-wrapper">
                                 <a href="#about-outshifting" onClick={this.props.toggle1}>
-                                    <MyBoxSolution>
-                                        <img src={Logo} />
-                                        <h6>About Outshifting</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolutionLogo
+                                        img={Logo}
+                                        headline='About Outshifting'
+                                        description='Learn about us'
+                                    />
                                 </a>
                             </div>
                             <div className="box-wrapper box-wrapper-right">
                                 <a href="#getting-started" onClick={this.props.toggle2}>
-                                    <MyBoxSolution>
-                                        <FontAwesomeIcon icon={faTasks} />
-                                        <h6>Getting Started</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolution
+                                        icon={faTasks}
+                                        headline='Getting Started'
+                                        description='A step by step guide'
+                                    />
                                 </a>
                             </div>
-
                         </div>
                     </div>
+
+                    <div className="solution-separator"><hr /></div>
+                    <br/><br/><br/>
 
                     <div className="row mb-5">
                         <div className="col text-center">
 
                             <div className="box-wrapper">
                                 <a href="#account" onClick={this.props.toggle3}>
-                                    <MyBoxSolution>
-                                        <FontAwesomeIcon icon={faUser} />
-                                        <h6>Account</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolution
+                                        icon={faUser}
+                                        headline='Account'
+                                        description='Setup, customize & manage'
+                                    />
                                 </a>
                             </div>
                             <div className="box-wrapper box-wrapper-right">
                                 <a href="#listings" onClick={this.props.toggle4}>
-                                    <MyBoxSolution>
-                                        <FontAwesomeIcon icon={faGem} />
-                                        <h6>Listings</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolution
+                                        icon={faGem}
+                                        headline='Listings'
+                                        description='Creating, importing and managing'
+                                    />
                                 </a>
                             </div>
 
@@ -93,18 +102,20 @@ class TermsData extends React.Component {
 
                             <div className="box-wrapper">
                                 <a href="#channels" onClick={this.props.toggle6}>
-                                    <MyBoxSolution>
-                                        <FontAwesomeIcon icon={faChartNetwork} />
-                                        <h6>Channels</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolution
+                                        icon={faChartNetwork}
+                                        headline='Channels'
+                                        description='Multiplatform direct-sales'
+                                    />
                                 </a>
                             </div>
                             <div className="box-wrapper box-wrapper-right">
                                 <a href="#sourcing" onClick={this.props.toggle5}>
-                                    <MyBoxSolution>
-                                        <FontAwesomeIcon icon={faShareAlt} />
-                                        <h6>Sourcing</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolution
+                                        icon={faShareAlt}
+                                        headline='Sourcing'
+                                        description='Outsourcing and sourcing listings'
+                                    />
                                 </a>
                             </div>
 
@@ -116,18 +127,20 @@ class TermsData extends React.Component {
 
                             <div className="box-wrapper">
                                 <a href="#orders" onClick={this.props.toggle7}>
-                                    <MyBoxSolution>
-                                        <FontAwesomeIcon icon={faFileInvoice} />
-                                        <h6>Orders</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolution
+                                        icon={faFileInvoice}
+                                        headline='Orders'
+                                        description='One dashboard for all orders'
+                                    />
                                 </a>
                             </div>
                             <div className="box-wrapper box-wrapper-right">
                                 <a href="#shipping" onClick={this.props.toggle8}>
-                                    <MyBoxSolution>
-                                        <FontAwesomeIcon icon={faPlane} />
-                                        <h6>Shipping</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolution
+                                        icon={faPlane}
+                                        headline='Shipping'
+                                        description='Labels, couriers & customs'
+                                    />
                                 </a>
                             </div>
 
@@ -139,10 +152,11 @@ class TermsData extends React.Component {
 
                             <div className="box-wrapper">
                                 <a href="#service-fee" onClick={this.props.toggle11}>
-                                    <MyBoxSolution>
-                                        <FontAwesomeIcon icon={faMoneyCheckAlt} />
-                                        <h6>Service Fee</h6>
-                                    </MyBoxSolution>
+                                    <MyBoxSolution
+                                        icon={faMoneyCheckAlt}
+                                        headline='Service Fee'
+                                        description='Outshifter & external channels'
+                                    />
                                 </a>
                             </div>
 

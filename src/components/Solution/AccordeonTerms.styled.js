@@ -53,6 +53,7 @@ export const StyledAccordeonTerms = styled.div`
     .sidebar-item img {
         height: 30px;
         padding-right: 15px;
+        filter: drop-shadow(0px 2px 4px #A8A8A8);
     }
     .sidebar-item svg {
         margin-right: 15px;
@@ -60,6 +61,7 @@ export const StyledAccordeonTerms = styled.div`
         font-size: 30px;
         position: relative;
         top: 5px;
+        filter: drop-shadow(0px 2px 4px #A8A8A8);
     }
     h5 {
         color: #9B9B9B;

@@ -2,6 +2,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 hr {
   background: linear-gradient(to right, #829DDD, #85E9F7);
   height: 3px;
@@ -18,8 +19,26 @@ hr {
   }
 }
 
+.solution-separator {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  hr {
+    width: 100%;
+    background: #cdcdcd;
+    height: 1px;
+    float: left;
+    @media only screen and (min-width: 1400px) {
+      width: 86%;
+    }
+  }
+}
+
 .wrapper-img-lottie img {
   width: 100%;
+}
+
+.icon-shadow {
+  filter: drop-shadow(0px 2px 4px #A8A8A8);
 }
 
 @media only screen and (max-width: 767px) {

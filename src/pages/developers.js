@@ -7,10 +7,6 @@ import SEO from "../components/seo"
 import styled from 'styled-components';
 import MyContact from "../components/MyContact/MyContactSupport"
 
-import { FaInfo } from 'react-icons/fa';
-import { FaCode } from 'react-icons/fa';
-import { FaQuestion } from 'react-icons/fa';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfo, faCode, faQuestion } from '@fortawesome/pro-duotone-svg-icons';
 
@@ -46,13 +42,29 @@ const ContactStyled = styled.div`
       margin-top: 4px;
     }
   }
+  .svg-inline--fa {
+    position: relative;
+    top: 4px;
+    right: 5px;
+  }
   .bulletstext {
     float: right;
     width: 75%;
+    h6 {
+      padding-top: 2px;
+    }
+    p {
+      color: #929292;
+    }
   }
   .contact-separator {
     margin-top: 75px;
     margin-bottom: 75px;
+    hr {
+      width: 100%;
+      background: #CDCDCD;
+      height: 1px;
+    }
   }
 
   .position-1 {margin-right: 5%}
@@ -89,7 +101,7 @@ const BoxStyled = styled.div`
     margin: 0 auto;
   }
 `;
-class SupportPage extends Component {
+class DevelopersPage extends Component {
   componentDidMount(){
     document.querySelector('#canvas1').style.visibility = "hidden"
     document.querySelector('#canvas2').style.visibility = "hidden"
@@ -116,7 +128,7 @@ class SupportPage extends Component {
       <div className="row faq">
         <div className="col-md-12 col-lg position-1 align-self-center">
           <Link to={'/solution'}><BoxStyled >
-            <div className="bulletsicon">
+            <div className="bulletsicon icon-shadow">
               <FontAwesomeIcon icon={faInfo} />
             </div>
             <div className="bulletstext">
@@ -127,7 +139,7 @@ class SupportPage extends Component {
         </div>
         <div className="col-md-12 col-lg position-2 align-self-center">
           <Link to={'/developers'}><BoxStyled>
-          <div className="bulletsicon">
+          <div className="bulletsicon icon-shadow">
             <FontAwesomeIcon icon={faCode} />
             </div>
             <div className="bulletstext">
@@ -138,7 +150,7 @@ class SupportPage extends Component {
         </div>
         <div className="col-md-12 col-lg position-3">
           <Link to={'/faq'}><BoxStyled position="3">
-          <div className="bulletsicon align-self-center">
+          <div className="bulletsicon icon-shadow align-self-center">
             <FontAwesomeIcon icon={faQuestion} />
             </div>
             <div className="bulletstext">
@@ -154,7 +166,8 @@ class SupportPage extends Component {
       <div className="row faq contact-description">
         <div className="col align-self-center">
           <p>
-            If you cant find the answer to your inquiry, please contact our support senter and we will be happy to assist you.
+            <b>Can’t find what you’re looking for?</b><br/><br/>
+            Contact our support center and we will be happy to assist you.
           </p>
         </div>
       </div>
@@ -172,8 +185,5 @@ class SupportPage extends Component {
     )
   }
 }
-  
-  
 
-
-export default SupportPage;
+export default DevelopersPage;

@@ -23,14 +23,19 @@ export const StyledSidebar = styled.nav`
     }
     .sidebar-item svg {
         font-size: 26px;
-        padding-right: 15px;
+        padding-right: 5px;
+        margin-right: 15px;
         width: 36px;
         position: relative;
-        top: 3px;    
+        top: 3px;  
+        left: 6px;  
+        filter: drop-shadow(0px 2px 4px #A8A8A8);
     }
     .sidebar-item img {
         max-width: 30px;
-        margin-right: 10px;
+        margin-right: 15px;
+        margin-left: 5px;
+        filter: drop-shadow(0px 2px 4px #A8A8A8);
     }
     .undermeny {
         padding-top: 25px;

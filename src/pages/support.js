@@ -42,13 +42,29 @@ const ContactStyled = styled.div`
       margin-top: 4px;
     }
   }
+  .svg-inline--fa {
+    position: relative;
+    top: 4px;
+    right: 5px;
+  }
   .bulletstext {
     float: right;
     width: 75%;
+    h6 {
+      padding-top: 2px;
+    }
+    p {
+      color: #929292;
+    }
   }
   .contact-separator {
     margin-top: 75px;
     margin-bottom: 75px;
+    hr {
+      width: 100%;
+      background: #CDCDCD;
+      height: 1px;
+    }
   }
 
   .position-1 {margin-right: 5%}
@@ -112,7 +128,7 @@ class SupportPage extends Component {
       <div className="row faq">
         <div className="col-md-12 col-lg position-1 align-self-center">
           <Link to={'/solution'}><BoxStyled >
-            <div className="bulletsicon">
+            <div className="bulletsicon icon-shadow">
               <FontAwesomeIcon icon={faInfo} />
             </div>
             <div className="bulletstext">
@@ -123,7 +139,7 @@ class SupportPage extends Component {
         </div>
         <div className="col-md-12 col-lg position-2 align-self-center">
           <Link to={'/developers'}><BoxStyled>
-          <div className="bulletsicon">
+          <div className="bulletsicon icon-shadow">
             <FontAwesomeIcon icon={faCode} />
             </div>
             <div className="bulletstext">
@@ -134,7 +150,7 @@ class SupportPage extends Component {
         </div>
         <div className="col-md-12 col-lg position-3">
           <Link to={'/faq'}><BoxStyled position="3">
-          <div className="bulletsicon align-self-center">
+          <div className="bulletsicon icon-shadow align-self-center">
             <FontAwesomeIcon icon={faQuestion} />
             </div>
             <div className="bulletstext">

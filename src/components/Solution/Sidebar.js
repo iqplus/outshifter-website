@@ -2,7 +2,7 @@ import React from 'react'
 
 import { StyledSidebar } from './Sidebar.styled'
 
-import Logo from '../../images/logo-mobil.png'
+import Logo from '../../images/new-logo-solutions.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
