@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import './layout.css'
 import Header from "./header"
+import SEO from "./seo.js"
 
 import { Link } from 'gatsby'
 import {Helmet} from "react-helmet"
@@ -50,6 +51,7 @@ const Layout = ({ children }) => {
   `);
 
   return (
+  <SEO>
   <Loading>
     <ThemeProvider theme={theme}>
     <>
@@ -75,6 +77,7 @@ const Layout = ({ children }) => {
     </>
     </ThemeProvider>
   </Loading>
+  </SEO>
   )
 }
 

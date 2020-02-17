@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Outshifter`,
     description: `Create and connect your sales community to grow exponentially.`,
-    url: "https://www.outshifter.com", // No trailing slash allowed!
+    siteUrl: "https://www.outshifter.com", // No trailing slash allowed!
     image: "/career-students-ba7d3a577ecc0de05b7416c5b6394633.jpg", // Path to your image you placed in the 'static' folder
     author: `@iqplus`,
   },
