@@ -20,12 +20,12 @@ import IconConnect from '../images/shopify-connect-min.png'
 import IconSell from '../images/shopify-sell-min.png'
 import IconImport from '../images/shopify-import-min.png'
 import BoxAccount from '../images/Box-Marie-Raleigh-min.png'
-import ImageChannels from '../images/image-channels-min.png'
+import ImageChannels from '../images/image-channels-centered-min.png'
 import ImageNetwork from '../images/image-Network-min.png'
 import ImageProducts from '../images/image-Products-min.png'
 import ImageOrders from '../images/image-Orders-min.png'
 import ImageShipping from '../images/image-Shipping-min.png'
-import ImageAnalytics from '../images/image-Analytics-min.png'
+import ImageAnalytics from '../images/image-Analytics-centered-min.png'
 import ImageBannerMobile from '../images/Shopify-banner-mobile-min.png'
 
 
@@ -37,9 +37,6 @@ const InnerPages = styled.div`
   .banner-content {
     max-width: 400px;
     margin: 0 auto;
-    @media only screen and (max-width: 991px) {
-      padding-top: 150px;
-    }
   }
   .banner-title {
     p {
@@ -192,7 +189,7 @@ class ShopifyPage extends React.Component {
         <div>
             <div className={'masthead'}>
               <div className={'container ' + 'h-100 '}>
-                <div className="row h-100 align-items-center mobile-center">
+                <div className="row h-100 align-items-center mobile-center mt-150-mob">
                     <div className="col-12 col-lg-6 align-items-center">
                       <div className="banner-content">
                         <div className="banner-title">
