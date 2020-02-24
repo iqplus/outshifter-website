@@ -89,7 +89,7 @@ const InnerPages = styled.div`
       opacity: 0.84;
     }
     @media only screen and (max-width: 991px) {
-      margin-top: 250px;
+      margin-top: 75px;
     }
   }
   .col-content {
@@ -405,7 +405,7 @@ class ShopifyPage extends React.Component {
         </div>
   
         {/* Free Forever */}
-        <div className="container mt-10 mb-10 mobile-center">
+        <div className="container mt-10 mb-10 pb-10 mobile-center">
           <div className="row width-991 align-items-center">
             <div className="col-lg-6 align-items-center">
               <div className="col-content">
