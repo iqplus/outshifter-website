@@ -20,12 +20,12 @@ import IconConnect from '../images/shopify-connect-min.png'
 import IconSell from '../images/shopify-sell-min.png'
 import IconImport from '../images/shopify-import-min.png'
 import BoxAccount from '../images/Box-Marie-Raleigh-min.png'
-import ImageChannels from '../images/image-channels-centered-min.png'
+import ImageChannels from '../images/image-channels-new.png'
 import ImageNetwork from '../images/image-Network-min.png'
 import ImageProducts from '../images/image-Products-min.png'
 import ImageOrders from '../images/image-Orders-min.png'
 import ImageShipping from '../images/image-Shipping-min.png'
-import ImageAnalytics from '../images/image-Analytics-centered-min.png'
+import ImageAnalytics from '../images/image-Analytics-centered.png'
 import ImageBannerMobile from '../images/Shopify-banner-mobile-min.png'
 
 
@@ -130,7 +130,8 @@ const InnerPages = styled.div`
   }
   .col-image-channels {
     img {
-      max-width: 500px;
+      max-width: 550px;
+      @media only screen and (max-width: 1200px) {max-width: 450px;}
       @media only screen and (max-width: 991px) {max-width: 350px;}
     }
   }
@@ -244,12 +245,12 @@ class ShopifyPage extends React.Component {
             <div className="col-lg-3">
               <img src={IconImport} alt="shopify icon import" />
               <h5>Import</h5>
-              <p>Import products with One Click</p>
+              <p>Import Products with One Click</p>
             </div>
             <div className="col-lg-3">
               <img src={IconSell} alt="shopify icon sell" />
               <h5>Sell</h5>
-              <p>Drive traffic and Grow Sales</p>
+              <p>Drive Traffic and Grow Sales</p>
             </div>
           </div>
         </div>
@@ -396,7 +397,7 @@ class ShopifyPage extends React.Component {
                 <h3>Analytics</h3>
                 <p>
                   Empower your business with data-driven insights and analytics. 
-                  Statistics and overall impact helps you adjust accordingly to target the most profitable online avenues. 
+                  Statistics and overall impact help you adjust accordingly to target the most profitable online avenues. 
                 </p>
                 <Link to={'/solution'}>Learn more <FontAwesomeIcon icon={faAngleRight} /></Link>
               </div>
@@ -407,7 +408,7 @@ class ShopifyPage extends React.Component {
         {/* Free Forever */}
         <div className="container mt-10 mb-10 pb-10 mobile-center">
           <div className="row width-991 align-items-center">
-            <div className="col-lg-6 align-items-center">
+            <div className="order-2 order-lg-1 col-lg-6 align-items-center">
               <div className="col-content">
                 <h3>Free Forever</h3>
                 <p>
@@ -417,7 +418,7 @@ class ShopifyPage extends React.Component {
                 <Link to={'/solution'}>Learn more <FontAwesomeIcon icon={faAngleRight} /></Link>
               </div>
             </div>
-            <div className="col-lg-6 align-items-center col-image-standard text-center pt-5-mob">
+            <div className="order-1 order-lg-2 col-lg-6 align-items-center col-image-standard text-center pt-5-mob pb-5-mob">
               <Link to={'https://app.outshifter.com/'}><Button>Get started</Button></Link>
             </div>
           </div>
