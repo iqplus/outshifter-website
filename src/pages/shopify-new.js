@@ -25,7 +25,7 @@ import ImageNetwork from '../images/image-Network-min.png'
 import ImageProducts from '../images/image-Products-min.png'
 import ImageOrders from '../images/image-Orders-min.png'
 import ImageShipping from '../images/image-Shipping-min.png'
-import ImageAnalytics from '../images/image-Analytics-centered.png'
+import ImageAnalytics from '../images/image-Analytics-new.png'
 import ImageBannerMobile from '../images/Shopify-banner-mobile-min.png'
 
 
@@ -90,6 +90,27 @@ const InnerPages = styled.div`
     }
     @media only screen and (max-width: 991px) {
       margin-top: 75px;
+    }
+  }
+  .shopi-icons-arrow {
+    position: absolute;
+    top: 15px;
+    left: 250px;
+    .svg-inline--fa {
+      font-size: 2rem;
+    }
+    .fa-secondary {
+      fill: #E3E3E3!important;
+      color: #E3E3E3!important;
+    }
+    .fa-primary {
+      fill: #E3E3E3!important;
+      color: #E3E3E3!important;
+    }
+    @media only screen and (max-width: 1150px) {left: 225px;}
+    @media only screen and (max-width: 1000px) {left: 200px;}
+    @media only screen and (max-width: 991px) {
+      display: none;
     }
   }
   .col-content {
@@ -234,16 +255,19 @@ class ShopifyPage extends React.Component {
           <div className="row width-991">
             <div className="col-lg-3">
               <img src={IconOutshifter} alt="shopify icon outshifter" />
+              <div className="shopi-icons-arrow"><FontAwesomeIcon icon={faAngleRight} /></div>
               <h5>Sign up</h5>
               <p>Create your Outshifter Account</p>
             </div>
             <div className="col-lg-3">
               <img src={IconConnect} alt="shopify icon connect" />
+              <div className="shopi-icons-arrow"><FontAwesomeIcon icon={faAngleRight} /></div>
               <h5>Connect</h5>
               <p>Connect your Sales Network</p>
             </div>
             <div className="col-lg-3">
               <img src={IconImport} alt="shopify icon import" />
+              <div className="shopi-icons-arrow"><FontAwesomeIcon icon={faAngleRight} /></div>
               <h5>Import</h5>
               <p>Import Products with One Click</p>
             </div>
