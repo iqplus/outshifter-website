@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby'
+import { Link } from "gatsby"
 
 const StyledBox = styled.div`
 
-    padding: 15px;
-    border-radius: 6px;
-
-    &:hover {
-        transition: background 1s;
-        background: #EEEEEE;
+    li {
+        padding: 10px 15px;
+        border-radius: 6px;
+        &:hover {
+            transition: background 1s;
+            background: #EEEEEE;
+        }
     }
 
     .image-wrapper img {
@@ -36,24 +39,67 @@ const StyledBox = styled.div`
         line-height: 1.2;
         margin-bottom: 0px;
     }
-
 `;  
 
 class BlogBoxStaff extends React.Component {
     render() {
         return(
-
             <StyledBox>
-                <div>
-                    <div className="image-wrapper">
-                        <img src={this.props.BlogItem.featuredImage.file.url} alt={this.props.BlogItem.title}/>
-                    </div>
-                    <p class="blog-title">{this.props.BlogItem.title}</p>
-                </div>
+
+                <StaticQuery query={POSTS} render={data =>{
+                    const post = data.allContentfulBlogPost.edges;
+                    function staffpost(value) {return value.node.staffPick === true;};
+                    const poststaff = post.filter(staffpost);
+                    return poststaff.map((item) => {
+                        return (
+                            <li>
+                                <Link to={'/blog/' + item.node.slug}>
+                                    <div>
+                                        <div className="image-wrapper">
+                                            <img src={item.node.featuredImage.file.url} alt={item.node.title}/>
+                                        </div>
+                                        <p class="blog-title">{item.node.title}</p>
+                                    </div>
+                                </Link>
+                            </li>
+                        );
+                    });
+                }} />
+
             </StyledBox>
-            
         );
     }
 }
 
 export default BlogBoxStaff;
+
+
+const POSTS = graphql `{
+    allContentfulBlogPost {
+        edges {
+            node {
+                id
+                author {
+                    name
+                    linkedIn
+                }
+                category
+                title
+                date
+                mainPost
+                staffPick
+                slug
+                featuredImage {
+                  file {
+                    url
+                  }
+                }
+                content {
+                    json
+                    content
+                }
+            }
+        }
+    }
+}`
+
