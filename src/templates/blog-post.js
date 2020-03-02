@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
+import Helmet from "react-helmet"
+
 
 import Button from '../components/Buttons/Button'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -82,7 +84,18 @@ const BlogPost = ({ data }) => {
   return (
 
     <Layout headerType="blog">
-    <SEO title="Blog" />
+              <Helmet
+          title={info.title}
+          meta={[
+            {
+              name: "description",
+              content: info.seoDescription,
+            },
+            { name: "keywords", content: "sample, something" },
+          ]}
+        >
+          <html lang="en" />
+        </Helmet>
     <BlogPostStyled>
 
       <div className="container">
