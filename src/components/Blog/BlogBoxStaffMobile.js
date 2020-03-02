@@ -5,15 +5,13 @@ import { Link } from "gatsby"
 
 const StyledBox = styled.div`
 
-    .box-wrapper {
+    .staff-mobile {
         padding: 15px;
         border-radius: 6px;
-        margin-bottom: 2rem;
-    
+        margin-bottom: 3rem;
         @media only screen and (max-width: 1024px) {  
             margin-bottom: 1rem;
         }
-    
         &:hover {
             transition: background 1s;
             background: #EEEEEE;
@@ -45,31 +43,38 @@ const StyledBox = styled.div`
         text-align: left;
     }
 
+    .blog-span-staff {
+        font-size: 1.2rem!important;
+    }
+
 `;  
 
-class BlogBox extends React.Component {
+class BlogBoxStaffMobile extends React.Component {
     render() {
         return(
             <StyledBox>
 
-                <div className="container mt-5 width-blog">
+                <div className="container mt-5 width-blog staff-mobile-display">
+                    <div className="row">
+                        <div className="col">
+                            <p className="blog-span-staff">STAFF PICKS</p>
+                        </div>
+                    </div>
                     <div className="row">
                         <StaticQuery query={POSTS} render={data =>{
-                            const posts = data.allContentfulBlogPost.edges;
-                            const postsbydate = posts.sort( (a,b) => a.node.date - b.node.date );
-                            return postsbydate.map((item) => {
+                            const post = data.allContentfulBlogPost.edges;
+                            function staffpost(value) {return value.node.staffPick === true;};
+                            const poststaff = post.filter(staffpost);
+                            return poststaff.map((item) => {
                                 return (
-                                    <div className="col-sm-6 col-lg-4">
-                                        <div className="box-wrapper">
-                                            <Link key={item.node.id} to={'/blog/' + item.node.slug}>
+                                    <div className="col-sm-6">
+                                        <div className="staff-mobile">
+                                            <Link to={'/blog/' + item.node.slug}>
                                                 <div>
-                                                    <div>
-                                                        <div className="image-wrapper">
-                                                            <img src={item.node.featuredImage.file.url} alt={item.node.title}/>
-                                                        </div>
-                                                        <p class="blog-category">{item.node.category}</p>
-                                                        <h2 class="blog-title">{item.node.title}</h2>
+                                                    <div className="image-wrapper">
+                                                        <img src={item.node.featuredImage.file.url} alt={item.node.title}/>
                                                     </div>
+                                                    <p class="blog-title">{item.node.title}</p>
                                                 </div>
                                             </Link>
                                         </div>
@@ -80,12 +85,12 @@ class BlogBox extends React.Component {
                     </div>
                 </div>
 
-            </StyledBox> 
+            </StyledBox>
         );
     }
 }
 
-export default BlogBox;
+export default BlogBoxStaffMobile;
 
 
 const POSTS = graphql `{
@@ -116,3 +121,4 @@ const POSTS = graphql `{
         }
     }
 }`
+

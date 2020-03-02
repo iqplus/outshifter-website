@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { StaticQuery, graphql } from 'gatsby'
+import { Link } from "gatsby"
 
 const StyledBox = styled.div`
 
@@ -28,7 +29,7 @@ const StyledBox = styled.div`
 
     .blog-category {
         color: #C0C0C0;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         font-weight: 500;
     }
 
@@ -39,7 +40,7 @@ const StyledBox = styled.div`
     }
 
     .blog-main-content-wrapper {
-        padding: 60px 30px;
+        padding: 40px 30px 50px 30px;
     }
 
 `;  
@@ -47,22 +48,60 @@ const StyledBox = styled.div`
 class BlogBoxMain extends React.Component {
     render() {
         return(
-
             <StyledBox>
-                <div>
-                    <div className="image-wrapper">
-                        <img src={this.props.BlogItem.featuredImage.file.url} alt={this.props.BlogItem.title}/>
-                    </div>
-                    <div className="blog-main-content-wrapper">
-                        <p class="blog-category">{this.props.BlogItem.category}</p>
-                        <br />
-                        <span class="blog-title">{this.props.BlogItem.title}</span>
-                    </div>
-                </div>
+
+                <StaticQuery query={POSTS} render={data =>{
+                    const post = data.allContentfulBlogPost.edges;
+                    function mainpost(value) {return value.node.mainPost === true;};
+                    const postmain = post.filter(mainpost);
+                    return postmain.map((item) => {
+                        return (
+                            <Link to={'/blog/' + item.node.slug}>
+                                <div className="image-wrapper">
+                                    <img src={item.node.featuredImage.file.url} alt={item.node.title}/>
+                                </div>
+                                    <div className="blog-main-content-wrapper">
+                                        <p class="blog-category">{item.node.category}</p>
+                                        <span class="blog-title">{item.node.title}</span>
+                                    </div>
+                            </Link>
+                        );
+                    });
+                }} />
+
             </StyledBox>
-            
         );
     }
 }
 
 export default BlogBoxMain;
+
+
+const POSTS = graphql `{
+    allContentfulBlogPost {
+        edges {
+            node {
+                id
+                author {
+                    name
+                    linkedIn
+                }
+                category
+                title
+                date
+                mainPost
+                staffPick
+                slug
+                featuredImage {
+                  file {
+                    url
+                  }
+                }
+                content {
+                    json
+                    content
+                }
+            }
+        }
+    }
+}`
