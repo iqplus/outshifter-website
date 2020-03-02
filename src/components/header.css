@@ -21,6 +21,30 @@
 .menu-class {
     margin-top: 15px;
 }
+
+/* header blog */
+
+.header-blog {
+    box-shadow: 0 0.1429rem 0.6429rem 0.07143rem rgba(1, 2, 2, 0.1);
+}
+.logo-blog-no-display {
+    display: none;
+}
+.logo-blog {
+    color: #CDCDCD;
+    margin-left: 0.5rem;
+    font-size: 1.4rem;
+    position: relative;
+    bottom: 3px;
+    font-weight: 500;
+}
+.logo-blog:hover {
+    color: #CDCDCD;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
 /* logo */
 .wrapper {
     display: flex;
@@ -31,8 +55,8 @@
     display: flex;
     align-items: stretch;
     z-index: 100;
-
 }
+
 /* Menu */
 .menu-wrapper {
     display: flex;
