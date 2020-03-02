@@ -52,7 +52,6 @@ const Layout = ({ children }) => {
   return (
   <Loading>
     <ThemeProvider theme={theme}>
-    <>
     <GlobalStyles />
       <Header siteTitle={'Outshifter'} />
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg-settings">
@@ -72,7 +71,6 @@ const Layout = ({ children }) => {
         <main className="main-class">{children}</main>
         <Footer/>
       </div>
-    </>
     </ThemeProvider>
   </Loading>
   )

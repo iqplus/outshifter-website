@@ -61,9 +61,7 @@ export default class Header extends Component {
           (maxScroll <= 0 && prevScrollpos > currentScrollPos) ||
           (prevScrollpos <= 0 && currentScrollPos <= 0)
         ) {
-
         } else {
-
         }
         if (currentScrollPos > 86) {
           document.getElementById('navbar').classList.add('sticky');
@@ -98,38 +96,42 @@ export default class Header extends Component {
       this.setState({ isOpen: false });
     }
   }
-  
+
 
   render() {
 
+    const currentUrl = window.location.pathname;
+    const blogHeader = currentUrl.includes("blog") ? true : false;
+
     return (
+
       <div>
 
-      <MenuMobil open={this.state.isOpen} onClick={this.toggleMenu}/>
-      <div className={'fixed-top'} id="navbar">
-      <div className="container menu-class">
-        <div className="row">
-
-          <div className="col col-lg-4 align-self-center">
-            <div className="logo-wrapper">
-              <Link to={'/'}><img className="desktop" src={LogoFull} /></Link>
-                  <Link to={'/'}><img className="mobil logo-mobil" src={this.state.isOpen ? LogoMobilWhite
-                    : LogoMobil} /> </Link>
-                  <Link to={'/'} className={'logo-line'}><img className="mobil logo-text" src={this.state.isOpen ? LogoTextWhite
-                    : LogoText} /> </Link>
+        <MenuMobil open={this.state.isOpen} onClick={this.toggleMenu}/>
+        <div className={(blogHeader ? 'header-blog fixed-top' : 'fixed-top')} id="navbar">
+        <div className="container menu-class">
+          <div className="row">
+            <div className="col col-lg-4 align-self-center">
+              <div className="logo-wrapper">
+                <Link to={blogHeader ? '/blog' : '/'}><img className="desktop" src={LogoFull} /></Link>
+                <Link to={blogHeader ? '/blog' : '/'}><img className="mobil logo-mobil" src={this.state.isOpen ? LogoMobilWhite
+                      : LogoMobil} /> </Link>
+                <Link to={blogHeader ? '/blog' : '/'} className={'logo-line'}><img className="mobil logo-text" src={this.state.isOpen ? LogoTextWhite
+                      : LogoText} /> </Link>
+                <Link to={'/blog'} className={!blogHeader ? 'logo-blog-no-display logo-blog' : 'logo-blog'}>blog</Link>
+              </div>
             </div>
-          </div>
-          <div className="col col-lg-8 align-self-center">
-            <div ref={this.setWrapperRef} className="menu-wrapper">
-              <StyledMenuName open={this.state.isOpen}>Menu</StyledMenuName>
-              <Burger open={this.state.isOpen} onClick={this.toggleMenu}/>
-              <Menu open={this.state.isOpen} />
-              <div className="button-meny"><a href="https://app.outshifter.com/"><ButtonOutline>Sign in</ButtonOutline></a></div>
+            <div className="col col-lg-8 align-self-center">
+              <div ref={this.setWrapperRef} className="menu-wrapper">
+                <StyledMenuName open={this.state.isOpen}>Menu</StyledMenuName>
+                <Burger open={this.state.isOpen} onClick={this.toggleMenu}/>
+                <Menu open={this.state.isOpen} />
+                <div className="button-meny"><a href="https://app.outshifter.com/"><ButtonOutline>Sign in</ButtonOutline></a></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>  
+        </div>  
 
       </div>
     );
