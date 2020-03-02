@@ -84,24 +84,15 @@ const BlogPost = ({ data }) => {
   return (
 
     <Layout headerType="blog">
-              <Helmet
-          title={info.title}
-          meta={[
-            {
-              name: "description",
-              content: info.seoDescription,
-            },
-            { name: "keywords", content: "sample, something" },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
+<SEO title={info.title}
+description={info.seoDescription}
+ogImage={info.featuredImage.file.url}
+/>
     <BlogPostStyled>
 
       <div className="container">
         <div className="row width-blog">
           <div className="col">
-
             <div className="image-wrapper text-center">
               <img src={info.featuredImage.file.url} alt={info.title} />
             </div>
@@ -154,6 +145,7 @@ export const pageQuery = graphql`
       title
       date
       slug
+      seoDescription
       featuredImage {
         file {
           url

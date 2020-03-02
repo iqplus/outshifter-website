@@ -7,22 +7,26 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+         
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-<title>Outshifter</title>
-<meta name="title" content="Outshifter"/>
-<meta name="description" content="The Sales Network | Create you sales community and grow exponentially"/>
+<title>Outshifter | The Sales Network</title>
+<meta name="title" content="Outshifter | The Sales Network">
+<meta name="description" content="Connect your sales community and grow exponentially. One complete solution for all your online sales channels. Distribute cross-platform with powerful listing tools and integrations that bridge content seamlessly.">
 
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://outshifter.com/"/>
-<meta property="og:title" content="Outshifter"/>
-<meta property="og:description" content="The Sales Network | Create you sales community and grow exponentially"/>
-<meta property="og:image" content=""/>
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://outshifter.com/">
+<meta property="og:title" content="Outshifter | The Sales Network">
+<meta property="og:description" content="Connect your sales community and grow exponentially. One complete solution for all your online sales channels. Distribute cross-platform with powerful listing tools and integrations that bridge content seamlessly.">
+<meta property="og:image" content="">
 
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:url" content="https://outshifter.com/"/>
-<meta property="twitter:title" content="Outshifter"/>
-<meta property="twitter:description" content="The Sales Network | Create you sales community and grow exponentially"/>
-<meta property="twitter:image" content=""/>
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://outshifter.com/">
+<meta property="twitter:title" content="Outshifter | The Sales Network">
+<meta property="twitter:description" content="Connect your sales community and grow exponentially. One complete solution for all your online sales channels. Distribute cross-platform with powerful listing tools and integrations that bridge content seamlessly.">
+<meta property="twitter:image" content=""></meta>
+
             <script src="./../includes/js/aftc.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
     <script src="./../includes/js/stats.min.js"></script>

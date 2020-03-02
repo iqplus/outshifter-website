@@ -690,7 +690,7 @@ class WavesPage extends React.Component {
     return (
       
       <Layout className="hidden">
-        <SEO title="Home" />
+        <SEO title="Home"/>
         <CookieConsent
           containerClasses="cookie-container"
           contentClasses="cookie-text"
