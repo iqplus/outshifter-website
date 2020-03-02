@@ -20,10 +20,8 @@ import Lottie from 'lottie-react-web'
 import Animation1 from '../animations/animation1.json'
 import Animation1Phone from '../images/Animation-1-Phone.png'
 
-import Animation3Tablet from '../images/Animation-3-Tablet.png'
 import DevelopersTest from '../images/developers-final.png'
 
-import DotsSphere from '../animations/dots-sphere.json'
 
 const CircleIcon = styled.div`
   border: none;
