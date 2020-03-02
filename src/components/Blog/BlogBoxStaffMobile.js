@@ -20,7 +20,7 @@ const StyledBox = styled.div`
 
     .image-wrapper img {
         max-width: 100%;
-        height: auto;
+        height: 200px;
     }
 
     img {
@@ -71,7 +71,7 @@ class BlogBoxStaffMobile extends React.Component {
                                         <div className="staff-mobile">
                                             <Link to={'/blog/' + item.node.slug}>
                                                 <div>
-                                                    <div className="image-wrapper">
+                                                    <div className="image-wrapper text-center">
                                                         <img src={item.node.featuredImage.file.url} alt={item.node.title}/>
                                                     </div>
                                                     <p class="blog-title">{item.node.title}</p>
