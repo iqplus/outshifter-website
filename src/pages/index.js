@@ -22,7 +22,6 @@ import Animation1Phone from '../images/Animation-1-Phone.png'
 
 import DevelopersTest from '../images/developers-final.png'
 
-
 const CircleIcon = styled.div`
   border: none;
   display: inline-block;
@@ -688,9 +687,7 @@ class WavesPage extends React.Component {
   
   render () {
     return (
-      
       <Layout className="hidden">
-        <SEO title="Home"/>
         <CookieConsent
           containerClasses="cookie-container"
           contentClasses="cookie-text"

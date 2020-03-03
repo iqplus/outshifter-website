@@ -11,6 +11,9 @@ import Button from '../components/Buttons/Button'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 
+import Header from "../components/header"
+import Footer from "../components/footer"
+
 
 const BlogPostStyled = styled.div`
 
@@ -82,11 +85,12 @@ const BlogPost = ({ data }) => {
   });
 
   return (
-
-    <Layout headerType="blog">
+<>
 <SEO title={info.title}
 description={info.seoDescription}
-ogImage={info.featuredImage.file.url}
+imageProp={info.featuredImage.file.url}
+urlMeta={'https://outshifter.com/blog/'+info.slug+'/'}
+type="article"
 />
     <BlogPostStyled>
 
@@ -125,8 +129,7 @@ ogImage={info.featuredImage.file.url}
       </div>
 
     </BlogPostStyled>
-    </Layout>
-
+</>
   );
 };
 

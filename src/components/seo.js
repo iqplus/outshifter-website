@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, ogImage: ogImageProp }) {
+function SEO({ description, lang, meta, title, imageProp ,urlMeta, type }) {
   const { site, ogImageDefault } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title, ogImage: ogImageProp }) {
             title
             description
             author
+            image
             siteUrl
           }
         }
@@ -34,39 +35,49 @@ function SEO({ description, lang, meta, title, ogImage: ogImageProp }) {
   )
 	const ogTitle = title || site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description
-const ogImage = site.siteMetadata.siteUrl.concat(ogImageDefault.childImageSharp.fixed.src);
-
+const ogImage = imageProp || site.siteMetadata.siteUrl.concat(ogImageDefault.childImageSharp.fixed.src);
+const url = urlMeta
+const metaType = type || site.siteMetadata.siteUrl
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={ogTitle}
+      title={ogTitle +' | '}
       titleTemplate={`%s | ${'Outshifter'}`}
       meta={[
         {
+          property:`og:url`,
+          content: url
+        },
+        {
+          property: `og:title`,
+          content:  ogTitle
+        },
+        {
 					name: `description`,
-					content: metaDescription,
-				},
-				{
-					property: `og:title`,
-					content: ogTitle,
-				},
-				{
-					property: `og:description`,
-					content: metaDescription,
-				},
+					content: metaDescription
+        },
+        {
+					property: 'og:image',
+					content: ogImage,
+        },
 				{
 					property: `og:type`,
-					content: `website`,
-				},
-				{
-					name: 'og:image',
-					content: ogImage,
-				},
+					content: metaType,
+        },
+
+        {
+					property: `og:description`,
+					content: metaDescription,
+        },
+        {
+        property: `fb:app_id`,
+        content: `230941004502160`
+        },
 				{
 					name: `twitter:card`,
-					content: `summary_large_image`,
+					content: ogImage,
 				},
 				{
 					name: `twitter:creator`,

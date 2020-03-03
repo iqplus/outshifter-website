@@ -4,8 +4,9 @@ module.exports = {
     title: `Outshifter`,
     description: `Create and connect your sales community to grow exponentially.`,
     siteUrl: "https://www.outshifter.com", // No trailing slash allowed!
-    image: "/career-students-ba7d3a577ecc0de05b7416c5b6394633.jpg", // Path to your image you placed in the 'static' folder
-    author: `@iqplus`,
+    image: "https://www.outshifter.com/static/861e6f0b4b00c33a4a6b419e23c6ea5f/33af3/og-image.png", // Path to your image you placed in the 'static' folder
+    author: `@outshifter`,
+    type:  `website`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
