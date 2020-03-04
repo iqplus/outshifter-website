@@ -11,7 +11,7 @@ import Button from '../components/Buttons/Button'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 
-import Header from "../components/header"
+import Header from "../components/header_blog"
 import Footer from "../components/footer"
 
 import { ThemeProvider } from 'styled-components';
@@ -91,7 +91,6 @@ const BlogPost = ({ data }) => {
 
   return (
 <>
-<Loading>
 <SEO title={info.title}
 description={info.seoDescription}
 imageProp={info.featuredImage.file.url}
@@ -141,7 +140,6 @@ type="article"
     </BlogPostStyled>
     <Footer/>
     </ThemeProvider>
-    </Loading>
 
 </>
   );

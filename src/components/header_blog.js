@@ -99,12 +99,11 @@ export default class Header extends Component {
 
   render() {
 
-    const blogHeader = false;
+    const blogHeader = true;
 
     return (
 
       <div>
-
         <MenuMobil open={this.state.isOpen} onClick={this.toggleMenu}/>
         <div className={(blogHeader ? 'header-blog fixed-top' : 'fixed-top')} id="navbar">
         <div className="container menu-class">
@@ -130,7 +129,6 @@ export default class Header extends Component {
           </div>
         </div>
         </div>  
-
       </div>
     );
   }

@@ -51,9 +51,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-   <Loading>
-
             <SEO/>
+
     <ThemeProvider theme={theme}>
     <GlobalStyles />
       <Header siteTitle={'Outshifter'} />
@@ -75,7 +74,6 @@ const Layout = ({ children }) => {
         <Footer/>
       </div>
     </ThemeProvider>
-  </Loading>
   </>
   )
 }
