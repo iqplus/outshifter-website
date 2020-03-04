@@ -15,7 +15,6 @@ import Menu from './Menu/Menu.js';
 import MenuMobil from './MenuMobil/MenuMobil.js';
 import Burger from './Burger/Burger';
 import ButtonOutline from '../components/Buttons/ButtonOutline'
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import './header.css';
 

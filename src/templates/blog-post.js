@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
-import Helmet from "react-helmet"
 
 
 import Button from '../components/Buttons/Button'
@@ -13,6 +12,10 @@ import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 
 import Header from "../components/header"
 import Footer from "../components/footer"
+
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './../global';
+import { theme } from './../theme';
 
 
 const BlogPostStyled = styled.div`
@@ -23,6 +26,7 @@ const BlogPostStyled = styled.div`
   .width-blog {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 5rem;
   }
 
   .image-wrapper img {
@@ -86,6 +90,9 @@ const BlogPost = ({ data }) => {
 
   return (
 <>
+<ThemeProvider theme={theme}>
+    <GlobalStyles />
+<Header/>
 <SEO title={info.title}
 description={info.seoDescription}
 imageProp={info.featuredImage.file.url}
@@ -129,6 +136,8 @@ type="article"
       </div>
 
     </BlogPostStyled>
+    <Footer/>
+    /</ThemeProvider>
 </>
   );
 };
