@@ -4,12 +4,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
-import Helmet from "react-helmet"
 
 
 import Button from '../components/Buttons/Button'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
+
+import Header from "../components/header"
+import Footer from "../components/footer"
+
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './../global';
+import { theme } from './../theme';
 
 
 const BlogPostStyled = styled.div`
@@ -20,6 +26,7 @@ const BlogPostStyled = styled.div`
   .width-blog {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 5rem;
   }
 
   .image-wrapper img {
@@ -82,26 +89,21 @@ const BlogPost = ({ data }) => {
   });
 
   return (
-
-    <Layout headerType="blog">
-              <Helmet
-          title={info.title}
-          meta={[
-            {
-              name: "description",
-              content: info.seoDescription,
-            },
-            { name: "keywords", content: "sample, something" },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
+<>
+<ThemeProvider theme={theme}>
+    <GlobalStyles />
+<Header/>
+<SEO title={info.title}
+description={info.seoDescription}
+imageProp={info.featuredImage.file.url}
+urlMeta={'https://outshifter.com/blog/'+info.slug+'/'}
+type="article"
+/>
     <BlogPostStyled>
 
       <div className="container">
         <div className="row width-blog">
           <div className="col">
-
             <div className="image-wrapper text-center">
               <img src={info.featuredImage.file.url} alt={info.title} />
             </div>
@@ -134,8 +136,9 @@ const BlogPost = ({ data }) => {
       </div>
 
     </BlogPostStyled>
-    </Layout>
-
+    <Footer/>
+    /</ThemeProvider>
+</>
   );
 };
 
@@ -154,6 +157,7 @@ export const pageQuery = graphql`
       title
       date
       slug
+      seoDescription
       featuredImage {
         file {
           url
