@@ -13,13 +13,10 @@ import { FaAngleDown } from 'react-icons/fa'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/pro-duotone-svg-icons';
-
 import ShopifyWhite from '../images/Shopify-Badge-White.png'
-
 import Lottie from 'lottie-react-web'
 import Animation1 from '../animations/animation1.json'
 import Animation1Phone from '../images/Animation-1-Phone.png'
-
 import DevelopersTest from '../images/developers-final.png'
 
 const CircleIcon = styled.div`
