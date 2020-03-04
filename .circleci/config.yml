@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Checkout
-          command: git checkout newtesting
+          command: git checkout master
 
       - restore_cache:
           keys:
