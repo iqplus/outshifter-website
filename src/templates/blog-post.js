@@ -84,6 +84,14 @@ const BlogPost = ({ data }) => {
 
   const info = data.contentfulBlogPost;
 
+  const options = {
+    renderNode: {
+      'embedded-asset-block': (node) => (
+        <img class="img-fluid" src={`https:${node.data.target.fields.file["en-US"].url}`}/>
+      ),
+    }
+  }
+
   useEffect(() => {
     document.querySelector('#canvas1').style.visibility = "hidden"
     document.querySelector('#canvas2').style.visibility = "hidden"
@@ -114,7 +122,7 @@ type="article"
               <span>{info.date}</span>  By  <a href={info.author.linkedIn}><span>{info.author.name}</span></a>
             </div>
             <div>
-              {documentToReactComponents(info.content.json)}
+              {documentToReactComponents(info.content.json, options)}
             </div>
 
           </div>
