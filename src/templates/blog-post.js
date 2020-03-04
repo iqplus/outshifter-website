@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
+import Loading from '../components/loading';
 
 
 import Button from '../components/Buttons/Button'
@@ -90,15 +91,17 @@ const BlogPost = ({ data }) => {
 
   return (
 <>
-<ThemeProvider theme={theme}>
-    <GlobalStyles />
-<Header/>
+<Loading>
 <SEO title={info.title}
 description={info.seoDescription}
 imageProp={info.featuredImage.file.url}
 urlMeta={'https://outshifter.com/blog/'+info.slug+'/'}
 type="article"
 />
+<ThemeProvider theme={theme}>
+    <GlobalStyles />
+<Header/>
+
     <BlogPostStyled>
 
       <div className="container">
@@ -137,7 +140,9 @@ type="article"
 
     </BlogPostStyled>
     <Footer/>
-    /</ThemeProvider>
+    </ThemeProvider>
+    </Loading>
+
 </>
   );
 };

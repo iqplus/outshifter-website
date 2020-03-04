@@ -15,7 +15,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './../global';
 import { theme } from './../theme';
 
-import Loading from './loading.js';
+import Loading from '../components/loading';
 import Footer from "./footer"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -51,8 +51,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+   <Loading>
+
             <SEO/>
-  <Loading>
     <ThemeProvider theme={theme}>
     <GlobalStyles />
       <Header siteTitle={'Outshifter'} />
