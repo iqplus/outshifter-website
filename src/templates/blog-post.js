@@ -6,7 +6,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
 import Helmet from "react-helmet"
 
-
 import Button from '../components/Buttons/Button'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
@@ -72,9 +71,23 @@ const BlogPostStyled = styled.div`
   }
 `;
 
+/*
+[BLOCKS.EMBEDDED_ASSET]: (node) => (
+`<img class="img-fluid" src="${node.data.target.fields.file.url}"/>`
+),
+*/
+
 const BlogPost = ({ data }) => {
 
   const info = data.contentfulBlogPost;
+
+  const options = {
+    renderNode: {
+      'embedded-asset-block': (node) => (
+        <img class="img-fluid" src={`https:${node.data.target.fields.file["en-US"].url}`}/>
+      ),
+    }
+  }
 
   useEffect(() => {
     document.querySelector('#canvas1').style.visibility = "hidden"
@@ -82,9 +95,8 @@ const BlogPost = ({ data }) => {
   });
 
   return (
-
-    <Layout headerType="blog">
-              <Helmet
+    <Layout>
+        <Helmet
           title={info.title}
           meta={[
             {
@@ -110,7 +122,7 @@ const BlogPost = ({ data }) => {
               <span>{info.date}</span>  By  <a href={info.author.linkedIn}><span>{info.author.name}</span></a>
             </div>
             <div>
-              {documentToReactComponents(info.content.json)}
+              {documentToReactComponents(info.content.json, options)}
             </div>
 
           </div>
@@ -134,7 +146,7 @@ const BlogPost = ({ data }) => {
       </div>
 
     </BlogPostStyled>
-    </Layout>
+  </Layout>
 
   );
 };
