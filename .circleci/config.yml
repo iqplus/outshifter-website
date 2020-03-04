@@ -19,9 +19,6 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run:
-          name: remove node modules
-          command: rm -rf node_modules
-      - run:
           name: Install Dependencies
           command: npm install
       - save_cache:
