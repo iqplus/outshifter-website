@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import { Link } from 'gatsby'
 import LogoWhite from '../images/logo-mobil_white.png'
 
-
-
 const Footer = () =>{
     return(
         <footer className="footer">
