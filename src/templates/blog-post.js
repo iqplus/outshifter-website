@@ -1,6 +1,5 @@
 import React from "react"
 import {useEffect} from "react"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components';
