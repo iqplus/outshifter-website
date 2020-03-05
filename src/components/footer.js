@@ -109,7 +109,7 @@ const Footer = () =>{
                 <div className="col">
                 <img src={LogoWhite} alt="logo white" />
                   <p>© 2020 Outshifter AS. All rights reserved.</p>
-                  <p>Developed by <Link to={'https://www.iqplus.no'}>iQPLUS.</Link></p>
+                  <p>Developed by <a href={'https://www.iqplus.no'} target="_blank" >iQPLUS.</a></p>
                 </div>
             </div>
           </div>
