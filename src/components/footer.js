@@ -44,6 +44,11 @@ const Footer = () =>{
                 </Link>
                 </p>
                 <p>
+                <Link to={'/blog'}>
+                Blog
+                </Link>
+                </p>
+                <p>
                 <Link to={'/terms'}>
                   Terms & Conditions
                 </Link>

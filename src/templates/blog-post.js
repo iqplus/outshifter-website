@@ -78,6 +78,11 @@ const BlogPostStyled = styled.div`
       font-size: 0.8rem;
     }
   }
+
+  .asset-img {
+    max-height: 415px;
+  }
+
 `;
 
 const BlogPost = ({ data }) => {
@@ -87,7 +92,7 @@ const BlogPost = ({ data }) => {
   const options = {
     renderNode: {
       'embedded-asset-block': (node) => (
-        <img class="img-fluid" src={`https:${node.data.target.fields.file["en-US"].url}`}/>
+        <img class="img-fluid asset-img" src={`https:${node.data.target.fields.file["en-US"].url}`}/>
       ),
     }
   }
