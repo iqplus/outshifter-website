@@ -80,7 +80,7 @@ const BlogPostStyled = styled.div`
   }
 
   .asset-img {
-    max-height: 415px;
+    width: 100%;
   }
 
 `;
