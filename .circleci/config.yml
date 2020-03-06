@@ -6,12 +6,13 @@ jobs:
     working_directory: ~/gatsby-site
     branches:
       only:
-        - contenful
+        - master
     steps:
       - checkout
       - run:
           name: Checkout
-          command: git checkout contenful
+          command: git checkout master
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
@@ -24,6 +25,9 @@ jobs:
           key: v1-npm-deps-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
+      - run:
+          name: Gatsby Build
+          command: npm install firebase-tools
       - run:
           name: Gatsby Build
           command: npm run build
