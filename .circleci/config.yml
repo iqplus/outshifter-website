@@ -6,12 +6,12 @@ jobs:
     working_directory: ~/gatsby-site
     branches:
       only:
-        - master
+        - contenful
     steps:
       - checkout
       - run:
           name: Checkout
-          command: git checkout master
+          command: git checkout contenful
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
